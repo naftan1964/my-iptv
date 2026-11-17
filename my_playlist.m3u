@@ -1,20 +1,6 @@
 #EXTM3U url-tvg="https://githubusercontent.com"
-#EXTINF:-1 group-title="Кино" tvg-rec="7" timeshift="7",Viju+ Premiere
-http://stream.mcquack.net/202/index.m3u8
-#EXTINF:-1 group-title="Кино" tvg-rec="7" timeshift="7",Viju+ Megahit
-http://stream.mcquack.net/200/index.m3u8
-#EXTINF:-1 group-title="Кино" tvg-rec="7" timeshift="7",Viju+ Comedy
-http://stream.mcquack.net/201/index.m3u8
-#EXTINF:-1 group-title="Кино" tvg-rec="7" timeshift="7",НТВ Сериал
+#EXTINF:-1 group-title="Эфирные" tvg-rec="7" timeshift="7",НТВ Сериал
 http://stream.mcquack.net/301/index.m3u8
-#EXTINF:-1 group-title="Спорт" tvg-rec="7" timeshift="7",Матч! Футбол 1
-http://stream.mcquack.net/130/index.m3u8
-#EXTINF:-1 group-title="Спорт" tvg-rec="7" timeshift="7",Матч! Футбол 2
-http://stream.mcquack.net/142/index.m3u8
-#EXTINF:-1 group-title="Спорт" tvg-rec="7" timeshift="7",Матч! Футбол 3
-http://stream.mcquack.net/185/index.m3u8
-#EXTINF:-1 group-title="Спорт" tvg-rec="7" timeshift="7",Матч! Игра
-http://stream.mcquack.net/188/index.m3u8
 #EXTINF:-1  group-title="Эфирные"  tvg-id="pervy"  tvg-logo="https://krasnovosti.ru/online_tv/img/logo_channels/pervyi-kanal.jpg"   tvg-name="Первый канал", Первый канал
 http://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD/variant.m3u8
 #EXTINF:-1  group-title="Эфирные"  tvg-id="rossia1"  tvg-logo="https://app.playlistbox.com/icon/2q94OaJj6rD5gYx8V9Z1ELBXGWRzPQ0A.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1", Россия 1
@@ -53,12 +39,18 @@ http://185.23.80.23:8080/REN/index.m3u8
 http://31.131.141.195:8000/play/2010/index.m3u8
 #EXTINF:-1  group-title="Эфирные"  tvg-id="rossia1" ,Россия 1
 http://31.131.141.195:8000/play/1020/index.m3u8
-#EXTINF:-1  group-title="Познавательные"  tvg-id="zvezda-plus" , Звезда Плюс
+#EXTINF:-1  group-title="Эфирные"  tvg-id="zvezda-plus" , Звезда Плюс
 http://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1  group-title="Познавательные"  tvg-id="zvezda-plus" , Звезда Плюс
+#EXTINF:-1  group-title="Эфирные"  tvg-id="zvezda-plus" , Звезда Плюс
 http://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/tracks-v2a1/mono.ts.m3u8
-#EXTINF:-1  group-title="Кино и сериалы"  tvg-id="vip-premiere" ,viju+ premiere
-https://flussonic.mkpnet.ru/tv-e107d21a90cb808f/video.m3u8
+#EXTINF:-1 group-title="Спортивные" tvg-rec="7" timeshift="7",Матч! Футбол 1
+http://stream.mcquack.net/130/index.m3u8
+#EXTINF:-1 group-title="Спортивные" tvg-rec="7" timeshift="7",Матч! Футбол 2
+http://stream.mcquack.net/142/index.m3u8
+#EXTINF:-1 group-title="Спортивные" tvg-rec="7" timeshift="7",Матч! Футбол 3
+http://stream.mcquack.net/185/index.m3u8
+#EXTINF:-1 group-title="Спортивные" tvg-rec="7" timeshift="7",Матч! Игра
+http://stream.mcquack.net/188/index.m3u8
 #EXTINF:-1  group-title="Спортивные"  tvg-id="eurosport1" ,Eurosport 1 HD
 http://195.64.140.147:10114/114
 #EXTINF:-1  group-title="Спортивные"  tvg-id="eurosport2" ,Eurosport 2 HD
@@ -67,9 +59,17 @@ http://195.64.140.147:10115/115
 http://31.148.5.241/Eurosport_1_HD/index.m3u8
 #EXTINF:-1  group-title="Спортивные"  tvg-id="eurosport2" ,Eurosport 2 HD
 http://31.148.5.241/Eurosport_2_HD/index.m3u8
-#EXTINF:-1  group-title="Тестовые"  tvg-id="vip-premiere"   tvg-rec="7" timeshift="7",Viju+ Premiere
+#EXTINF:-1 group-title="Кино и сериалы" tvg-rec="7" timeshift="7",Viju+ Premiere
 http://stream.mcquack.net/202/index.m3u8
-#EXTINF:-1  group-title="Тестовые"  tvg-id="vip-megahit"   tvg-rec="7" timeshift="7",Viju+ Megahit
+#EXTINF:-1 group-title="Кино и сериалы" tvg-rec="7" timeshift="7",Viju+ Megahit
 http://stream.mcquack.net/200/index.m3u8
-#EXTINF:-1  group-title="Тестовые"  tvg-id="vip-comedy"   tvg-rec="7" timeshift="7",Viju+ Comedy
+#EXTINF:-1 group-title="Кино и сериалы" tvg-rec="7" timeshift="7",Viju+ Comedy
+http://stream.mcquack.net/201/index.m3u8
+#EXTINF:-1  group-title="Кино и сериалы"  tvg-id="vip-premiere" ,viju+ premiere
+https://flussonic.mkpnet.ru/tv-e107d21a90cb808f/video.m3u8
+#EXTINF:-1  group-title="Кино и сериалы"  tvg-id="vip-premiere"   tvg-rec="7" timeshift="7",Viju+ Premiere
+http://stream.mcquack.net/202/index.m3u8
+#EXTINF:-1  group-title="Кино и сериалы"  tvg-id="vip-megahit"   tvg-rec="7" timeshift="7",Viju+ Megahit
+http://stream.mcquack.net/200/index.m3u8
+#EXTINF:-1  group-title="Кино и сериалы"  tvg-id="vip-comedy"   tvg-rec="7" timeshift="7",Viju+ Comedy
 http://stream.mcquack.net/201/index.m3u8
