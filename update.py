@@ -27,11 +27,18 @@ def read_grouped_channels(filename):
 def has_timezone_shift(name):
     return bool(re.search(r'[\s\(\[][\+\-]\d{1,2}[\)\]]?\b', name))
 
-def set_group_title(extinf_line, new_group):
-    if 'group-title="' in extinf_line:
-        return re.sub(r'group-title="[^"]*"', f'group-title="{new_group}"', extinf_line)
-    else:
-        return extinf_line.replace("#EXTINF:-1", f'#EXTINF:-1 group-title="{new_group}"', 1)
+def format_for_ottplayer(extinf_line, new_group, copy_num):
+    raw_name = extinf_line.split(",")[-1].strip()
+    if copy_num > 1:
+        raw_name = f"{raw_name} ({copy_num})"
+    
+    tvg_id = re.search(r'tvg-id="([^"]*)"', extinf_line)
+    tvg_logo = re.search(r'tvg-logo="([^"]*)"', extinf_line)
+    
+    id_part = f' tvg-id="{tvg_id.group(1)}"' if tvg_id else ""
+    logo_part = f' tvg-logo="{tvg_logo.group(1)}"' if tvg_logo else ""
+    
+    return f'#EXTINF:-1{id_part}{logo_part} group-title="{new_group}",{raw_name}'
 
 def check_stream(item):
     key, group, info, url = item
@@ -66,8 +73,7 @@ def main():
                         name_lower = raw_name.lower()
                         for w, grp in wanted_list:
                             if w in name_lower:
-                                clean_info = set_group_title(current_info, grp)
-                                candidates.append((w, grp, clean_info, line))
+                                candidates.append((w, grp, current_info, line))
                                 break
                     current_info = ""
         except Exception as e:
@@ -81,8 +87,9 @@ def main():
             if res:
                 key, grp, info, url = res
                 if counts[key] < MAX_STREAMS_PER_CHANNEL:
-                    valid_by_group.setdefault(grp, []).append((info, url))
                     counts[key] += 1
+                    clean_info = format_for_ottplayer(info, grp, counts[key])
+                    valid_by_group.setdefault(grp, []).append((clean_info, url))
 
     with open("my_playlist.m3u", "w", encoding="utf-8") as out:
         out.write('#EXTM3U url-tvg="https://githubusercontent.com"\n')
@@ -91,9 +98,10 @@ def main():
                 for info, url in valid_by_group.pop(grp):
                     out.write(f"{info}\n{url}\n")
 
-    print("Сборка и сортировка по группам завершены!")
+    print("Сборка под OTTPlayer и TiviMate завершена!")
 
 if __name__ == "__main__":
     main()
+
 
 
