@@ -27,19 +27,6 @@ def read_grouped_channels(filename):
 def has_timezone_shift(name):
     return bool(re.search(r'[\s\(\[][\+\-]\d{1,2}[\)\]]?\b', name))
 
-def format_for_ottplayer(extinf_line, new_group, copy_num):
-    raw_name = extinf_line.split(",")[-1].strip()
-    if copy_num > 1:
-        raw_name = f"{raw_name} ({copy_num})"
-    
-    tvg_id = re.search(r'tvg-id="([^"]*)"', extinf_line)
-    tvg_logo = re.search(r'tvg-logo="([^"]*)"', extinf_line)
-    
-    id_part = f' tvg-id="{tvg_id.group(1)}"' if tvg_id else ""
-    logo_part = f' tvg-logo="{tvg_logo.group(1)}"' if tvg_logo else ""
-    
-    return f'#EXTINF:-1{id_part}{logo_part} group-title="{new_group}",{raw_name}'
-
 def check_stream(item):
     key, group, info, url = item
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
@@ -80,6 +67,7 @@ def main():
             print(f"Ошибка загрузки {src}: {e}")
 
     counts = {w: 0 for w, _ in wanted_list}
+    seen_names = {}
     valid_by_group = {}
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
@@ -88,20 +76,32 @@ def main():
                 key, grp, info, url = res
                 if counts[key] < MAX_STREAMS_PER_CHANNEL:
                     counts[key] += 1
-                    clean_info = format_for_ottplayer(info, grp, counts[key])
-                    valid_by_group.setdefault(grp, []).append((clean_info, url))
+                    raw_name = info.split(",")[-1].strip()
+                    
+                    name_key = raw_name.lower()
+                    seen_names[name_key] = seen_names.get(name_key, 0) + 1
+                    final_name = f"{raw_name} ({seen_names[name_key]})" if seen_names[name_key] > 1 else raw_name
+                    
+                    tvg_id = re.search(r'tvg-id="([^"]*)"', info)
+                    tvg_logo = re.search(r'tvg-logo="([^"]*)"', info)
+                    id_part = f' tvg-id="{tvg_id.group(1)}"' if tvg_id else ""
+                    logo_part = f' tvg-logo="{tvg_logo.group(1)}"' if tvg_logo else ""
+                    
+                    clean_info = f'#EXTINF:-1{id_part}{logo_part} group-title="{grp}",{final_name}'
+                    valid_by_group.setdefault(grp, []).append((clean_info, grp, url))
 
     with open("my_playlist.m3u", "w", encoding="utf-8") as out:
         out.write('#EXTM3U url-tvg="https://githubusercontent.com"\n')
         for _, grp in wanted_list:
             if grp in valid_by_group:
-                for info, url in valid_by_group.pop(grp):
-                    out.write(f"{info}\n{url}\n")
+                for info, group_name, url in valid_by_group.pop(grp):
+                    out.write(f"{info}\n#EXTGRP:{group_name}\n{url}\n")
 
-    print("Сборка под OTTPlayer и TiviMate завершена!")
+    print("Сборка с поддержкой #EXTGRP для OTTPlayer завершена!")
 
 if __name__ == "__main__":
     main()
+
 
 
 
