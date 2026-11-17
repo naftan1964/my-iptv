@@ -1,7 +1,8 @@
-on: [workflow_dispatch]
+on: {workflow_dispatch: {}, schedule: [{cron: '0 3 * * *'}]}
 jobs:
   b:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python3 update.py && git config user.name b && git config user.email b@b && git add my_playlist.m3u && git commit -m u && git push
+      - run: python3 update.py && git config user.name b && git config user.email b@b && git add my_playlist.m3u && (git commit -m u || exit 0) && git push
+
