@@ -65,6 +65,9 @@ http://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="zvezda-plus" group-title="Эфирные",Звезда Плюс (2)
 #EXTGRP:Эфирные
 http://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/tracks-v2a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/звезда_плюс.png" group-title="Эфирные",Звезда плюс (3)
+#EXTGRP:Эфирные
+http://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/playlist.m3u8
 #EXTINF:-1 group-title="Спортивные",Матч! Футбол 1
 #EXTGRP:Спортивные
 http://stream.mcquack.net/130/index.m3u8
@@ -89,6 +92,15 @@ http://31.148.5.241/Eurosport_1_HD/index.m3u8
 #EXTINF:-1 tvg-id="eurosport2" group-title="Спортивные",Eurosport 2 HD (2)
 #EXTGRP:Спортивные
 http://31.148.5.241/Eurosport_2_HD/index.m3u8
+#EXTINF:-1 tvg-id="okko-football" tvg-logo="http://epg.one/img2/9325.png" group-title="Спортивные",Окко Футбол
+#EXTGRP:Спортивные
+http://uhugktfh.megogo.xyz/iptv/BV4SSQ9PRKF2CW/6554/index.m3u8
+#EXTINF:-1 tvg-id="eurosport1" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/eurosport1_logo.png" group-title="Спортивные",Eurosport 1
+#EXTGRP:Спортивные
+http://178.134.1.158:8081/eurosport/index.m3u8
+#EXTINF:-1 tvg-id="eurosport2" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/eurosport2_logo.png" group-title="Спортивные",Eurosport 2
+#EXTGRP:Спортивные
+http://91.205.196.7:8000/play/a02w
 #EXTINF:-1 group-title="Кино и сериалы",Viju+ Premiere
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/202/index.m3u8
@@ -110,3 +122,6 @@ http://stream.mcquack.net/200/index.m3u8
 #EXTINF:-1 tvg-id="vip-comedy" group-title="Кино и сериалы",Viju+ Comedy (2)
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/201/index.m3u8
+#EXTINF:-1 tvg-id="vip-megahit" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/viju_плюс_megahit_logo.png" group-title="Кино и сериалы",viju+ megahit (3)
+#EXTGRP:Кино и сериалы
+http://stream.mcquack.net/200/index.m3u8
