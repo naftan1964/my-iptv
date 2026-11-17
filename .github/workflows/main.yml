@@ -1,0 +1,7 @@
+on: [workflow_dispatch]
+jobs:
+  b:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 update.py && git config user.name b && git config user.email b@b && git add my_playlist.m3u && git commit -m u && git push
