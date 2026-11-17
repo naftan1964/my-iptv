@@ -2,27 +2,28 @@ name: Update IPTV Playlist
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # Автозапуск каждые 6 часов
-  workflow_dispatch:       # Кнопка для ручного запуска в любое время
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Загрузка репозитория
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Установка Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Сборка и проверка плейлиста
+      - name: Run script
         run: python update.py
 
-      - name: Сохранение результата
+      - name: Save playlist
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add my_playlist.m3u
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Автообновление плейлиста" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update" && git push)
+
