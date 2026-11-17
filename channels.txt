@@ -6,6 +6,9 @@
 Звезда Плюс
 Звезда
 Мосфильм.Золотая коллекция
+Арсенал
+Мир
+Санкт-Петербург
 [Спортивные]
 Матч
 Матч! Премьер
@@ -19,3 +22,84 @@ Eurosport 2
 Viju+ Premiere
 Viju+ Megahit
 Viju+ Comedy
+Viju TV1000 Action
+Viju TV1000
+Viju TV1000 Русское
+Мужское Кино
+Кинохит
+Киномикс
+Кинопремьера
+Наше Новое Кино
+Кинокомедия
+Киноужас
+Родное Кино
+Дом Кино Премиум
+Дом Кино
+Иллюзион+
+Русский иллюзион
+Кинопоказ
+Кино ТВ
+Комедия
+Камеди
+Комедийное
+Любимое
+Любимое Кино
+ЕвроКино
+ТВ 21
+9-1-1
+НСТ
+Шокирующее
+Страшное
+Cinema
+sci-fi
+[Кинозалы]
+Z!Russian
+Z!Comedy
+Z!Thriller
+Z!Action
+Z!Adventure
+Z!Detective
+Z!Fantastic
+VeleS 60fps
+VeleS Киноплёнкa
+VeleS Premiere
+VeleS Страшное
+VeleS СССР
+VeleS Movie Hits
+BCU Russian
+BCU СССР
+BCU Comedy
+BCU Action
+BCU Premiere
+BCU Catastrophe
+BCU Fantastic
+BCU Kinorating
+BCU VHS HDR
+[Познавательные]
+Z!Travel
+Z!Science
+The Explorers
+National Geographic
+Мужской
+TERRA
+BOX Mayday
+CineMan Air Crash
+Большая Азия
+Discovery Channel
+Первый космический
+Телепутешествия
+Глазами Туриста
+Приключения
+Viju Explore
+Viju History
+Viju+ Planet
+History
+History 2
+Travel+Adventure
+Travel Channel
+Моя Планета
+Big Planet
+
+
+
+
