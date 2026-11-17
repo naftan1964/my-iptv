@@ -1,0 +1,291 @@
+#EXTM3U url-tvg="https://githubusercontent.com"
+#EXTINF:-1 group-title="Кино" tvg-rec="7" timeshift="7",Viju+ Premiere
+http://stream.mcquack.net/202/index.m3u8
+#EXTINF:-1 group-title="Кино" tvg-rec="7" timeshift="7",Viju+ Megahit
+http://stream.mcquack.net/200/index.m3u8
+#EXTINF:-1 group-title="Кино" tvg-rec="7" timeshift="7",Viju+ Comedy
+http://stream.mcquack.net/201/index.m3u8
+#EXTINF:-1 group-title="Кино" tvg-rec="7" timeshift="7",НТВ Сериал
+http://stream.mcquack.net/301/index.m3u8
+#EXTINF:-1 group-title="Спорт" tvg-rec="7" timeshift="7",Матч! Футбол 1
+http://stream.mcquack.net/130/index.m3u8
+#EXTINF:-1 group-title="Спорт" tvg-rec="7" timeshift="7",Матч! Футбол 2
+http://stream.mcquack.net/142/index.m3u8
+#EXTINF:-1 group-title="Спорт" tvg-rec="7" timeshift="7",Матч! Футбол 3
+http://stream.mcquack.net/185/index.m3u8
+#EXTINF:-1 group-title="Спорт" tvg-rec="7" timeshift="7",Матч! Игра
+http://stream.mcquack.net/188/index.m3u8
+#EXTINF:-1 group-title="Спорт" tvg-rec="7" timeshift="7",Матч! СТРАНА
+http://stream.mcquack.net/143/index.m3u8
+#EXTINF:-1 group-title="Спорт" tvg-rec="7" timeshift="7",Матч! Арена
+http://stream.mcquack.net/163/index.m3u8
+#EXTINF:-1 group-title="Спорт" tvg-rec="7" timeshift="7",Матч ТВ
+http://stream.mcquack.net/169/index.m3u8
+#EXTINF:-1 group-title="Спорт" tvg-rec="7" timeshift="7",Матч! Боец
+http://stream.mcquack.net/112/index.m3u8
+#EXTINF:-1 group-title="Спорт" tvg-rec="7" timeshift="7",Матч Премьер
+http://stream.mcquack.net/193/index.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="pervy"  tvg-logo="https://krasnovosti.ru/online_tv/img/logo_channels/pervyi-kanal.jpg"   tvg-name="Первый канал", Первый канал
+http://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD/variant.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="rossia1"  tvg-logo="https://app.playlistbox.com/icon/2q94OaJj6rD5gYx8V9Z1ELBXGWRzPQ0A.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1", Россия 1
+https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1/variant.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="ntv"  tvg-logo="https://app.playlistbox.com/icon/vQ97O6Vp54NE2yxmJqMLKe3Pjln8qJAm.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="НТВ", НТВ
+http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV/variant.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="rentv"  tvg-logo="http://s1.hostingkartinok.com/uploads/images/2021/08/6900abad5b72092009961dfa20d42abc.png"   tvg-name="Рен ТВ", Рен ТВ
+http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV/variant.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="zvezda"  tvg-logo="https://app.playlistbox.com/icon/yWKm9lLEGakqPMQNpzZBOnNdRr06XV32.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Звезда", Звезда
+http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA/variant.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="zvezda" , Звезда HD
+https://tvchannelstream1.tvzvezda.ru/cdn/tvzvezda/playlist_hdhigh.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="pervy" ,Первый канал HD
+https://bl.rutube.ru/livestream/c58f502c7bb34a8fcdd976b221fca292/index.m3u8?s=F9b_Ghaws4dMiwK1Txx5Dw&e=2067513304&scheme=https
+#EXTINF:-1  group-title="Эфирные"  tvg-id="ntv" ,НТВ HD
+https://bl.rutube.ru/livestream/c37cd74192c6bc3d6cd6077c0c4fd686/index.m3u8?s=-6hRlx-KnLcf8CcxeehXmg&e=2067513304&scheme=https
+#EXTINF:-1  group-title="Эфирные"  tvg-id="zvezda" ,Звезда HD
+http://tvchannelstream1.tvzvezda.ru/cdn/tvzvezda/playlist_hdhigh.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="rossia1" ,Россия 1
+https://flussonic.mkpnet.ru/tv-d696bdfd6a0e4373/video.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="rentv" ,Рен ТВ
+https://flussonic.mkpnet.ru/tv-44dfec2799c5738e/video.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="pervy" ,Первый канал
+https://flussonic.mkpnet.ru/tv-4f9598ab5f91dca4/video.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="rossia1" ,Россия 1
+https://flussonic.mkpnet.ru/tv-d696bdfd6a0e4373/video.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="zvezda" ,ЗВЕЗДА HD
+https://bl.rutube.ru/livestream/5ab908fccfac5bb43ef2b1e4182256b0/index.m3u8?s=hXjqQZCnC74PCA0_2_CX-A&e=2066519791&scheme=https
+#EXTINF:-1  group-title="Эфирные"  tvg-id="zvezda" ,Звезда
+https://bl.rutube.ru/livestream/5ab908fccfac5bb43ef2b1e4182256b0/index.m3u8?s=HZime4xO3o2sA2Nw0JD--w&e=2069285060&scheme=https
+#EXTINF:-1  group-title="Эфирные"  tvg-id="ntv" ,НТВ HD
+https://bl.rutube.ru/livestream/c37cd74192c6bc3d6cd6077c0c4fd686/index.m3u8?s=KRpRtdju100oOaCoxpKyPg&e=2066519750&scheme=https
+#EXTINF:-1  group-title="Эфирные"  tvg-id="ntv" ,НТВ HD
+https://bl.rutube.ru/livestream/c37cd74192c6bc3d6cd6077c0c4fd686/index.m3u8?s=igQsAY6jjMrZlDidg-nMDA&e=2069285048&scheme=https
+#EXTINF:-1  group-title="Эфирные" ,ПЕРВЫЙ КАНАЛ SD
+https://bl.rutube.ru/livestream/c58f502c7bb34a8fcdd976b221fca292/index.m3u8?s=RRyK9h1rVwc4QOrY4h721g&e=2066519749&scheme=https
+#EXTINF:-1  group-title="Эфирные"  tvg-id="pervy" ,Первый канал HD
+https://bl.rutube.ru/livestream/c58f502c7bb34a8fcdd976b221fca292/index.m3u8?s=cdEX_MDZxQc2DELRdY3CwQ&e=2069285048&scheme=https
+#EXTINF:-1  group-title="Эфирные"  tvg-id="rentv" ,Рен ТВ
+http://185.23.80.23:8080/REN/index.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="pervy" ,ПЕРВЫЙ КАНАЛ
+http://31.131.141.195:8000/play/1010/index.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="rentv" ,Рен ТВ
+http://31.131.141.195:8000/play/2010/index.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="rossia1" ,Россия 1
+http://31.131.141.195:8000/play/1020/index.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="ntv" ,НТВ
+http://31.131.141.195:8000/play/1040/index.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="zvezda" ,Звезда
+http://31.131.141.195:8000/play/2070/index.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="match-tv" ,Матч ТВ
+http://31.131.141.195:8000/play/1030/index.m3u8
+#EXTINF:-1  group-title="Эфирные"  tvg-id="pervy" ,Первый канал
+http://195.64.140.147:10001/991
+#EXTINF:-1  group-title="Эфирные"  tvg-id="rossia1" ,Россия 1
+http://195.64.140.147:10002/992
+#EXTINF:-1  group-title="Эфирные"  tvg-id="ntv" ,НТВ
+http://195.64.140.147:10004/994
+#EXTINF:-1  group-title="Эфирные"  tvg-id="rentv" ,РЕН ТВ
+http://195.64.140.147:10011/9911
+#EXTINF:-1  group-title="Эфирные"  tvg-id="zvezda" ,Звезда
+http://195.64.140.147:10016/9916
+#EXTINF:-1  group-title="Эфирные"  tvg-id="zvezda-plus" ,Звезда+
+http://195.64.140.147:10155/155
+#EXTINF:-1  group-title="Познавательные"  tvg-id="zvezda-plus" , Звезда Плюс
+http://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1  group-title="Познавательные"  tvg-id="zvezda-plus" , Звезда Плюс
+http://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/tracks-v2a1/mono.ts.m3u8
+#EXTINF:-1  group-title="Познавательные"  tvg-id="ntv-style" ,НТВ Стиль
+http://195.64.140.147:10173/173
+#EXTINF:-1  group-title="Познавательные"  tvg-id="ntv-pravo" ,НТВ Право
+http://195.64.140.147:10181/181
+#EXTINF:-1  group-title="Кино и сериалы"  tvg-logo="https://cdn2-static.ntv.ru/home/schedule/2025/20250926/shef_vert_live_1.jpg" ,НТВ Сериалы Шеф
+https://cdn-dvr.ntv.ru/Shef/tracks-v1a1/rewind-240.ts.m3u8
+#EXTINF:-1  group-title="Кино и сериалы"  tvg-logo="https://cdn2-static.ntv.ru/home/schedule/2025/20250926/1st_otdel_vert_live.jpg" ,НТВ Сериалы Первый отдел
+https://cdn-dvr.ntv.ru/Perviy_otdel/tracks-v1a1/rewind-240.ts.m3u8
+#EXTINF:-1  group-title="Кино и сериалы"  tvg-logo="https://cdn2-static.ntv.ru/home/schedule/2025/20250926/nevs_black_live3.jpg" ,НТВ Сериалы Невский
+https://cdn-dvr.ntv.ru/Nevskiy/tracks-v1a1/rewind-240.ts.m3u8
+#EXTINF:-1  group-title="Кино и сериалы"  tvg-logo="https://cdn2-static.ntv.ru/home/schedule/2025/20251021/balabol_vse_vert.jpg" ,НТВ Сериалы Балабол
+https://cdn-dvr.ntv.ru/Balabol/tracks-v1a1/rewind-240.ts.m3u8
+#EXTINF:-1  group-title="Кино и сериалы"  tvg-logo="https://cdn2-static.ntv.ru/home/schedule/2025/20251021/5minut_vert.jpg" ,НТВ Сериалы Пять минут тишины
+https://cdn-dvr.ntv.ru/5_minut_tishiny/tracks-v1a1/rewind-240.ts.m3u8
+#EXTINF:-1  group-title="Кино и сериалы"  tvg-id="ntv-serial"  tvg-logo="https://iptvx.one/picons/ntv-serial.png" ,НТВ Сериал
+https://cdn.ntv.ru/th_serial/playlist.m3u8
+#EXTINF:-1  group-title="Кино и сериалы"  tvg-id="ntv-xit"  tvg-logo="https://iptvx.one/picons/ntv-xit.png" ,НТВ Хит
+http://cdn2.ntv.ru/th_hit/playlist.m3u8
+#EXTINF:-1  group-title="Кино и сериалы"  tvg-id="no_epg_cinema"  tvg-logo="https://i.ibb.co/ZpRXL3jP/image-4.png" ,НТВ Хит
+https://cdn.ntv.ru/th_hit/tracks-v1a1/playlist.m3u8
+#EXTINF:-1  group-title="Кино и сериалы"  tvg-id="no_epg_cinema"  tvg-logo="https://i.ibb.co/ZpRXL3jP/image-4.png" ,НТВ Сериал
+https://cdn.ntv.ru/th_serial/tracks-v1a1/playlist.m3u8
+#EXTINF:-1  group-title="Кино и сериалы"  tvg-id="vip-premiere" ,viju+ premiere
+https://flussonic.mkpnet.ru/tv-e107d21a90cb808f/video.m3u8
+#EXTINF:-1  group-title="Кино и сериалы"  tvg-id="ntv-serial"   timeshift="7" tvg-rec="7",НТВ Сериал
+http://stream.mcquack.net/301/index.m3u8
+#EXTINF:-1  group-title="Кино и сериалы"  tvg-id="ntv-serial" ,НТВ Сериал
+http://195.64.140.147:10073/73
+#EXTINF:-1  group-title="Кино и сериалы"  tvg-id="ntv-xit" ,НТВ Хит
+http://195.64.140.147:10074/74
+#EXTINF:-1 group-title="Популярное кино" tvg-logo="https://pic.rtbcdn.ru/video/2026-10-11/0d/f2/0df2456f085894351d2e7ef88e44d7f6.jpg", Матч (2025)
+https://river-6-604.rtbcdn.ru/hls-vod/jqq3jhzmawthC_bVWCJhww/1795291654/2586/0x5000039ce820356d/0f7c933293334c999e8120ce6606c2f1.mp4.m3u8?i=1280x720_838&streams=v1a1
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-tv"  tvg-logo="http://domnet.me/images/picons/tvico_n52.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Матч! ТВ
+http://zabava-htlive.cdn.ngenix.net/hls/CH_MATCHTV/variant.m3u8
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-tv" , Матч! HD
+http://bl.video.matchtv.ru/media/playlist/free_d46d0cf1712c0542ec7fd4f0808f600a_hd/17_89756005/1080/e6bef86de8a133cd7b27deb040758a00/4796141934.m3u8
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-arena" ,Матч! Арена
+https://flussonic.mkpnet.ru/tv-9dda1dd9d740a9a4/video.m3u8
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-igra" ,Матч! Игра
+https://flussonic.mkpnet.ru/tv-1bfac9df3d938c1f/video.m3u8
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-premier" ,Матч! Премьер
+https://flussonic.mkpnet.ru/tv-ee3651e1e7ce5cbf/video.m3u8
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-nash-sport" ,Матч! Страна
+https://flussonic.mkpnet.ru/tv-6db4f59c21aec361/video.m3u8
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-arena" ,МАТЧ! Арена
+https://flussonic.mkpnet.ru/tv-9dda1dd9d740a9a4/video.m3u8
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-igra" ,МАТЧ! Игра
+https://flussonic.mkpnet.ru/tv-1bfac9df3d938c1f/video.m3u8
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-nash-sport" , МАТЧ! Страна
+https://flussonic.mkpnet.ru/tv-6db4f59c21aec361/video.m3u8
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-arena" ,Матч! Арена
+http://185.46.16.239:8000/Match_Arena
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-nash-sport" ,Матч! Страна
+http://185.46.16.239:8000/Match_Nash_Sport
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-igra" ,Матч! Игра
+http://185.46.16.239:8000/Match_Igra
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-football1" ,Матч Футбол 1 HD
+http://195.64.140.147:10100/100
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-football2" ,Матч Футбол 2 HD
+http://195.64.140.147:10101/101
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-football3" ,Матч Футбол 3 HD
+http://195.64.140.147:10102/102
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-premier" ,Матч Премьер HD
+http://195.64.140.147:10103/99103
+#EXTINF:-1  group-title="Спортивные"  tvg-id="eurosport1" ,Eurosport 1 HD
+http://195.64.140.147:10114/114
+#EXTINF:-1  group-title="Спортивные"  tvg-id="eurosport2" ,Eurosport 2 HD
+http://195.64.140.147:10115/115
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-premier" ,МАТЧ! Премьер
+https://flussonic.mkpnet.ru/tv-ee3651e1e7ce5cbf/video.m3u8
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-tv"  tvg-logo="https://iptvx.one/picons/match-tv.png" ,Матч!
+https://zabava-htlive.cdn.ngenix.net/hls/CH_MATCHTV/variant.m3u8
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-football1" ,Матч! Футбол 1
+http://31.148.5.241/Match_Football_1_HD/index.m3u8
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-football2" ,Матч! Футбол 2
+http://31.148.5.241/Match_Football_2_HD/index.m3u8
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-football3" ,Матч! Футбол 3
+http://31.148.5.241/Match_Football_3_HD/index.m3u8
+#EXTINF:-1  group-title="Спортивные"  tvg-id="eurosport1" ,Eurosport 1 HD
+http://31.148.5.241/Eurosport_1_HD/index.m3u8
+#EXTINF:-1  group-title="Спортивные"  tvg-id="eurosport2" ,Eurosport 2 HD
+http://31.148.5.241/Eurosport_2_HD/index.m3u8
+#EXTINF:-1  group-title="Спортивные"  tvg-id="match-premier" ,Матч Премьер
+http://185.23.80.23:8080/MATCH_PREMIER/index.m3u8
+#EXTINF:-1  group-title="Региональные"  tvg-id="nntv"  tvg-logo="https://app.playlistbox.com/icon/YgKnX27GlDPdkZGV3rMV6AOrqyjw9z1W.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ННТВ", ННТВ
+http://rt-vlg-nn-htlive.cdn.ngenix.net/hls/CH_R02_NNTV/variant.m3u8
+#EXTINF:-1  group-title="Региональные"  tvg-logo="https://krasnovosti.ru/online_tv/img/logo_channels/ntv.jpg"   tvg-name="НТВ (Мурманск)", НТВ (Мурманск)
+http://rt-nw-murm-htlive.cdn.ngenix.net/hls/CH_R03_OTT_NW_MURM_NTV/variant.m3u8
+#EXTINF:-1  group-title="Региональные"  tvg-id="nntv" ,ННТВ
+https://bl.rutube.ru/livestream/333f94ef9af118c0ac51006243053e07/index.m3u8?s=LXV_e4kB0fJOUw2C8cijDg&e=2067513328&scheme=https
+#EXTINF:-1  group-title="Региональные"  tvg-id="nntv" ,ННТВ
+https://bl.rutube.ru/livestream/333f94ef9af118c0ac51006243053e07/index.m3u8?s=jH-icQYHCGT0-N98caMj0w&e=2069285066&scheme=https
+#EXTINF:-1  group-title="Региональные" ,ННТВ SD
+https://bl.rutube.ru/livestream/333f94ef9af118c0ac51006243053e07/index.m3u8?s=QKJvjAHdCmOwvCYdKLFYLQ&e=2066519818&scheme=https
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="rentv-pl4"  tvg-logo="http://s1.hostingkartinok.com/uploads/images/2021/08/6900abad5b72092009961dfa20d42abc.png"   tvg-name="Рен ТВ (+4)", Рен ТВ (+4)
+http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV_4/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="pervy-mn1"  tvg-logo="https://krasnovosti.ru/online_tv/img/logo_channels/pervyi-kanal.jpg"   tvg-name="Первый канал (-1)", Первый канал (-1)
+http://rt-nw-klgr-htlive.cdn.ngenix.net/hls/CH_R03_1TV_KLNG/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="rentv-pl7"  tvg-logo="http://s1.hostingkartinok.com/uploads/images/2021/08/6900abad5b72092009961dfa20d42abc.png"   tvg-name="Рен ТВ (+7)", Рен ТВ (+7)
+http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV_7/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="match-arena"   tvg-name="Россия 1 (-1)", Россия 1 (-1)
+http://rt-nw-klgr-htlive.cdn.ngenix.net/hls/CH_R04_OTT_NW_KLGR_ROSSIA1/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="rossia1-pl7"   tvg-name="Россия 1 (+7)", Россия 1 (+7)
+http://s91030.cdn.ngenix.net/hls/CH_R25_OTT_DV_VLD_ROSSIA1/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="pervy-pl1"  tvg-logo="https://app.playlistbox.com/icon/5YDKwr2BqLzpgZeq7pZVW8J7GyvOXld6.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+1)", Первый канал (+1)
+https://rt-vlg-saratov-htlive.cdn.ngenix.net/hls/CH_R03_OTT_VLG_SARATOV_1TV/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="pervy-pl2"  tvg-logo="https://app.playlistbox.com/icon/5YDKwr2BqLzpgZeq7pZVW8J7GyvOXld6.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+2)", Первый канал (+2)
+https://rt-ural-ekt-htlive.cdn.ngenix.net/hls/CH_R03_OTT_1TV_EKT/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="pervy-pl3"  tvg-logo="https://app.playlistbox.com/icon/5YDKwr2BqLzpgZeq7pZVW8J7GyvOXld6.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+3)", Первый канал (+3)
+https://rt-sib-omsk-htlive.cdn.ngenix.net/hls/CH_R03_OTT_SIB_OMSK_1TV_OMSKOBL/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="pervy-pl4"  tvg-logo="http://epg.it999.ru/img/146.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+4)", Первый канал (+4)
+http://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD_4/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="pervy-pl5"  tvg-logo="https://app.playlistbox.com/icon/5YDKwr2BqLzpgZeq7pZVW8J7GyvOXld6.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+5)", Первый канал (+5)
+https://rt-sib-irk-htlive.cdn.ngenix.net/hls/CH_R03_OTT_SIB_IRK_1TV/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="pervy-pl6"  tvg-logo="http://epg.it999.ru/img/146.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+6)", Первый канал (+6)
+http://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD_6/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="pervy-pl7"  tvg-logo="http://epg.it999.ru/img/146.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+7)", Первый канал (+7)
+https://s91030.cdn.ngenix.net/hls/CH_R25_OTT_DV_VLD_1TV/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="pervy-pl8"  tvg-logo="http://epg.it999.ru/img/146.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+8)", Первый канал (+8)
+http://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD_8/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="ntv-pl2"  tvg-logo="https://app.playlistbox.com/icon/0B7b8PKO54QkGZ6p1qxNEqAYzmrVWyjg.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="НТВ (+2)", НТВ (+2)
+http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV_2/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="ntv-pl4"  tvg-logo="https://app.playlistbox.com/icon/0B7b8PKO54QkGZ6p1qxNEqAYzmrVWyjg.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="НТВ (+4)", НТВ (+4)
+http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV_4/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="ntv-pl7"  tvg-logo="https://app.playlistbox.com/icon/0B7b8PKO54QkGZ6p1qxNEqAYzmrVWyjg.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="НТВ (+7)", НТВ (+7)
+http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV_7/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="pervy-pl9"  tvg-logo="http://epg.it999.ru/img/146.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+9)", Первый канал (+9)
+https://s14131.cdn.ngenix.net/hls/CH_R41_OTT_DV_KAM_1TV/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="rentv-pl2"  tvg-logo="https://app.playlistbox.com/icon/Gl5gOW7dpJq9LRZAymZEkNQX2Bn6V1bA.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="РЕН ТВ (+2)", РЕН ТВ (+2)
+http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV_2/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="rossia1-pl1"  tvg-logo="https://app.playlistbox.com/icon/2q94OaJj6rD5gYx8V9Z1ELBXGWRzPQ0A.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (+1)", Россия 1 (+1)
+https://rt-vlg-saratov-htlive.cdn.ngenix.net/hls/CH_R04_OTT_VLG_SARATOV_ROSSIA1/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="rossia1-pl2"  tvg-logo="https://app.playlistbox.com/icon/2q94OaJj6rD5gYx8V9Z1ELBXGWRzPQ0A.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (+2)", Россия 1 (+2)
+https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1_2/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="rossia1-pl3"  tvg-logo="https://app.playlistbox.com/icon/2q94OaJj6rD5gYx8V9Z1ELBXGWRzPQ0A.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (+3)", Россия 1 (+3)
+https://rt-sib-omsk-htlive.cdn.ngenix.net/hls/CH_R04_OTT_SIB_OMSK_ROSSIA1_OMSKOBL/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="rossia1-pl4"  tvg-logo="https://app.playlistbox.com/icon/2q94OaJj6rD5gYx8V9Z1ELBXGWRzPQ0A.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (+4)", Россия 1 (+4)
+https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1_4/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="rossia1-pl5"  tvg-logo="https://app.playlistbox.com/icon/2q94OaJj6rD5gYx8V9Z1ELBXGWRzPQ0A.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (+5)", Россия 1 (+5)
+https://rt-sib-irk-htlive.cdn.ngenix.net/hls/CH_R04_OTT_SIB_IRK_ROSSIA1/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="rossia1-pl6"  tvg-logo="https://app.playlistbox.com/icon/2q94OaJj6rD5gYx8V9Z1ELBXGWRzPQ0A.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (+6)", Россия 1 (+6)
+https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1_7/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="rossia1-pl8"  tvg-logo="https://app.playlistbox.com/icon/2q94OaJj6rD5gYx8V9Z1ELBXGWRzPQ0A.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (+8)", Россия 1 (+8)
+https://s20441.cdn.ngenix.net/hls/CH_R49_OTT_DV_MGDN_ROSSIA1/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="rossia1-pl9"  tvg-logo="https://app.playlistbox.com/icon/2q94OaJj6rD5gYx8V9Z1ELBXGWRzPQ0A.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (+9)", Россия 1 (+9)
+https://s14131.cdn.ngenix.net/hls/CH_R41_OTT_DV_KAM_ROSSIA1/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="zvezda-pl2"  tvg-logo="https://app.playlistbox.com/icon/0B7b8PKO54QkGZ6pE5xNEqAYzmrVWyjg.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Звезда (+2)", Звезда (+2)
+http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA_2/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="zvezda-pl4"  tvg-logo="https://app.playlistbox.com/icon/0B7b8PKO54QkGZ6pE5xNEqAYzmrVWyjg.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Звезда (+4)", Звезда (+4)
+http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA_4/variant.m3u8
+#EXTINF:-1  group-title="Региoнальные плюс"  tvg-id="zvezda-pl7"  tvg-logo="https://app.playlistbox.com/icon/0B7b8PKO54QkGZ6pE5xNEqAYzmrVWyjg.png"   catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Звезда (+7)", Звезда (+7)
+http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA_7/variant.m3u8
+#EXTINF:-1 group-title="ТриК",Звезда HD
+http://live-stream-06.ott.tricolor.tv/live/live/zvezda_hd/hls_enc/zvezda_hd.m3u8?drmreq=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBfdHlwZSI6ImFwdHBfb3R0IiwiY2xhc3MiOiJCUk9XU0VSIiwiZHJlaWQiOiI1MjA0MDkwNTk0OTM0NSIsImV4cCI6MTc5NDk4OTM5OCwiaHdpZCI6ImYxY2I2OGZiZDVjMzI5NTA3ZGQ1ZjE2M2MzMjlkMjYyMDNhYmViZTc0M2YyOTc4ZmYwZDM2ZmRlMmJhMjE0ZGEiLCJsYXN0X3JlcV9kYXRlIjoxNzk0Mzg0NTk4LCJzZXNzaW9uX2lkIjoiNjc0ZDA0NGNkYWIxN2JjNzkxMzI0NzA1MTY5MGRjYzIiLCJ0b2tlbl90eXBlIjoiQ29udGVudEFjY2Vzc1Rva2VuIiwidHlwZSI6Ik1PWklMTEEifQ.vPABFI7k_OhDsUTSQaHCJGqt31qu2exgob8BQffhCS4
+#EXTINF:-1 group-title="ТриК",Матч! FHD
+http://live-mirror-01.ott.tricolor.tv/live/live/match/hls_enc/match-avc1_2000000=10004_mp4a_59200_rus=20000.m3u8?drmreq=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBfdHlwZSI6ImFwdHBfb3R0IiwiY2xhc3MiOiJCUk9XU0VSIiwiZHJlaWQiOiI1MjA0MDkwNTk0OTM0NSIsImV4cCI6MTc5NDk4OTM5OCwiaHdpZCI6ImYxY2I2OGZiZDVjMzI5NTA3ZGQ1ZjE2M2MzMjlkMjYyMDNhYmViZTc0M2YyOTc4ZmYwZDM2ZmRlMmJhMjE0ZGEiLCJsYXN0X3JlcV9kYXRlIjoxNzk0Mzg0NTk4LCJzZXNzaW9uX2lkIjoiNjc0ZDA0NGNkYWIxN2JjNzkxMzI0NzA1MTY5MGRjYzIiLCJ0b2tlbl90eXBlIjoiQ29udGVudEFjY2Vzc1Rva2VuIiwidHlwZSI6Ik1PWklMTEEifQ.vPABFI7k_OhDsUTSQaHCJGqt31qu2exgob8BQffhCS4
+#EXTINF:-1  group-title="Казахстан"  tvg-id="ntv-mir" ,НТВ-Мир
+https://fs.uplink.kz/ntv_mir/mono.m3u8?token=onlinetv2
+#EXTINF:-1  group-title="Казахстан"  tvg-id="rentv-int" ,Рен ТВ international
+https://fs.uplink.kz/ren/mono.m3u8?token=onlinetv2
+#EXTINF:-1  group-title="Казахстан"  tvg-id="zvezda" ,Звезда
+https://fs.uplink.kz/zvezda/mono.m3u8?token=onlinetv2
+#EXTINF:-1  group-title="Узбекистан"  tvg-id="pervy" ,Первый канал
+https://stream8.cinerama.uz/1019/tracks-v1a1/mono.m3u8
+#EXTINF:-1  group-title="Узбекистан"  tvg-id="ntv" ,НТВ
+https://stream8.cinerama.uz/1023/tracks-v1a1/mono.m3u8
+#EXTINF:-1  group-title="Узбекистан"  tvg-id="rossia1" ,Россия 1
+https://stream8.cinerama.uz/1020/tracks-v1a1/mono.m3u8
+#EXTINF:-1  group-title="Узбекистан"  tvg-id="zvezda" ,Звезда
+https://stream8.cinerama.uz/1050/tracks-v1a1/mono.m3u8
+#EXTINF:-1  group-title="Узбекистан"   audio-track="rus",Матч! Планета SD
+https://stream8.cinerama.uz/1243/tracks-v1a1/mono.m3u8
+#EXTINF:-1  group-title="Тестовые"  tvg-id="vip-premiere"   tvg-rec="7" timeshift="7",Viju+ Premiere
+http://stream.mcquack.net/202/index.m3u8
+#EXTINF:-1  group-title="Тестовые"  tvg-id="vip-megahit"   tvg-rec="7" timeshift="7",Viju+ Megahit
+http://stream.mcquack.net/200/index.m3u8
+#EXTINF:-1  group-title="Тестовые"  tvg-id="vip-comedy"   tvg-rec="7" timeshift="7",Viju+ Comedy
+http://stream.mcquack.net/201/index.m3u8
+#EXTINF:-1  group-title="Тестовые"  tvg-id="match-football1"   tvg-rec="7" timeshift="7",Матч! Футбол 1
+http://stream.mcquack.net/130/index.m3u8
+#EXTINF:-1  group-title="Тестовые"  tvg-id="match-football2"   tvg-rec="7" timeshift="7",Матч! Футбол 2
+http://stream.mcquack.net/142/index.m3u8
+#EXTINF:-1  group-title="Тестовые"  tvg-id="match-football3"   tvg-rec="7" timeshift="7",Матч! Футбол 3
+http://stream.mcquack.net/185/index.m3u8
+#EXTINF:-1  group-title="Тестовые"  tvg-id="match-igra"   tvg-rec="7" timeshift="7",Матч! Игра
+http://stream.mcquack.net/188/index.m3u8
+#EXTINF:-1  group-title="Тестовые"  tvg-id="match-nash-sport"   tvg-rec="7" timeshift="7",Матч! СТРАНА
+http://stream.mcquack.net/143/index.m3u8
+#EXTINF:-1  group-title="Тестовые"  tvg-id="match-arena"   tvg-rec="7" timeshift="7",Матч! Арена
+http://stream.mcquack.net/163/index.m3u8
+#EXTINF:-1  group-title="Тестовые"  tvg-id="match-tv"   tvg-rec="7" timeshift="7",Матч ТВ
+http://stream.mcquack.net/169/index.m3u8
+#EXTINF:-1  group-title="Тестовые"  tvg-id="match-boets"   tvg-rec="7" timeshift="7",Матч! Боец
+http://stream.mcquack.net/112/index.m3u8
+#EXTINF:-1  group-title="Тестовые"  tvg-id="match-premier"   tvg-rec="7" timeshift="7",Матч Премьер
+http://stream.mcquack.net/193/index.m3u8
