@@ -1,0 +1,2 @@
+http://stream.mcquack.net/stream.mcquack.net.m3u
+https://raw.githubusercontent.com/bormanulik/TV/refs/heads/main/list.m3u
