@@ -1,75 +1,112 @@
 #EXTM3U url-tvg="https://githubusercontent.com"
 #EXTINF:-1 group-title="Эфирные",НТВ Сериал
+#EXTGRP:Эфирные
 http://stream.mcquack.net/301/index.m3u8
 #EXTINF:-1 tvg-id="pervy" tvg-logo="https://krasnovosti.ru/online_tv/img/logo_channels/pervyi-kanal.jpg" group-title="Эфирные",Первый канал
+#EXTGRP:Эфирные
 http://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD/variant.m3u8
 #EXTINF:-1 tvg-id="rossia1" tvg-logo="https://app.playlistbox.com/icon/2q94OaJj6rD5gYx8V9Z1ELBXGWRzPQ0A.png" group-title="Эфирные",Россия 1
+#EXTGRP:Эфирные
 https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1/variant.m3u8
-#EXTINF:-1 tvg-id="ntv" tvg-logo="https://app.playlistbox.com/icon/vQ97O6Vp54NE2yxmJqMLKe3Pjln8qJAm.png" group-title="Эфирные",НТВ (2)
+#EXTINF:-1 tvg-id="ntv" tvg-logo="https://app.playlistbox.com/icon/vQ97O6Vp54NE2yxmJqMLKe3Pjln8qJAm.png" group-title="Эфирные",НТВ
+#EXTGRP:Эфирные
 http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV/variant.m3u8
 #EXTINF:-1 tvg-id="rentv" tvg-logo="http://s1.hostingkartinok.com/uploads/images/2021/08/6900abad5b72092009961dfa20d42abc.png" group-title="Эфирные",Рен ТВ
+#EXTGRP:Эфирные
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV/variant.m3u8
 #EXTINF:-1 tvg-id="zvezda" tvg-logo="https://app.playlistbox.com/icon/yWKm9lLEGakqPMQNpzZBOnNdRr06XV32.png" group-title="Эфирные",Звезда
+#EXTGRP:Эфирные
 http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA/variant.m3u8
-#EXTINF:-1 tvg-id="zvezda" group-title="Эфирные",Звезда HD (2)
+#EXTINF:-1 tvg-id="zvezda" group-title="Эфирные",Звезда HD
+#EXTGRP:Эфирные
 https://tvchannelstream1.tvzvezda.ru/cdn/tvzvezda/playlist_hdhigh.m3u8
-#EXTINF:-1 tvg-id="pervy" group-title="Эфирные",Первый канал HD (2)
+#EXTINF:-1 tvg-id="pervy" group-title="Эфирные",Первый канал HD
+#EXTGRP:Эфирные
 https://bl.rutube.ru/livestream/c58f502c7bb34a8fcdd976b221fca292/index.m3u8?s=F9b_Ghaws4dMiwK1Txx5Dw&e=2067513304&scheme=https
-#EXTINF:-1 tvg-id="ntv" group-title="Эфирные",НТВ HD (3)
+#EXTINF:-1 tvg-id="ntv" group-title="Эфирные",НТВ HD
+#EXTGRP:Эфирные
 https://bl.rutube.ru/livestream/c37cd74192c6bc3d6cd6077c0c4fd686/index.m3u8?s=-6hRlx-KnLcf8CcxeehXmg&e=2067513304&scheme=https
-#EXTINF:-1 tvg-id="zvezda" group-title="Эфирные",Звезда HD (3)
+#EXTINF:-1 tvg-id="zvezda" group-title="Эфирные",Звезда HD (2)
+#EXTGRP:Эфирные
 http://tvchannelstream1.tvzvezda.ru/cdn/tvzvezda/playlist_hdhigh.m3u8
 #EXTINF:-1 tvg-id="rossia1" group-title="Эфирные",Россия 1 (2)
+#EXTGRP:Эфирные
 https://flussonic.mkpnet.ru/tv-d696bdfd6a0e4373/video.m3u8
 #EXTINF:-1 tvg-id="rentv" group-title="Эфирные",Рен ТВ (2)
+#EXTGRP:Эфирные
 https://flussonic.mkpnet.ru/tv-44dfec2799c5738e/video.m3u8
-#EXTINF:-1 tvg-id="pervy" group-title="Эфирные",Первый канал (3)
+#EXTINF:-1 tvg-id="pervy" group-title="Эфирные",Первый канал (2)
+#EXTGRP:Эфирные
 https://flussonic.mkpnet.ru/tv-4f9598ab5f91dca4/video.m3u8
 #EXTINF:-1 tvg-id="rossia1" group-title="Эфирные",Россия 1 (3)
+#EXTGRP:Эфирные
 https://flussonic.mkpnet.ru/tv-d696bdfd6a0e4373/video.m3u8
-#EXTINF:-1 tvg-id="zvezda" group-title="Эфирные",ЗВЕЗДА HD (4)
+#EXTINF:-1 tvg-id="zvezda" group-title="Эфирные",ЗВЕЗДА HD (3)
+#EXTGRP:Эфирные
 https://bl.rutube.ru/livestream/5ab908fccfac5bb43ef2b1e4182256b0/index.m3u8?s=hXjqQZCnC74PCA0_2_CX-A&e=2066519791&scheme=https
-#EXTINF:-1 tvg-id="ntv" group-title="Эфирные",НТВ HD (4)
+#EXTINF:-1 tvg-id="ntv" group-title="Эфирные",НТВ HD (2)
+#EXTGRP:Эфирные
 https://bl.rutube.ru/livestream/c37cd74192c6bc3d6cd6077c0c4fd686/index.m3u8?s=KRpRtdju100oOaCoxpKyPg&e=2066519750&scheme=https
-#EXTINF:-1 group-title="Эфирные",ПЕРВЫЙ КАНАЛ SD (4)
+#EXTINF:-1 group-title="Эфирные",ПЕРВЫЙ КАНАЛ SD
+#EXTGRP:Эфирные
 https://bl.rutube.ru/livestream/c58f502c7bb34a8fcdd976b221fca292/index.m3u8?s=RRyK9h1rVwc4QOrY4h721g&e=2066519749&scheme=https
 #EXTINF:-1 tvg-id="rentv" group-title="Эфирные",Рен ТВ (3)
+#EXTGRP:Эфирные
 http://185.23.80.23:8080/REN/index.m3u8
 #EXTINF:-1 tvg-id="rentv" group-title="Эфирные",Рен ТВ (4)
+#EXTGRP:Эфирные
 http://31.131.141.195:8000/play/2010/index.m3u8
 #EXTINF:-1 tvg-id="rossia1" group-title="Эфирные",Россия 1 (4)
+#EXTGRP:Эфирные
 http://31.131.141.195:8000/play/1020/index.m3u8
 #EXTINF:-1 tvg-id="zvezda-plus" group-title="Эфирные",Звезда Плюс
+#EXTGRP:Эфирные
 http://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="zvezda-plus" group-title="Эфирные",Звезда Плюс (2)
+#EXTGRP:Эфирные
 http://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/tracks-v2a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Спортивные",Матч! Футбол 1
+#EXTGRP:Спортивные
 http://stream.mcquack.net/130/index.m3u8
-#EXTINF:-1 group-title="Спортивные",Матч! Футбол 2 (2)
+#EXTINF:-1 group-title="Спортивные",Матч! Футбол 2
+#EXTGRP:Спортивные
 http://stream.mcquack.net/142/index.m3u8
-#EXTINF:-1 group-title="Спортивные",Матч! Футбол 3 (3)
+#EXTINF:-1 group-title="Спортивные",Матч! Футбол 3
+#EXTGRP:Спортивные
 http://stream.mcquack.net/185/index.m3u8
-#EXTINF:-1 group-title="Спортивные",Матч! Игра (4)
+#EXTINF:-1 group-title="Спортивные",Матч! Игра
+#EXTGRP:Спортивные
 http://stream.mcquack.net/188/index.m3u8
 #EXTINF:-1 tvg-id="eurosport1" group-title="Спортивные",Eurosport 1 HD
+#EXTGRP:Спортивные
 http://195.64.140.147:10114/114
 #EXTINF:-1 tvg-id="eurosport2" group-title="Спортивные",Eurosport 2 HD
+#EXTGRP:Спортивные
 http://195.64.140.147:10115/115
 #EXTINF:-1 tvg-id="eurosport1" group-title="Спортивные",Eurosport 1 HD (2)
+#EXTGRP:Спортивные
 http://31.148.5.241/Eurosport_1_HD/index.m3u8
 #EXTINF:-1 tvg-id="eurosport2" group-title="Спортивные",Eurosport 2 HD (2)
+#EXTGRP:Спортивные
 http://31.148.5.241/Eurosport_2_HD/index.m3u8
 #EXTINF:-1 group-title="Кино и сериалы",Viju+ Premiere
+#EXTGRP:Кино и сериалы
 http://stream.mcquack.net/202/index.m3u8
 #EXTINF:-1 group-title="Кино и сериалы",Viju+ Megahit
+#EXTGRP:Кино и сериалы
 http://stream.mcquack.net/200/index.m3u8
 #EXTINF:-1 group-title="Кино и сериалы",Viju+ Comedy
+#EXTGRP:Кино и сериалы
 http://stream.mcquack.net/201/index.m3u8
 #EXTINF:-1 tvg-id="vip-premiere" group-title="Кино и сериалы",viju+ premiere (2)
+#EXTGRP:Кино и сериалы
 https://flussonic.mkpnet.ru/tv-e107d21a90cb808f/video.m3u8
 #EXTINF:-1 tvg-id="vip-premiere" group-title="Кино и сериалы",Viju+ Premiere (3)
+#EXTGRP:Кино и сериалы
 http://stream.mcquack.net/202/index.m3u8
 #EXTINF:-1 tvg-id="vip-megahit" group-title="Кино и сериалы",Viju+ Megahit (2)
+#EXTGRP:Кино и сериалы
 http://stream.mcquack.net/200/index.m3u8
 #EXTINF:-1 tvg-id="vip-comedy" group-title="Кино и сериалы",Viju+ Comedy (2)
+#EXTGRP:Кино и сериалы
 http://stream.mcquack.net/201/index.m3u8
