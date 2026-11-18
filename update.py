@@ -4,7 +4,7 @@ import re
 
 USER_AGENT = "Mozilla/5.0"
 TIMEOUT = 6
-MAX_STREAMS_PER_CHANNEL = 4
+MAX_STREAMS_PER_CHANNEL = 3
 
 def read_sources(filename):
     with open(filename, "r", encoding="utf-8") as f:
@@ -91,7 +91,7 @@ def main():
                     valid_by_group.setdefault(grp, []).append((clean_info, grp, url))
 
     with open("my_playlist.m3u", "w", encoding="utf-8") as out:
-        out.write('#EXTM3U url-tvg="https://githubusercontent.com"\n')
+        out.write('#EXTM3U url-tvg="https://raw.githubusercontent.com/Lorax121/epg_v2/main/data/epg2.xml.gz"\n')
         for _, grp in wanted_list:
             if grp in valid_by_group:
                 for info, group_name, url in valid_by_group.pop(grp):
@@ -101,6 +101,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
