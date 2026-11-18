@@ -27,6 +27,11 @@ def read_grouped_channels(filename):
 def has_timezone_shift(name):
     return bool(re.search(r'[\s\(\[][\+\-]\d{1,2}[\)\]]?\b', name))
 
+def is_channel_match(wanted, channel_name):
+    # Ищем совпадение только по границам слов, чтобы "мир" не цеплял "в мире животных"
+    pattern = r'(?:^|[^а-яёa-z0-9])' + re.escape(wanted) + r'(?:$|[^а-яёa-z0-9])'
+    return bool(re.search(pattern, channel_name))
+
 def check_stream(item):
     key, group, info, url = item
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
@@ -59,7 +64,7 @@ def main():
                     if not has_timezone_shift(raw_name):
                         name_lower = raw_name.lower()
                         for w, grp in wanted_list:
-                            if w in name_lower:
+                            if is_channel_match(w, name_lower):
                                 candidates.append((w, grp, current_info, line))
                                 break
                     current_info = ""
@@ -91,7 +96,7 @@ def main():
                     valid_by_group.setdefault(grp, []).append((clean_info, grp, url))
 
     with open("my_playlist.m3u", "w", encoding="utf-8") as out:
-        out.write('#EXTM3U url-tvg="https://raw.githubusercontent.com/Lorax121/epg_v2/main/data/epg2.xml.gz"\n')
+        out.write('#EXTM3U url-tvg="https://githubusercontent.com"\n')
         for _, grp in wanted_list:
             if grp in valid_by_group:
                 for info, group_name, url in valid_by_group.pop(grp):
@@ -101,6 +106,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
