@@ -14,13 +14,17 @@
 [Спортивные]
 Матч! Премьер
 Матч
+Беларусь 5
 Megogo Спорт
-Спорт
+Setanta Sports 1
+Setanta Sports 2
+Viju+ Sport
 Окко Футбол
 Окко Прайм Спорт
 Окко Спорт
 Eurosport 1
 Eurosport 2
+BOX SportCast
 [Кино и сериалы]
 Viju+ Premiere
 Viju+ Megahit
@@ -78,6 +82,31 @@ BCU Catastrophe
 BCU Fantastic
 BCU Kinorating
 BCU VHS HDR
+CineMan
+CineMan Top
+CineMan Premium
+CineMan Action
+CineMan Thriller
+CineMan Катастрофы
+CineMan Ужасы
+MM Роскино
+MM NewFilm RU
+MM USSR Комедия
+MM USSR Приключения
+MM Комедия Classic
+MM Комедия
+MM Боевик Classic
+MM Боевик
+MM Триллер
+MM NewFilm 1
+MM NewFilm 2
+MM NewFilm 3
+MM Катастрофа
+MM Погружение
+MM Приключения
+MM Фантастика
+MM UFO
+MM Ужасы
 [Познавательные]
 Z!Travel
 Z!Science
