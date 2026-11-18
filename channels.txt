@@ -6,6 +6,8 @@
 Звезда Плюс
 Звезда
 Мосфильм.Золотая коллекция
+Мосфильм. Золотая коллекция
+Мосфильм
 Арсенал
 Мир
 Санкт-Петербург
@@ -61,7 +63,7 @@ Z!Adventure
 Z!Detective
 Z!Fantastic
 VeleS 60fps
-VeleS Киноплёнкa
+VeleS Киноплёнка
 VeleS Premiere
 VeleS Страшное
 VeleS СССР
