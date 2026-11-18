@@ -1,4 +1,4 @@
-#EXTM3U url-tvg="https://githubusercontent.com"
+#EXTM3U url-tvg="https://githubusercontent.com/Lorax121/epg_v2/main/data/epg2.xml.gz"
 #EXTINF:-1 group-title="Эфирные",НТВ Сериал
 #EXTGRP:Эфирные
 http://stream.mcquack.net/301/index.m3u8
@@ -113,6 +113,9 @@ http://195.64.140.147:10115/115
 #EXTINF:-1 tvg-id="match-premier" group-title="Спортивные",МАТЧ! Премьер (2)
 #EXTGRP:Спортивные
 https://flussonic.mkpnet.ru/tv-ee3651e1e7ce5cbf/video.m3u8
+#EXTINF:-1 tvg-id="okko-football" tvg-logo="http://epg.one/img2/9325.png" group-title="Спортивные",Окко Футбол
+#EXTGRP:Спортивные
+http://uhugktfh.megogo.xyz/iptv/BV4SSQ9PRKF2CW/6554/index.m3u8
 #EXTINF:-1 tvg-id="sportivny" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/тв_спорт_logo.png" group-title="Спортивные",ТВ Спорт
 #EXTGRP:Спортивные
 http://live-3.otcnet.ru/sportivny/tracks-v1a1/mono.ts.m3u8
@@ -392,9 +395,24 @@ http://dda3aa01fc.edemist.com/iptv/KSKRCX75EL4VFTSHWYUKQUGB/11027/index.m3u8
 #EXTINF:-1 tvg-id="bcu-catastrophe" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/bcu_catastrophe_logo.png" group-title="Кинозалы",BCU Catastrophe
 #EXTGRP:Кинозалы
 http://dda3aa01fc.edemist.com/iptv/KSKRCX75EL4VFTSHWYUKQUGB/11028/index.m3u8
+#EXTINF:-1 tvg-id="bcu-comedy" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/bcu_comedy_logo.png" group-title="Кинозалы",BCU Comedy
+#EXTGRP:Кинозалы
+http://uhugktfh.megogo.xyz/iptv/BV4SSQ9PRKF2CW/15026/index.m3u8
 #EXTINF:-1 tvg-id="bcu-fantastic" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/bcu_fantastic_logo.png" group-title="Кинозалы",BCU Fantastic
 #EXTGRP:Кинозалы
 http://dda3aa01fc.edemist.com/iptv/KSKRCX75EL4VFTSHWYUKQUGB/11032/index.m3u8
+#EXTINF:-1 tvg-id="bcu-kinorating" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/bcu_kinorating_logo.png" group-title="Кинозалы",BCU Kinorating
+#EXTGRP:Кинозалы
+http://ztf5jtil.zyntras.top/iptv/KLEYQYC7TPZ8G7W822WQCXNQ/11037/index.m3u8
+#EXTINF:-1 tvg-id="bcu-premiere" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/bcu_premiere_logo.png" group-title="Кинозалы",BCU Premiere
+#EXTGRP:Кинозалы
+http://ztf5jtil.zyntras.top/iptv/KLEYQYC7TPZ8G7W822WQCXNQ/11039/index.m3u8
+#EXTINF:-1 tvg-id="bcu-kinozal-prem-1" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/bcu_premiere_logo.png" group-title="Кинозалы",BCU Premiere 1
+#EXTGRP:Кинозалы
+http://185.221.213.254/live/stream112.php?q=h0c5Eyuek0CppzJQmzPiyBmI9DfhNnGVuNxzdYNOfd-NZXVzxn-5nG-V_i8HN8fOHDMhpQUP31GPikt5E7L5N2gbMfUg1vF3N-45eo-mwmo
+#EXTINF:-1 tvg-id="bcu-kinozal-prem-2" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/bcu_premiere_logo.png" group-title="Кинозалы",BCU Premiere 2
+#EXTGRP:Кинозалы
+http://ztf5jtil.zyntras.top/iptv/KLEYQYC7TPZ8G7W822WQCXNQ/11016/index.m3u8
 #EXTINF:-1 tvg-id="bcu-russian" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/bcu_russian_logo.png" group-title="Кинозалы",BCU Russian
 #EXTGRP:Кинозалы
 http://dda3aa01fc.edemist.com/iptv/KSKRCX75EL4VFTSHWYUKQUGB/11041/index.m3u8
