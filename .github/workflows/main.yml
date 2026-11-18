@@ -1,8 +1,24 @@
-on: {workflow_dispatch: {}, schedule: [{cron: '0 3 * * *'}]}
+name: Update IPTV Playlist
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 */6 * * *'
+
+permissions:
+  contents: write
+
 jobs:
-  b:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python3 update.py && git config user.name b && git config user.email b@b && git add my_playlist.m3u && (git commit -m u || exit 0) && git push
+      - run: |
+          python3 update.py
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add my_playlist.m3u
+          git commit -m "Update playlist" || exit 0
+          git push
+
 
