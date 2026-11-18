@@ -28,7 +28,6 @@ def has_timezone_shift(name):
     return bool(re.search(r'[\s\(\[][\+\-]\d{1,2}[\)\]]?\b', name))
 
 def is_channel_match(wanted, channel_name):
-    # Ищем совпадение только по границам слов, чтобы "мир" не цеплял "в мире животных"
     pattern = r'(?:^|[^а-яёa-z0-9])' + re.escape(wanted) + r'(?:$|[^а-яёa-z0-9])'
     return bool(re.search(pattern, channel_name))
 
@@ -106,6 +105,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
