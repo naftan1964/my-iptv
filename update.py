@@ -81,10 +81,14 @@ def get_quality_score(name):
 def check_stream(item):
     idx, key, group, info, url = item
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    start = time.time()
     try:
         with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
             if resp.status == 200:
-                return (idx, key, group, info, url)
+                chunk = resp.read(512)
+                if chunk and not chunk.lstrip().lower().startswith((b"<!doctype", b"<html")):
+                    ping = time.time() - start
+                    return (idx, key, group, info, url, ping)
     except Exception:
         pass
     return None
