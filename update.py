@@ -114,7 +114,15 @@ def main():
                     current_info = line
                 elif line.startswith("http") and current_info:
                     raw_name = current_info.split(",")[-1].strip()
-                    if not has_timezone_shift(raw_name):
+                                    elif line.startswith("http") and current_info:
+                    raw_name = current_info.split(",")[-1].strip()
+                    if not has_timezone_shift(raw_name) and not is_unsupported_format(raw_name):
+                        name_lower = raw_name.lower()
+                        for idx, (w, grp) in enumerate(wanted_list):
+                            if is_channel_match(w, name_lower):
+                                candidates.append((idx, w, grp, current_info, line))
+                                break
+
                         name_lower = raw_name.lower()
                         for idx, (w, grp) in enumerate(wanted_list):
                             if is_channel_match(w, name_lower):
