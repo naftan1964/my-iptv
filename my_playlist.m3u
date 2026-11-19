@@ -8,40 +8,40 @@ https://bl.rutube.ru/livestream/c37cd74192c6bc3d6cd6077c0c4fd686/index.m3u8?s=KR
 #EXTINF:-1 tvg-id="ntv" group-title="Эфирные",НТВ HD (3)
 #EXTGRP:Эфирные
 https://bl.rutube.ru/livestream/c37cd74192c6bc3d6cd6077c0c4fd686/index.m3u8?s=igQsAY6jjMrZlDidg-nMDA&e=2069285048&scheme=https
-#EXTINF:-1 group-title="Эфирные",Россия 1 HD
+#EXTINF:-1 tvg-id="rossia1" tvg-logo="https://app.playlistbox.com/icon/2q94OaJj6rD5gYx8V9Z1ELBXGWRzPQ0A.png" group-title="Эфирные",Россия 1 HD
 #EXTGRP:Эфирные
 https://live.smotrim.ru/vgtrk/0/russia1-hd/1080p.m3u8
+#EXTINF:-1 tvg-id="rossia1" tvg-logo="https://app.playlistbox.com/icon/2q94OaJj6rD5gYx8V9Z1ELBXGWRzPQ0A.png" group-title="Эфирные",Россия 1 HD (2)
+#EXTGRP:Эфирные
+http://tv.ttk.mx:9075
 #EXTINF:-1 tvg-id="rossia1" tvg-logo="https://app.playlistbox.com/icon/2q94OaJj6rD5gYx8V9Z1ELBXGWRzPQ0A.png" group-title="Эфирные",Россия 1
 #EXTGRP:Эфирные
 https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1/variant.m3u8
-#EXTINF:-1 tvg-id="rossia1" group-title="Эфирные",Россия 1 (2)
-#EXTGRP:Эфирные
-https://flussonic.mkpnet.ru/tv-d696bdfd6a0e4373/video.m3u8
 #EXTINF:-1 tvg-id="pervy" group-title="Эфирные",Первый канал HD
 #EXTGRP:Эфирные
 https://bl.rutube.ru/livestream/c58f502c7bb34a8fcdd976b221fca292/index.m3u8?s=F9b_Ghaws4dMiwK1Txx5Dw&e=2067513304&scheme=https
 #EXTINF:-1 tvg-id="pervy" group-title="Эфирные",Первый канал HD (2)
 #EXTGRP:Эфирные
 https://bl.rutube.ru/livestream/c58f502c7bb34a8fcdd976b221fca292/index.m3u8?s=cdEX_MDZxQc2DELRdY3CwQ&e=2069285048&scheme=https
-#EXTINF:-1 group-title="Эфирные",Первый канал HD (3)
+#EXTINF:-1 tvg-id="pervy" group-title="Эфирные",Первый канал HD (3)
 #EXTGRP:Эфирные
 https://edge04.1internet.tv/dash-live3/streams/1tv-dvr/1tvdash.mpd
-#EXTINF:-1 group-title="Эфирные",Рен ТВ HD
+#EXTINF:-1 tvg-id="rentv" tvg-logo="http://s1.hostingkartinok.com/uploads/images/2021/08/6900abad5b72092009961dfa20d42abc.png" group-title="Эфирные",Рен ТВ HD
 #EXTGRP:Эфирные
 http://185.76.10.53:8080/srv5/ren_tv_hd/tracks-v1a1/mono.m3u8?cid=144&did=5366158&m=1&rid=24397&token=2022b6576a65c40ede42a7d4941b5471
 #EXTINF:-1 tvg-id="rentv" tvg-logo="http://s1.hostingkartinok.com/uploads/images/2021/08/6900abad5b72092009961dfa20d42abc.png" group-title="Эфирные",Рен ТВ
 #EXTGRP:Эфирные
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV/variant.m3u8
-#EXTINF:-1 tvg-id="rentv" group-title="Эфирные",Рен ТВ (2)
+#EXTINF:-1 tvg-id="rentv" tvg-logo="http://s1.hostingkartinok.com/uploads/images/2021/08/6900abad5b72092009961dfa20d42abc.png" group-title="Эфирные",Рен ТВ (2)
 #EXTGRP:Эфирные
 https://flussonic.mkpnet.ru/tv-44dfec2799c5738e/video.m3u8
-#EXTINF:-1 tvg-id="zvezda-plus" group-title="Эфирные",Звезда Плюс
+#EXTINF:-1 tvg-id="zvezda-plus" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/звезда_плюс.png" group-title="Эфирные",Звезда Плюс
 #EXTGRP:Эфирные
 http://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="zvezda-plus" group-title="Эфирные",Звезда Плюс (2)
+#EXTINF:-1 tvg-id="zvezda-plus" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/звезда_плюс.png" group-title="Эфирные",Звезда Плюс (2)
 #EXTGRP:Эфирные
 http://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/tracks-v2a1/mono.ts.m3u8
-#EXTINF:-1 tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/звезда_плюс.png" group-title="Эфирные",Звезда плюс (3)
+#EXTINF:-1 tvg-id="zvezda-plus" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/звезда_плюс.png" group-title="Эфирные",Звезда плюс (3)
 #EXTGRP:Эфирные
 http://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/playlist.m3u8
 #EXTINF:-1 tvg-id="zvezda" group-title="Эфирные",Звезда HD
@@ -53,7 +53,7 @@ http://tvchannelstream1.tvzvezda.ru/cdn/tvzvezda/playlist_hdhigh.m3u8
 #EXTINF:-1 tvg-id="zvezda" group-title="Эфирные",ЗВЕЗДА HD (3)
 #EXTGRP:Эфирные
 https://bl.rutube.ru/livestream/5ab908fccfac5bb43ef2b1e4182256b0/index.m3u8?s=hXjqQZCnC74PCA0_2_CX-A&e=2066519791&scheme=https
-#EXTINF:-1 group-title="Эфирные",Мосфильм. Золотая коллекция
+#EXTINF:-1 tvg-id="mosfilm" group-title="Эфирные",Мосфильм. Золотая коллекция
 #EXTGRP:Эфирные
 http://stream.mcquack.net/369/index.m3u8
 #EXTINF:-1 tvg-id="mosfilm" group-title="Эфирные",Мосфильм. Золотая коллекция (2)
@@ -68,7 +68,7 @@ http://195.64.140.147:10157/157
 #EXTINF:-1 tvg-id="arsenaltv" group-title="Эфирные",Арсенал HD (2)
 #EXTGRP:Эфирные
 https://stream8.cinerama.uz/1414/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Эфирные",Арсенал HD (3)
+#EXTINF:-1 tvg-id="arsenaltv" group-title="Эфирные",Арсенал HD (3)
 #EXTGRP:Эфирные
 http://195.64.140.147:10157/157
 #EXTINF:-1 tvg-id="mir-premium" tvg-logo="https://www.oreol.tv/img/mirpremium1.jpg" group-title="Эфирные",Мир Premium HD
@@ -77,19 +77,19 @@ http://hls.mirtv.cdnvideo.ru/mirtv-parampublish/mirtv_2500/playlist.m3u8
 #EXTINF:-1 tvg-id="mir-24" tvg-logo="https://iptvx.one/picons/mir24.png" group-title="Эфирные",Мир 24 HD
 #EXTGRP:Эфирные
 http://hls.mirtv.cdnvideo.ru/mirtv-parampublish/mir24_2500/playlist.m3u8
-#EXTINF:-1 group-title="Эфирные",МИР 24 HD (2)
+#EXTINF:-1 tvg-id="mir-premium" tvg-logo="https://www.oreol.tv/img/mirpremium1.jpg" group-title="Эфирные",МИР 24 HD (2)
 #EXTGRP:Эфирные
 https://bl.rutube.ru/livestream/43269ba8fb179e298b1e497f557e8d2d/index.m3u8?s=lswkUz3NQQHnD-a8WTcTEw&e=2066519806&scheme=https
-#EXTINF:-1 tvg-logo="https://runigma.com.ua/EPG/png/360e/1_0_16_721_12_70_1680000_0_0_0.png" group-title="Эфирные",Санкт-Петербург HD
+#EXTINF:-1 tvg-id="sankt-peterburg" tvg-logo="https://runigma.com.ua/EPG/png/360e/1_0_16_721_12_70_1680000_0_0_0.png" group-title="Эфирные",Санкт-Петербург HD
 #EXTGRP:Эфирные
 http://rt-nw-spb-htlive.cdn.ngenix.net/hls/CH_R02_SPBREGIONALHD/variant.m3u8
-#EXTINF:-1 tvg-id="sankt-peterburg" group-title="Эфирные",Санкт-Петербург
+#EXTINF:-1 tvg-id="sankt-peterburg" tvg-logo="https://runigma.com.ua/EPG/png/360e/1_0_16_721_12_70_1680000_0_0_0.png" group-title="Эфирные",Санкт-Петербург
 #EXTGRP:Эфирные
 http://195.64.140.147:10186/186
 #EXTINF:-1 tvg-id="sankt-peterburg" tvg-logo="https://app.playlistbox.com/icon/j5YDKwr2BqLzpgZewpxVW8J7GyvOXld6.png" group-title="Эфирные",Санкт-Петербург (2)
 #EXTGRP:Эфирные
 https://rt-nw-spb-htlive.cdn.ngenix.net/hls/CH_R02_SPBREGIONALHD/variant.m3u8
-#EXTINF:-1 group-title="Спортивные",Матч! Премьер HD
+#EXTINF:-1 tvg-id="match-premier" group-title="Спортивные",Матч! Премьер HD
 #EXTGRP:Спортивные
 http://195.64.140.147:10103/99103
 #EXTINF:-1 tvg-id="match-premier" group-title="Спортивные",Матч! Премьер
@@ -107,52 +107,49 @@ http://195.64.140.147:10100/100
 #EXTINF:-1 tvg-id="match-football2" group-title="Спортивные",Матч Футбол 2 HD
 #EXTGRP:Спортивные
 http://195.64.140.147:10101/101
-#EXTINF:-1 group-title="Спортивные",Беларусь 5 Интернет HD
+#EXTINF:-1 tvg-id="belarus5" tvg-logo="https://iptvx.one/picons/belarus5hd.png" group-title="Спортивные",Беларусь 5 Интернет HD
 #EXTGRP:Спортивные
 https://ngtrk.dc.beltelecom.by/ngtrk/smil:belarus5/playlist.m3u8
 #EXTINF:-1 tvg-id="belarus5" tvg-logo="https://iptvx.one/picons/belarus5hd.png" group-title="Спортивные",Беларусь 5 HD
 #EXTGRP:Спортивные
 https://ngtrk.dc.beltelecom.by/ngtrk/_definst_/smil:belarus5/playlist.m3u8
-#EXTINF:-1 group-title="Спортивные",Беларусь 5
+#EXTINF:-1 tvg-id="belarus5" tvg-logo="https://iptvx.one/picons/belarus5hd.png" group-title="Спортивные",Беларусь 5
 #EXTGRP:Спортивные
 http://stream.mcquack.net/33/index.m3u8
-#EXTINF:-1 group-title="Спортивные",Setanta Sports 1 HD
+#EXTINF:-1 tvg-id="setanta-sports" group-title="Спортивные",Setanta Sports 1 HD
 #EXTGRP:Спортивные
 https://stream8.cinerama.uz/1263/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Спортивные",Setanta Sports 1
+#EXTINF:-1 tvg-id="setanta-sports" group-title="Спортивные",Setanta Sports 1
 #EXTGRP:Спортивные
 http://stream.mcquack.net/234/index.m3u8
 #EXTINF:-1 tvg-id="setanta-sports" group-title="Спортивные",Setanta Sports 1 (2)
 #EXTGRP:Спортивные
 http://stream.mcquack.net/234/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 group-title="Спортивные",Setanta Sports 2 HD
+#EXTINF:-1 tvg-id="setanta-sports-plus" group-title="Спортивные",Setanta Sports 2 HD
 #EXTGRP:Спортивные
 https://stream8.cinerama.uz/1264/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Спортивные",Setanta Sports 2
+#EXTINF:-1 tvg-id="setanta-sports-plus" group-title="Спортивные",Setanta Sports 2
 #EXTGRP:Спортивные
 http://stream.mcquack.net/235/index.m3u8
 #EXTINF:-1 tvg-id="setanta-sports-plus" group-title="Спортивные",Setanta Sports 2 (2)
 #EXTGRP:Спортивные
 http://stream.mcquack.net/235/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 group-title="Спортивные",Viju+ Sport
+#EXTINF:-1 tvg-id="viasat-sport" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/viju_плюс_sport.png" group-title="Спортивные",Viju+ Sport
 #EXTGRP:Спортивные
 http://stream.mcquack.net/333/index.m3u8
-#EXTINF:-1 tvg-id="viasat-sport" group-title="Спортивные",Viju+ Sport (2)
+#EXTINF:-1 tvg-id="viasat-sport" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/viju_плюс_sport.png" group-title="Спортивные",Viju+ Sport (2)
 #EXTGRP:Спортивные
 http://stream.mcquack.net/333/index.m3u8
 #EXTINF:-1 tvg-id="viasat-sport" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/viju_плюс_sport.png" group-title="Спортивные",Viju+ Sport (3)
 #EXTGRP:Спортивные
 http://178.134.1.158:8081/viasatsport/index.m3u8
-#EXTINF:-1 tvg-id="okko-football" tvg-logo="http://epg.one/img2/9325.png" group-title="Спортивные",Окко Футбол
-#EXTGRP:Спортивные
-http://uhugktfh.megogo.xyz/iptv/BV4SSQ9PRKF2CW/6554/index.m3u8
 #EXTINF:-1 tvg-id="eurosport1" group-title="Спортивные",Eurosport 1 HD
 #EXTGRP:Спортивные
 http://195.64.140.147:10114/114
 #EXTINF:-1 tvg-id="eurosport1" group-title="Спортивные",Eurosport 1 HD (2)
 #EXTGRP:Спортивные
 http://31.148.5.241/Eurosport_1_HD/index.m3u8
-#EXTINF:-1 group-title="Спортивные",Eurosport 1 HD (3)
+#EXTINF:-1 tvg-id="eurosport1" group-title="Спортивные",Eurosport 1 HD (3)
 #EXTGRP:Спортивные
 http://31.148.5.241/Eurosport_1_HD/index.m3u8
 #EXTINF:-1 tvg-id="eurosport2" group-title="Спортивные",Eurosport 2 HD
@@ -161,10 +158,10 @@ http://195.64.140.147:10115/115
 #EXTINF:-1 tvg-id="eurosport2" group-title="Спортивные",Eurosport 2 HD (2)
 #EXTGRP:Спортивные
 http://31.148.5.241/Eurosport_2_HD/index.m3u8
-#EXTINF:-1 group-title="Спортивные",Eurosport 2 HD (3)
+#EXTINF:-1 tvg-id="eurosport2" group-title="Спортивные",Eurosport 2 HD (3)
 #EXTGRP:Спортивные
 http://31.148.5.241/Eurosport_2_HD/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Viju+ Premiere
+#EXTINF:-1 tvg-id="vip-premiere" group-title="Кино и сериалы",Viju+ Premiere
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/202/index.m3u8
 #EXTINF:-1 tvg-id="vip-premiere" group-title="Кино и сериалы",viju+ premiere (2)
@@ -173,16 +170,16 @@ https://flussonic.mkpnet.ru/tv-e107d21a90cb808f/video.m3u8
 #EXTINF:-1 tvg-id="vip-premiere" group-title="Кино и сериалы",Viju+ Premiere (3)
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/202/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Viju+ Megahit
+#EXTINF:-1 tvg-id="vip-megahit" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/viju_плюс_megahit_logo.png" group-title="Кино и сериалы",Viju+ Megahit
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/200/index.m3u8
-#EXTINF:-1 tvg-id="vip-megahit" group-title="Кино и сериалы",Viju+ Megahit (2)
+#EXTINF:-1 tvg-id="vip-megahit" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/viju_плюс_megahit_logo.png" group-title="Кино и сериалы",Viju+ Megahit (2)
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/200/index.m3u8
 #EXTINF:-1 tvg-id="vip-megahit" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/viju_плюс_megahit_logo.png" group-title="Кино и сериалы",viju+ megahit (3)
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/200/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Viju+ Comedy
+#EXTINF:-1 tvg-id="vip-comedy" group-title="Кино и сериалы",Viju+ Comedy
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/201/index.m3u8
 #EXTINF:-1 tvg-id="vip-comedy" group-title="Кино и сериалы",Viju+ Comedy (2)
@@ -203,13 +200,13 @@ http://46.53.200.153:7777/play/VIJU_TV_1000_novella/index.m3u8
 #EXTINF:-1 tvg-id="muzhskoe-kino" group-title="Кино и сериалы",Мужское кино HD
 #EXTGRP:Кино и сериалы
 https://stream8.cinerama.uz/1237/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Мужское кино
+#EXTINF:-1 tvg-id="muzhskoe-kino" group-title="Кино и сериалы",Мужское Кино HD (2)
+#EXTGRP:Кино и сериалы
+http://tv.ttk.mx:9165
+#EXTINF:-1 tvg-id="muzhskoe-kino" group-title="Кино и сериалы",Мужское кино
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/107/index.m3u8
-#EXTINF:-1 tvg-id="muzhskoe-kino" group-title="Кино и сериалы",Мужское кино (2)
-#EXTGRP:Кино и сериалы
-https://fs.uplink.kz/muzhskoe_kino/mono.m3u8?token=onlinetv2
-#EXTINF:-1 group-title="Кино и сериалы",Кинохит
+#EXTINF:-1 tvg-id="kinoxit" group-title="Кино и сериалы",Кинохит
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/126/index.m3u8
 #EXTINF:-1 tvg-id="kinoxit" group-title="Кино и сериалы",Кинохит (2)
@@ -218,7 +215,7 @@ https://flussonic.mkpnet.ru/tv-513b9c22f4277475/video.m3u8
 #EXTINF:-1 tvg-id="kinoxit" group-title="Кино и сериалы",Кинохит (3)
 #EXTGRP:Кино и сериалы
 http://195.64.140.147:10046/46
-#EXTINF:-1 group-title="Кино и сериалы",Киномикс
+#EXTINF:-1 tvg-id="kinomiks" group-title="Кино и сериалы",Киномикс
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/133/index.m3u8
 #EXTINF:-1 tvg-id="kinomiks" group-title="Кино и сериалы",Киномикс (2)
@@ -230,10 +227,10 @@ http://93.170.254.17/Kinomiks/index.m3u8
 #EXTINF:-1 tvg-id="kinopremiera-hd" group-title="Кино и сериалы",Кинопремьера HD
 #EXTGRP:Кино и сериалы
 https://fs.uplink.kz/kinopremiera_hd/mono.m3u8?token=onlinetv2
-#EXTINF:-1 group-title="Кино и сериалы",Кинопремьера HD (2)
+#EXTINF:-1 tvg-id="kinopremiera-hd" group-title="Кино и сериалы",Кинопремьера HD (2)
 #EXTGRP:Кино и сериалы
 http://195.64.140.147:10084/84
-#EXTINF:-1 group-title="Кино и сериалы",Кинопремьера HD (3)
+#EXTINF:-1 tvg-id="kinopremiera-hd" group-title="Кино и сериалы",Кинопремьера HD (3)
 #EXTGRP:Кино и сериалы
 https://fs.uplink.kz/kinopremiera_hd/mono.m3u8?token=onlinetv2
 #EXTINF:-1 tvg-id="nashe-novoe-kino" group-title="Кино и сериалы",Наше Новое Кино
@@ -245,7 +242,7 @@ http://185.46.16.239:8000/Nickelodeon
 #EXTINF:-1 tvg-id="nashe-novoe-kino" group-title="Кино и сериалы",Наше новое кино (3)
 #EXTGRP:Кино и сериалы
 https://fs.uplink.kz/nashe_novoe_kino/mono.m3u8?token=onlinetv2
-#EXTINF:-1 group-title="Кино и сериалы",Кинокомедия
+#EXTINF:-1 tvg-id="kinokomedia" group-title="Кино и сериалы",Кинокомедия
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/265/index.m3u8
 #EXTINF:-1 tvg-id="kinokomedia" group-title="Кино и сериалы",Кинокомедия (2)
@@ -254,7 +251,7 @@ http://195.64.140.147:10047/47
 #EXTINF:-1 tvg-id="kinokomedia" group-title="Кино и сериалы",Кинокомедия (3)
 #EXTGRP:Кино и сериалы
 http://185.46.16.239:8000/Fox_HD
-#EXTINF:-1 group-title="Кино и сериалы",Киноужас
+#EXTINF:-1 tvg-id="kinouzhas" group-title="Кино и сериалы",Киноужас
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/278/index.m3u8
 #EXTINF:-1 tvg-id="kinouzhas" group-title="Кино и сериалы",Киноужас (2)
@@ -263,7 +260,7 @@ http://195.64.140.147:10043/43
 #EXTINF:-1 tvg-id="kinouzhas" group-title="Кино и сериалы",Киноужас (3)
 #EXTGRP:Кино и сериалы
 https://fs.uplink.kz/kinouzhas/mono.m3u8?token=onlinetv2
-#EXTINF:-1 group-title="Кино и сериалы",Родное кино
+#EXTINF:-1 tvg-id="rodnoe-kino" group-title="Кино и сериалы",Родное кино
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/242/index.m3u8
 #EXTINF:-1 tvg-id="rodnoe-kino" group-title="Кино и сериалы",Родное Кино (2)
@@ -272,16 +269,16 @@ http://195.64.140.147:10052/52
 #EXTINF:-1 tvg-id="rodnoe-kino" group-title="Кино и сериалы",Родное кино (3)
 #EXTGRP:Кино и сериалы
 https://fs.uplink.kz/rodnoe_kino/mono.m3u8?token=onlinetv2
-#EXTINF:-1 group-title="Кино и сериалы",Дом Кино Премиум
+#EXTINF:-1 tvg-id="domkino-premium" group-title="Кино и сериалы",Дом Кино Премиум HD
+#EXTGRP:Кино и сериалы
+http://tv.ttk.mx:9084
+#EXTINF:-1 tvg-id="domkino-premium" group-title="Кино и сериалы",Дом Кино Премиум
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/108/index.m3u8
 #EXTINF:-1 tvg-id="domkino-premium" group-title="Кино и сериалы",Дом кино премиум (2)
 #EXTGRP:Кино и сериалы
 https://fs.uplink.kz/dom_kino_premium/mono.m3u8?token=onlinetv2
-#EXTINF:-1 tvg-id="domkino-premium" group-title="Кино и сериалы",Дом Кино Премиум (3)
-#EXTGRP:Кино и сериалы
-http://stream.mcquack.net/108/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Дом Кино
+#EXTINF:-1 tvg-id="domkino" group-title="Кино и сериалы",Дом Кино
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/236/index.m3u8
 #EXTINF:-1 tvg-id="domkino" group-title="Кино и сериалы",Дом кино (2)
@@ -293,10 +290,10 @@ http://195.64.140.147:10057/57
 #EXTINF:-1 tvg-id="illuzion-plus" tvg-logo="https://iptvx.one/picons/illuzion-plus.png" group-title="Кино и сериалы",Иллюзион+
 #EXTGRP:Кино и сериалы
 http://176.118.197.101/Illuzion+/index.m3u8
-#EXTINF:-1 tvg-id="illuzion-plus" group-title="Кино и сериалы",Иллюзион+ (2)
+#EXTINF:-1 tvg-id="illuzion-plus" tvg-logo="https://iptvx.one/picons/illuzion-plus.png" group-title="Кино и сериалы",Иллюзион+ (2)
 #EXTGRP:Кино и сериалы
 http://195.64.140.147:10090/90
-#EXTINF:-1 tvg-id="illuzion-plus" group-title="Кино и сериалы",Иллюзион+ (3)
+#EXTINF:-1 tvg-id="illuzion-plus" tvg-logo="https://iptvx.one/picons/illuzion-plus.png" group-title="Кино и сериалы",Иллюзион+ (3)
 #EXTGRP:Кино и сериалы
 http://185.46.16.239:8000/Illyuzion+
 #EXTINF:-1 tvg-id="russky-illuzion" group-title="Кино и сериалы",Русский Иллюзион
@@ -311,64 +308,64 @@ https://fs.uplink.kz/russkiy_illusion/mono.m3u8?token=onlinetv2
 #EXTINF:-1 tvg-id="kinopokaz-hd" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/кинопоказ.png" group-title="Кино и сериалы",Кинопоказ HD
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/64/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Кинопоказ HD (2)
+#EXTINF:-1 tvg-id="kinopokaz-hd" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/кинопоказ.png" group-title="Кино и сериалы",Кинопоказ HD (2)
 #EXTGRP:Кино и сериалы
 http://185.76.10.53:8080/srv5/nash_kinopokaz_hd/tracks-v1a1/mono.m3u8?cid=144&did=5366158&m=1&rid=24397&token=2022b6576a65c40ede42a7d4941b5471
-#EXTINF:-1 group-title="Кино и сериалы",Кинопоказ
+#EXTINF:-1 tvg-id="kinopokaz-hd" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/кинопоказ.png" group-title="Кино и сериалы",Кинопоказ
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/64/index.m3u8
+#EXTINF:-1 tvg-id="kino-tv" group-title="Кино и сериалы",Кино ТВ HD
+#EXTGRP:Кино и сериалы
+http://tv.ttk.mx:9113
 #EXTINF:-1 tvg-id="kino-tv" group-title="Кино и сериалы",Кино ТВ
 #EXTGRP:Кино и сериалы
 http://vod.tuva.ru/kinotv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="kino-tv" group-title="Кино и сериалы",Кино ТВ (2)
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/221/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="kino-tv" group-title="Кино и сериалы",Кино ТВ (3)
-#EXTGRP:Кино и сериалы
-http://185.46.16.239:8000/Kino_TV
-#EXTINF:-1 group-title="Кино и сериалы",Комедия
+#EXTINF:-1 tvg-id="russkaya-komedia" tvg-logo="https://iptvx.one/picons/russkaya-komedia.png" group-title="Кино и сериалы",Комедия
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/68/index.m3u8
 #EXTINF:-1 tvg-id="russkaya-komedia" tvg-logo="https://iptvx.one/picons/russkaya-komedia.png" group-title="Кино и сериалы",Комедия (2)
 #EXTGRP:Кино и сериалы
 http://176.118.197.101/Komediya/index.m3u8
-#EXTINF:-1 tvg-id="russkaya-komedia" group-title="Кино и сериалы",Комедия (3)
+#EXTINF:-1 tvg-id="russkaya-komedia" tvg-logo="https://iptvx.one/picons/russkaya-komedia.png" group-title="Кино и сериалы",Комедия (3)
 #EXTGRP:Кино и сериалы
 http://195.64.140.147:10092/92
 #EXTINF:-1 tvg-id="kamedi" tvg-logo="https://i.imgur.com/UU4SGuk.png" group-title="Кино и сериалы",Камеди
 #EXTGRP:Кино и сериалы
 http://cdntv.online/high/wkb8rh2jd6/1100.mpeg
-#EXTINF:-1 tvg-id="komedijnoe-hd" group-title="Кино и сериалы",Комедийное HD
+#EXTINF:-1 tvg-id="komedijnoe-hd" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/комедийное.png" group-title="Кино и сериалы",Комедийное HD
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/74/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="komedijnoe-hd" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/комедийное.png" group-title="Кино и сериалы",Комедийное HD (2)
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/74/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Комедийное HD (3)
+#EXTINF:-1 tvg-id="komedijnoe-hd" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/комедийное.png" group-title="Кино и сериалы",Комедийное HD (3)
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/74/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="nashe-lubimoe-hd" tvg-logo="http://epg.one/img2/2509.png" group-title="Кино и сериалы",Любимое HD
 #EXTGRP:Кино и сериалы
 http://uhugktfh.megogo.xyz/iptv/BV4SSQ9PRKF2CW/915/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Наше любимое кино
+#EXTINF:-1 tvg-id="nashe-lubimoe-hd" tvg-logo="http://epg.one/img2/2509.png" group-title="Кино и сериалы",Наше любимое кино
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/456/index.m3u8
 #EXTINF:-1 tvg-id="lubimoe-kino" tvg-logo="https://iptvx.one/picons/lubimoe-kino.png" group-title="Кино и сериалы",Любимое Кино
 #EXTGRP:Кино и сериалы
 http://176.118.197.101/LubimoeKino/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Еврокино
+#EXTINF:-1 tvg-id="evrokino" tvg-logo="https://iptvx.one/picons/eurokino.png" group-title="Кино и сериалы",Еврокино
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/385/index.m3u8
 #EXTINF:-1 tvg-id="evrokino" tvg-logo="https://iptvx.one/picons/eurokino.png" group-title="Кино и сериалы",Еврокино (2)
 #EXTGRP:Кино и сериалы
 http://176.118.197.101/Evrokino/index.m3u8
-#EXTINF:-1 tvg-id="evrokino" group-title="Кино и сериалы",ЕвроКино (3)
+#EXTINF:-1 tvg-id="evrokino" tvg-logo="https://iptvx.one/picons/eurokino.png" group-title="Кино и сериалы",ЕвроКино (3)
 #EXTGRP:Кино и сериалы
 http://195.64.140.147:10088/88
 #EXTINF:-1 tvg-id="tv21m" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/тв_21.png" group-title="Кино и сериалы",ТВ 21
 #EXTGRP:Кино и сериалы
 http://mfe01.cliptv.az/dash/TV_XXI_SDghtydf56.ism/playlist.mpd
-#EXTINF:-1 group-title="Кино и сериалы",НСТ
+#EXTINF:-1 tvg-id="nst" group-title="Кино и сериалы",НСТ
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/207/index.m3u8
 #EXTINF:-1 tvg-id="nst" group-title="Кино и сериалы",НСТ (2)
@@ -377,34 +374,34 @@ http://vod.tuva.ru/nst/index.m3u8
 #EXTINF:-1 tvg-id="nst" group-title="Кино и сериалы",НСТ (3)
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/207/index.m3u8
-#EXTINF:-1 tvg-id="shokiruyushchee-hd" group-title="Кино и сериалы",Шокирующее HD
+#EXTINF:-1 tvg-id="shokiruyushchee-hd" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/шокирующее_logo.png" group-title="Кино и сериалы",Шокирующее HD
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/75/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="shokiruyushchee-hd" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/шокирующее_logo.png" group-title="Кино и сериалы",Шокирующее HD (2)
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/75/index.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",Шокирующее HD (3)
+#EXTINF:-1 tvg-id="shokiruyushchee-hd" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/шокирующее_logo.png" group-title="Кино и сериалы",Шокирующее HD (3)
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/75/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="strashnoe-hd" tvg-logo="http://epg.one/img2/2857.png" group-title="Кино и сериалы",Страшное HD
-#EXTGRP:Кино и сериалы
-http://ztf5jtil.zyntras.top/iptv/KLEYQYC7TPZ8G7W822WQCXNQ/7247/index.m3u8
-#EXTINF:-1 tvg-id="nst" group-title="Кино и сериалы",Настоящее Страшное ТВ
+#EXTINF:-1 tvg-id="nst" tvg-logo="https://pic.rtbcdn.ru/video/2026-07-21/5f/b6/5fb64db3973efc5210910217633bb6d1.jpg" group-title="Кино и сериалы",Настоящее Страшное ТВ
 #EXTGRP:Кино и сериалы
 http://195.64.140.147:10054/54
-#EXTINF:-1 tvg-logo="https://pic.rtbcdn.ru/video/2026-07-21/5f/b6/5fb64db3973efc5210910217633bb6d1.jpg" group-title="Кино и сериалы",Очень страшное кино (2026)
+#EXTINF:-1 tvg-id="nst" tvg-logo="https://pic.rtbcdn.ru/video/2026-07-21/5f/b6/5fb64db3973efc5210910217633bb6d1.jpg" group-title="Кино и сериалы",Очень страшное кино (2026)
 #EXTGRP:Кино и сериалы
 https://river-4-434.rtbcdn.ru/hls-vod/6V-1JRE4XbZGpBg59XtMwQ/1795291673/2205/0x5000c500e71930bf/d3d4aa346d2e4ffd971f036c6148e680.mp4.m3u8?i=1920x800_2126&streams=v1a1
-#EXTINF:-1 tvg-logo="https://i.ibb.co/ZpRXL3jP/image-4.png" group-title="Кино и сериалы",Cinema Time FHD
+#EXTINF:-1 tvg-id="nst" tvg-logo="https://pic.rtbcdn.ru/video/2026-07-21/5f/b6/5fb64db3973efc5210910217633bb6d1.jpg" group-title="Кино и сериалы",Настоящее Страшное ТВ (2)
+#EXTGRP:Кино и сериалы
+http://195.64.140.147:10054/54
+#EXTINF:-1 tvg-id="ultra-hd-cinema" tvg-logo="https://i.ibb.co/ZpRXL3jP/image-4.png" group-title="Кино и сериалы",Cinema Time FHD
 #EXTGRP:Кино и сериалы
 http://kinowalk.hopto.org/cinematime_live
 #EXTINF:-1 tvg-id="ultra-hd-cinema" tvg-logo="http://epg.one/img2/2743.png" group-title="Кино и сериалы",Ultra HD Cinema
 #EXTGRP:Кино и сериалы
 http://cdntv.online/high/wkb8rh2jd6/387.mpeg
-#EXTINF:-1 group-title="Кино и сериалы",4ever Cinema HD
+#EXTINF:-1 tvg-id="ultra-hd-cinema" tvg-logo="https://i.ibb.co/ZpRXL3jP/image-4.png" group-title="Кино и сериалы",4ever Cinema HD
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/258/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 group-title="Кино и сериалы",sci-fi
+#EXTINF:-1 tvg-id="sony-scifi" group-title="Кино и сериалы",sci-fi
 #EXTGRP:Кино и сериалы
 http://stream.mcquack.net/180/index.m3u8
 #EXTINF:-1 tvg-id="sony-scifi" group-title="Кино и сериалы",.Sci-Fi
@@ -437,49 +434,28 @@ http://uhugktfh.megogo.xyz/iptv/BV4SSQ9PRKF2CW/15026/index.m3u8
 #EXTINF:-1 tvg-id="bcu-action" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/bcu_action_logo.png" group-title="Кинозалы",BCU Action
 #EXTGRP:Кинозалы
 http://b1d98e28.amazzin.pw/iptv/CN5Y444G9H77QSKXU2V6SEW7/11027/index.m3u8
-#EXTINF:-1 tvg-id="bcu-premiere" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/bcu_premiere_logo.png" group-title="Кинозалы",BCU Premiere
-#EXTGRP:Кинозалы
-http://ztf5jtil.zyntras.top/iptv/KLEYQYC7TPZ8G7W822WQCXNQ/11039/index.m3u8
-#EXTINF:-1 tvg-id="bcu-kinozal-prem-2" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/bcu_premiere_logo.png" group-title="Кинозалы",BCU Premiere 2
-#EXTGRP:Кинозалы
-http://ztf5jtil.zyntras.top/iptv/KLEYQYC7TPZ8G7W822WQCXNQ/11016/index.m3u8
-#EXTINF:-1 tvg-id="bcu-kinozal-prem-3" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/bcu_premiere_logo.png" group-title="Кинозалы",BCU Premiere 3
-#EXTGRP:Кинозалы
-http://ztf5jtil.zyntras.top/iptv/KLEYQYC7TPZ8G7W822WQCXNQ/11017/index.m3u8
 #EXTINF:-1 tvg-id="bcu-catastrophe" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/bcu_catastrophe_logo.png" group-title="Кинозалы",BCU Catastrophe
 #EXTGRP:Кинозалы
 http://dda3aa01fc.edemist.com/iptv/KSKRCX75EL4VFTSHWYUKQUGB/11028/index.m3u8
 #EXTINF:-1 tvg-id="bcu-fantastic" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/bcu_fantastic_logo.png" group-title="Кинозалы",BCU Fantastic
 #EXTGRP:Кинозалы
 http://dda3aa01fc.edemist.com/iptv/KSKRCX75EL4VFTSHWYUKQUGB/11032/index.m3u8
-#EXTINF:-1 tvg-id="bcu-kinorating" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/bcu_kinorating_logo.png" group-title="Кинозалы",BCU Kinorating
-#EXTGRP:Кинозалы
-http://ztf5jtil.zyntras.top/iptv/KLEYQYC7TPZ8G7W822WQCXNQ/11037/index.m3u8
-#EXTINF:-1 group-title="Кинозалы",Cineman Relax 4K
+#EXTINF:-1 tvg-id="cineman-relax" group-title="Кинозалы",Cineman Relax 4K
 #EXTGRP:Кинозалы
 http://stream.mcquack.net/459/index.m3u8
 #EXTINF:-1 tvg-id="cineman-relax" group-title="Кинозалы",Cineman Relax 4K (2)
 #EXTGRP:Кинозалы
 http://stream.mcquack.net/459/index.m3u8
-#EXTINF:-1 group-title="Кинозалы",CineMan HD
+#EXTINF:-1 tvg-id="cineman-relax" group-title="Кинозалы",CineMan HD
 #EXTGRP:Кинозалы
 http://stream.mcquack.net/349/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="minimax-boevik_classic" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/mm_boevik_classic.png" group-title="Кинозалы",MM Боевик Classic
-#EXTGRP:Кинозалы
-http://ztf5jtil.zyntras.top/iptv/KLEYQYC7TPZ8G7W822WQCXNQ/13027/index.m3u8
-#EXTINF:-1 tvg-id="minimax-triller" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/mm_триллер.png" group-title="Кинозалы",MM Триллер
-#EXTGRP:Кинозалы
-http://ztf5jtil.zyntras.top/iptv/KLEYQYC7TPZ8G7W822WQCXNQ/13058/index.m3u8
-#EXTINF:-1 tvg-id="minimax-fantastika" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/mm_фантастика.png" group-title="Кинозалы",MM Фантастика
-#EXTGRP:Кинозалы
-http://ztf5jtil.zyntras.top/iptv/KLEYQYC7TPZ8G7W822WQCXNQ/13062/index.m3u8
 #EXTINF:-1 tvg-id="minimax-ujasi-classic" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/mm_ужасы_classic.png" group-title="Кинозалы",MM Ужасы Classic
 #EXTGRP:Кинозалы
 http://uhugktfh.megogo.xyz/iptv/BV4SSQ9PRKF2CW/14128/index.m3u8
 #EXTINF:-1 tvg-id="the-explorers" group-title="Познавательные",The Explorers
 #EXTGRP:Познавательные
 http://stream.mcquack.net/450/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 group-title="Познавательные",The Explorers (2)
+#EXTINF:-1 tvg-id="the-explorers" group-title="Познавательные",The Explorers (2)
 #EXTGRP:Познавательные
 http://stream.mcquack.net/450/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 group-title="Познавательные",National Geographic HD
@@ -491,55 +467,55 @@ http://195.64.140.147:10149/149
 #EXTINF:-1 group-title="Познавательные",National Geographic
 #EXTGRP:Познавательные
 http://stream.mcquack.net/116/index.m3u8
-#EXTINF:-1 tvg-id="muzhskoy" group-title="Познавательные",Мужской
+#EXTINF:-1 tvg-id="muzhskoy" tvg-logo="https://iptvx.one/picons/muzhskoy.png" group-title="Познавательные",Мужской
 #EXTGRP:Познавательные
 https://flussonic.mkpnet.ru/tv-55c94e838b306657/video.m3u8
-#EXTINF:-1 tvg-id="muzhskoy" group-title="Познавательные",Мужской (2)
+#EXTINF:-1 tvg-id="muzhskoy" tvg-logo="https://iptvx.one/picons/muzhskoy.png" group-title="Познавательные",Мужской (2)
 #EXTGRP:Познавательные
 https://flussonic.mkpnet.ru/tv-55c94e838b306657/video.m3u8
 #EXTINF:-1 tvg-id="muzhskoy" tvg-logo="https://iptvx.one/picons/muzhskoy.png" group-title="Познавательные",Мужской (3)
 #EXTGRP:Познавательные
 https://flussonic.mkpnet.ru/tv-55c94e838b306657/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/ZpRXL3jP/image-4.png" group-title="Познавательные",Terra Incognita
+#EXTINF:-1 tvg-id="terra-ru" tvg-logo="https://i.ibb.co/ZpRXL3jP/image-4.png" group-title="Познавательные",Terra Incognita
 #EXTGRP:Познавательные
 http://stitch.teletarget.ru/vintera/terra/index.m3u8
-#EXTINF:-1 tvg-id="terra-ru" group-title="Познавательные",Terra
+#EXTINF:-1 tvg-id="terra-ru" tvg-logo="https://i.ibb.co/ZpRXL3jP/image-4.png" group-title="Познавательные",Terra
 #EXTGRP:Познавательные
 http://195.64.140.147:10150/150
-#EXTINF:-1 group-title="Познавательные",Terra (2)
+#EXTINF:-1 tvg-id="terra-ru" tvg-logo="https://i.ibb.co/ZpRXL3jP/image-4.png" group-title="Познавательные",Terra (2)
 #EXTGRP:Познавательные
 http://195.64.140.147:10150/150
 #EXTINF:-1 tvg-id="box-myday" tvg-logo="http://epg.one/img2/7493.png" group-title="Познавательные",BOX Mayday
 #EXTGRP:Познавательные
 http://xxot9n16.megogo.xyz/iptv/T9H75A85UBLDTFZDN74YZ4G6/20159/index.m3u8
-#EXTINF:-1 tvg-id="bolshaya-azia" group-title="Познавательные",Большая Азия HD
+#EXTINF:-1 tvg-id="bolshaya-azia" tvg-logo="https://app.playlistbox.com/icon/2q94OaJj6rD5gYx8yYM1ELBXGWRzPQ0A.png" group-title="Познавательные",Большая Азия HD
 #EXTGRP:Познавательные
 http://live-bigasia.cdnvideo.ru/bigasia/bigasia.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="bolshaya-azia" tvg-logo="https://app.playlistbox.com/icon/2q94OaJj6rD5gYx8yYM1ELBXGWRzPQ0A.png" group-title="Познавательные",Большая Азия
 #EXTGRP:Познавательные
 https://live-bigasia.cdnvideo.ru/bigasia/bigasia.smil/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="bolshaya-azia" group-title="Познавательные",Большая азия (2)
+#EXTINF:-1 tvg-id="bolshaya-azia" tvg-logo="https://app.playlistbox.com/icon/2q94OaJj6rD5gYx8yYM1ELBXGWRzPQ0A.png" group-title="Познавательные",Большая азия (2)
 #EXTGRP:Познавательные
 https://bl.rutube.ru/livestream/495ab964b755baa2c9fc7481a2e40f7d/index.m3u8?s=Gmlc9AoKQsc_SsKXpHLc3g&e=2067513311&scheme=https
 #EXTINF:-1 tvg-id="discovery-channel" tvg-logo="https://iptvx.one/picons/discovery-channel.png" group-title="Познавательные",Discovery Channel HD
 #EXTGRP:Познавательные
 https://stream8.cinerama.uz/1039/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="discovery-channel" group-title="Познавательные",Discovery Channel HD (2)
+#EXTINF:-1 tvg-id="discovery-channel" tvg-logo="https://iptvx.one/picons/discovery-channel.png" group-title="Познавательные",Discovery Channel HD (2)
 #EXTGRP:Познавательные
 http://stream.mcquack.net/177/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 group-title="Познавательные",Discovery Channel HD (3)
+#EXTINF:-1 tvg-id="discovery-channel" tvg-logo="https://iptvx.one/picons/discovery-channel.png" group-title="Познавательные",Discovery Channel HD (3)
 #EXTGRP:Познавательные
 http://stream.mcquack.net/177/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="eureka-hd" group-title="Познавательные",Первый Космический
+#EXTINF:-1 tvg-id="eureka-hd" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/первый_космический.png" group-title="Познавательные",Первый Космический
 #EXTGRP:Познавательные
 https://stream8.cinerama.uz/1415/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="eureka-hd" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/первый_космический.png" group-title="Познавательные",Первый космический (2)
 #EXTGRP:Познавательные
 https://stream1.cinerama.uz/1415/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Познавательные",Первый Космический (3)
+#EXTINF:-1 tvg-id="eureka-hd" tvg-logo="https://gitflic.ru/project/romzes_25/playlisttv/blob/raw?file=imgtv/первый_космический.png" group-title="Познавательные",Первый Космический (3)
 #EXTGRP:Познавательные
 https://stream8.cinerama.uz/1415/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Познавательные",Глазами Туриста
+#EXTINF:-1 tvg-id="glazami-turista" group-title="Познавательные",Глазами Туриста
 #EXTGRP:Познавательные
 http://stream.mcquack.net/304/index.m3u8
 #EXTINF:-1 tvg-id="glazami-turista" group-title="Познавательные",Глазами Туриста (2)
@@ -557,7 +533,7 @@ http://stream.mcquack.net/198/index.m3u8
 #EXTINF:-1 group-title="Познавательные",Приключения (2)
 #EXTGRP:Познавательные
 http://stream.mcquack.net/198/index.m3u8
-#EXTINF:-1 group-title="Познавательные",Viju Explore
+#EXTINF:-1 tvg-id="viasat-explore" group-title="Познавательные",Viju Explore
 #EXTGRP:Познавательные
 http://stream.mcquack.net/239/index.m3u8
 #EXTINF:-1 tvg-id="viasat-explore" group-title="Познавательные",viju Explore (2)
@@ -566,7 +542,7 @@ http://46.53.200.153:7777/play/a01i/index.m3u8
 #EXTINF:-1 tvg-id="viasat-explore" group-title="Познавательные",Viju Explore (3)
 #EXTGRP:Познавательные
 http://stream.mcquack.net/239/index.m3u8
-#EXTINF:-1 group-title="Познавательные",Viju History
+#EXTINF:-1 tvg-id="viasat-history" group-title="Познавательные",Viju History
 #EXTGRP:Познавательные
 http://stream.mcquack.net/101/index.m3u8
 #EXTINF:-1 tvg-id="viasat-history" group-title="Познавательные",viju History (2)
@@ -575,7 +551,7 @@ http://46.53.200.153:7777/play/a01j/index.m3u8
 #EXTINF:-1 tvg-id="viasat-history" group-title="Познавательные",Viju History (3)
 #EXTGRP:Познавательные
 http://stream.mcquack.net/101/index.m3u8
-#EXTINF:-1 group-title="Познавательные",Viju+ Planet
+#EXTINF:-1 tvg-id="viasat-nature-history-hd" group-title="Познавательные",Viju+ Planet
 #EXTGRP:Познавательные
 http://stream.mcquack.net/240/index.m3u8
 #EXTINF:-1 tvg-id="viasat-nature-history-hd" group-title="Познавательные",Viju+ Planet (2)
@@ -593,7 +569,7 @@ https://flussonic.mkpnet.ru/tv-687ba838ca927b9a/video.m3u8
 #EXTINF:-1 tvg-id="viasat-history" group-title="Познавательные",Viasat History (3)
 #EXTGRP:Познавательные
 http://195.64.140.147:10145/145
-#EXTINF:-1 group-title="Познавательные",Travel+Adventure
+#EXTINF:-1 tvg-id="travel-adventure" group-title="Познавательные",Travel+Adventure
 #EXTGRP:Познавательные
 http://stream.mcquack.net/206/index.m3u8
 #EXTINF:-1 tvg-id="travel-adventure" group-title="Познавательные",Travel+Adventure (2)
@@ -602,24 +578,24 @@ http://stream.mcquack.net/206/index.m3u8
 #EXTINF:-1 tvg-id="travel-channel" group-title="Познавательные",Travel Channel HD
 #EXTGRP:Познавательные
 http://stream.mcquack.net/231/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 group-title="Познавательные",Travel Channel HD (2)
+#EXTINF:-1 tvg-id="travel-channel" group-title="Познавательные",Travel Channel HD (2)
 #EXTGRP:Познавательные
 http://stream.mcquack.net/231/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 group-title="Познавательные",Travel channel
+#EXTINF:-1 tvg-id="travel-channel" group-title="Познавательные",Travel channel
 #EXTGRP:Познавательные
 http://stream.mcquack.net/231/index.m3u8
 #EXTINF:-1 tvg-id="moya-planeta" group-title="Познавательные",Моя планета HD
 #EXTGRP:Познавательные
 http://185.46.16.239:8000/Planeta_HD
-#EXTINF:-1 group-title="Познавательные",Моя планета HD (2)
+#EXTINF:-1 tvg-id="moya-planeta" group-title="Познавательные",Моя планета HD (2)
 #EXTGRP:Познавательные
 http://185.46.16.239:8000/Planeta_HD
-#EXTINF:-1 group-title="Познавательные",Моя планета
+#EXTINF:-1 tvg-id="moya-planeta" group-title="Познавательные",Моя планета HD (3)
 #EXTGRP:Познавательные
-http://stream.mcquack.net/124/index.m3u8
+http://tv.ttk.mx:9087
 #EXTINF:-1 tvg-id="big-planet" group-title="Познавательные",Big planet
 #EXTGRP:Познавательные
 https://fs.uplink.kz/big_planet/mono.m3u8?token=onlinetv2
-#EXTINF:-1 group-title="Познавательные",Big planet (2)
+#EXTINF:-1 tvg-id="big-planet" group-title="Познавательные",Big planet (2)
 #EXTGRP:Познавательные
 https://fs.uplink.kz/big_planet/mono.m3u8?token=onlinetv2
