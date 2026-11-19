@@ -126,14 +126,21 @@ def main():
 
     candidates.sort(key=lambda x: (x[0], get_quality_score(x[3].split(",")[-1])))
 
-    valid_by_idx = {}
-    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        valid_by_idx = {}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=15) as executor:
         for res in executor.map(check_stream, candidates):
             if res:
-                idx, key, grp, info, url = res
+                idx, key, grp, info, url, ping = res
                 bucket = valid_by_idx.setdefault(idx, [])
-                if len(bucket) < MAX_STREAMS_PER_CHANNEL:
-                    bucket.append((grp, info, url))
+                bucket.append((grp, info, url, ping))
+
+    def stream_sort_key(item):
+        grp, info, url, ping = item
+        return (get_quality_score(info.split(",")[-1]), ping)
+
+    for idx in valid_by_idx:
+        valid_by_idx[idx].sort(key=stream_sort_key)
+        del valid_by_idx[idx][MAX_STREAMS_PER_CHANNEL:]
 
     seen_names = {}
 
@@ -144,7 +151,7 @@ def main():
                 streams = valid_by_idx[idx]
                 best_id = ""
                 best_logo = ""
-                for _, s_info, _ in streams:
+                for _, s_info, _, _ in streams:
                     if not best_id:
                         m_id = re.search(r'tvg-id="([^"]+)"', s_info)
                         if m_id:
@@ -156,7 +163,7 @@ def main():
 
                 epg_id, epg_logo = epg_map.get(normalize_name(w), ("", ""))
                 if not epg_id or not epg_logo:
-                    for _, s_info, _ in streams:
+                    for _, s_info, _, _ in streams:
                         s_raw = s_info.split(",").pop().strip()
                         s_id, s_logo = epg_map.get(normalize_name(s_raw), ("", ""))
                         if not epg_id and s_id:
@@ -167,17 +174,24 @@ def main():
                 final_id = epg_id or best_id
                 final_logo = epg_logo or best_logo
 
-                for group_name, info, url in streams:
+                for group_name, info, url, _ in streams:
                     raw_name = info.split(",").pop().strip()
                     name_key = raw_name.lower()
                     seen_names[name_key] = seen_names.get(name_key, 0) + 1
                     final_name = f"{raw_name} ({seen_names[name_key]})" if seen_names[name_key] > 1 else raw_name
 
+                    catchup_tags = ""
+                    for tag in ("catchup", "catchup-days", "catchup-source", "timeshift"):
+                        m_tag = re.search(rf'{tag}="([^"]+)"', info)
+                        if m_tag:
+                            catchup_tags += f' {tag}="{m_tag.group(1)}"'
+
                     id_part = f' tvg-id="{final_id}"' if final_id else ""
                     logo_part = f' tvg-logo="{final_logo}"' if final_logo else ""
 
-                    clean_info = f'#EXTINF:-1{id_part}{logo_part} group-title="{group_name}",{final_name}'
+                    clean_info = f'#EXTINF:-1{id_part}{logo_part}{catchup_tags} group-title="{group_name}",{final_name}'
                     out.write(f"{clean_info}\n#EXTGRP:{group_name}\n{url}\n")
+
 
     total_streams = sum(len(v) for v in valid_by_idx.values())
     missing = []
