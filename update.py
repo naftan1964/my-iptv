@@ -98,20 +98,37 @@ def main():
     with open("my_playlist.m3u", "w", encoding="utf-8") as out:
         out.write(f'#EXTM3U url-tvg="{epg_url}"\n')
         for idx, (w, grp) in enumerate(wanted_list):
-            if idx in valid_by_idx:
-                for group_name, info, url in valid_by_idx[idx]:
-                    raw_name = info.split(",")[-1].strip()
+                        if idx in valid_by_idx:
+                streams = valid_by_idx[idx]
+                best_id = ""
+                best_logo = ""
+                for _, s_info, _ in streams:
+                    if not best_id:
+                        m_id = re.search(r'tvg-id="([^"]+)"', s_info)
+                        if m_id:
+                            best_id = m_id.group(1)
+                    if not best_logo:
+                        m_logo = re.search(r'tvg-logo="([^"]+)"', s_info)
+                        if m_logo:
+                            best_logo = m_logo.group(1)
+
+                for group_name, info, url in streams:
+                    raw_name = info.split(",").pop().strip()
                     name_key = raw_name.lower()
                     seen_names[name_key] = seen_names.get(name_key, 0) + 1
                     final_name = f"{raw_name} ({seen_names[name_key]})" if seen_names[name_key] > 1 else raw_name
 
-                    tvg_id = re.search(r'tvg-id="([^"]*)"', info)
-                    tvg_logo = re.search(r'tvg-logo="([^"]*)"', info)
-                    id_part = f' tvg-id="{tvg_id.group(1)}"' if tvg_id else ""
-                    logo_part = f' tvg-logo="{tvg_logo.group(1)}"' if tvg_logo else ""
+                    m_id = re.search(r'tvg-id="([^"]+)"', info)
+                    m_logo = re.search(r'tvg-logo="([^"]+)"', info)
+                    cur_id = m_id.group(1) if m_id else best_id
+                    cur_logo = m_logo.group(1) if m_logo else best_logo
+
+                    id_part = f' tvg-id="{cur_id}"' if cur_id else ""
+                    logo_part = f' tvg-logo="{cur_logo}"' if cur_logo else ""
 
                     clean_info = f'#EXTINF:-1{id_part}{logo_part} group-title="{group_name}",{final_name}'
                     out.write(f"{clean_info}\n#EXTGRP:{group_name}\n{url}\n")
+
 
     total_streams = sum(len(v) for v in valid_by_idx.values())
     missing = []
