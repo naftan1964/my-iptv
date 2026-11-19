@@ -1,4 +1,3 @@
-http://stream.mcquack.net/stream.mcquack.net.m3u
 https://raw.githubusercontent.com/bormanulik/TV/refs/heads/main/list.m3u
 https://raw.githubusercontent.com/Romzes25/playlistTV/refs/heads/master/ip_playlistTV_DV.m3u
 https://raw.githubusercontent.com/Dimonovich/TV/Dimonovich/FREE/TV?m3u8
