@@ -97,8 +97,8 @@ def main():
 
     with open("my_playlist.m3u", "w", encoding="utf-8") as out:
         out.write(f'#EXTM3U url-tvg="{epg_url}"\n')
-        for idx, (w, grp) in enumerate(wanted_list):
-                        if idx in valid_by_idx:
+                for idx, (w, grp) in enumerate(wanted_list):
+            if idx in valid_by_idx:
                 streams = valid_by_idx[idx]
                 best_id = ""
                 best_logo = ""
@@ -128,6 +128,7 @@ def main():
 
                     clean_info = f'#EXTINF:-1{id_part}{logo_part} group-title="{group_name}",{final_name}'
                     out.write(f"{clean_info}\n#EXTGRP:{group_name}\n{url}\n")
+
 
 
     total_streams = sum(len(v) for v in valid_by_idx.values())
