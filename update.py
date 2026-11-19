@@ -9,9 +9,11 @@ USER_AGENT = "Mozilla/5.0"
 TIMEOUT = 6
 MAX_STREAMS_PER_CHANNEL = 3
 
+
 def read_sources(filename):
     with open(filename, "r", encoding="utf-8") as f:
         return [line.strip() for line in f if line.strip() and not line.startswith("#")]
+
 
 def read_grouped_channels(filename):
     channels = []
@@ -22,17 +24,29 @@ def read_grouped_channels(filename):
             if not line or line.startswith("#"):
                 continue
             if line.startswith("[") and line.endswith("]"):
-                current_group = line[1:-1].strip()
+                current_group = line.strip("[]").strip()
             else:
                 channels.append((line.lower(), current_group))
     return channels
 
+
 def has_timezone_shift(name):
     return bool(re.search(r'[\s\(\[][\+\-]\d{1,2}[\)\]]?\b', name))
 
+
+def is_unsupported_format(name):
+    return bool(re.search(r'\b(full\s*hd|fhd|orig|ориг|ариг|4k|uhd|ultra\s*hd|50\s*fps)\b', name.lower()))
+
+
 def is_channel_match(wanted, channel_name):
     pattern = r'(?:^|[^а-яёa-z0-9])' + re.escape(wanted) + r'(?:$|[^а-яёa-z0-9])'
-    return bool(re.search(pattern, channel_name))
+    if not re.search(pattern, channel_name):
+        return False
+    if wanted == "history":
+        if re.search(r'\b(bcu|всу|citrus|viasat)\b', channel_name):
+            return False
+    return True
+
 
 def normalize_name(name):
     name = name.lower().strip()
@@ -68,15 +82,15 @@ def load_epg_data(epg_url):
         print(f"Не удалось загрузить иконки из EPG: {e}")
     return epg_map
 
+
 def get_quality_score(name):
     name_low = name.lower()
-    if re.search(r'\b(full\s*hd|fhd|1080p?|50\s*fps|orig|4k|uhd)\b', name_low):
+    if re.search(r'\b(1080p?|720p?|hd)\b', name_low):
         return 1
-    if re.search(r'\b(hd|720p?)\b', name_low):
-        return 2
     if re.search(r'\bsd\b', name_low):
-        return 4
-    return 3
+        return 3
+    return 2
+
 
 def check_stream(item):
     idx, key, group, info, url = item
@@ -93,6 +107,7 @@ def check_stream(item):
         pass
     return None
 
+
 def main():
     epg_url = "https://raw.githubusercontent.com/Lorax121/epg_v2/main/data/epg2.xml.gz"
     epg_map = load_epg_data(epg_url)
@@ -106,14 +121,14 @@ def main():
             req = urllib.request.Request(src, headers={"User-Agent": USER_AGENT})
             with urllib.request.urlopen(req, timeout=15) as resp:
                 lines = resp.read().decode("utf-8", errors="ignore").splitlines()
-                
-                current_info = ""
-                for line in lines:
+
+            current_info = ""
+            for line in lines:
                 line = line.strip()
                 if line.startswith("#EXTINF"):
                     current_info = line
                 elif line.startswith("http") and current_info:
-                    raw_name = current_info.split(",")[-1].strip()
+                    raw_name = current_info.rsplit(",", 1).pop().strip()
                     if not has_timezone_shift(raw_name) and not is_unsupported_format(raw_name):
                         name_lower = raw_name.lower()
                         for idx, (w, grp) in enumerate(wanted_list):
@@ -123,8 +138,6 @@ def main():
                     current_info = ""
         except Exception as e:
             print(f"Ошибка загрузки {src}: {e}")
-
-    candidates.sort(key=lambda x: (x[0], get_quality_score(x[3].split(",")[-1])))
 
     valid_by_idx = {}
     with concurrent.futures.ThreadPoolExecutor(max_workers=15) as executor:
@@ -136,11 +149,12 @@ def main():
 
     def stream_sort_key(item):
         grp, info, url, ping = item
-        return (get_quality_score(info.split(",")[-1]), ping)
+        ch_title = info.rsplit(",", 1).pop().strip()
+        return (get_quality_score(ch_title), ping)
 
     for idx in valid_by_idx:
         valid_by_idx[idx].sort(key=stream_sort_key)
-        del valid_by_idx[idx][MAX_STREAMS_PER_CHANNEL:]
+        valid_by_idx[idx] = valid_by_idx[idx][:MAX_STREAMS_PER_CHANNEL]
 
     seen_names = {}
 
@@ -164,7 +178,7 @@ def main():
                 epg_id, epg_logo = epg_map.get(normalize_name(w), ("", ""))
                 if not epg_id or not epg_logo:
                     for _, s_info, _, _ in streams:
-                        s_raw = s_info.split(",").pop().strip()
+                        s_raw = s_info.rsplit(",", 1).pop().strip()
                         s_id, s_logo = epg_map.get(normalize_name(s_raw), ("", ""))
                         if not epg_id and s_id:
                             epg_id = s_id
@@ -175,7 +189,7 @@ def main():
                 final_logo = epg_logo or best_logo
 
                 for group_name, info, url, _ in streams:
-                    raw_name = info.split(",").pop().strip()
+                    raw_name = info.rsplit(",", 1).pop().strip()
                     name_key = raw_name.lower()
                     seen_names[name_key] = seen_names.get(name_key, 0) + 1
                     final_name = f"{raw_name} ({seen_names[name_key]})" if seen_names[name_key] > 1 else raw_name
@@ -211,8 +225,10 @@ def main():
         print("🎉 Отлично! Найдены абсолютно все каналы из списка!")
     print("=" * 40 + "\n")
 
+
 if __name__ == "__main__":
     main()
+
 
 
 
