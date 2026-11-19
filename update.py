@@ -1,5 +1,7 @@
 import urllib.request
 import concurrent.futures
+import gzip
+import xml.etree.ElementTree as ET
 import re
 
 USER_AGENT = "Mozilla/5.0"
@@ -31,6 +33,37 @@ def is_channel_match(wanted, channel_name):
     pattern = r'(?:^|[^а-яёa-z0-9])' + re.escape(wanted) + r'(?:$|[^а-яёa-z0-9])'
     return bool(re.search(pattern, channel_name))
 
+def normalize_name(name):
+    name = name.lower().strip()
+    name = re.sub(r'\b(full\s*hd|fhd|hd|sd|4k|uhd|1080p?|720p?|50\s*fps|orig)\b', '', name)
+    return re.sub(r'\s+', ' ', name).strip()
+
+def load_epg_data(epg_url):
+    epg_map = {}
+    try:
+        req = urllib.request.Request(epg_url, headers={"User-Agent": USER_AGENT})
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            raw_data = resp.read()
+        xml_data = gzip.decompress(raw_data)
+        root = ET.fromstring(xml_data)
+        for ch in root.findall("channel"):
+            ch_id = (ch.get("id") or "").strip()
+            icon_el = ch.find("icon")
+            icon_src = (icon_el.get("src") or "").strip() if icon_el is not None else ""
+            for dn in ch.findall("display-name"):
+                if dn.text:
+                    key = normalize_name(dn.text)
+                    if key:
+                        old_id, old_logo = epg_map.get(key, ("", ""))
+                        if not old_logo and icon_src:
+                            epg_map[key] = (ch_id or old_id, icon_src)
+                        elif key not in epg_map:
+                            epg_map[key] = (ch_id, icon_src)
+        print(f"База EPG загружена: {len(epg_map)} каналов с иконками.")
+    except Exception as e:
+        print(f"Не удалось загрузить иконки из EPG: {e}")
+    return epg_map
+
 def get_quality_score(name):
     name_low = name.lower()
     if re.search(r'\b(full\s*hd|fhd|1080p?|50\s*fps|orig|4k|uhd)\b', name_low):
@@ -53,6 +86,9 @@ def check_stream(item):
     return None
 
 def main():
+    epg_url = "https://raw.githubusercontent.com/Lorax121/epg_v2/main/data/epg2.xml.gz"
+    epg_map = load_epg_data(epg_url)
+
     sources = read_sources("sources.txt")
     wanted_list = read_grouped_channels("channels.txt")
     candidates = []
@@ -80,7 +116,6 @@ def main():
         except Exception as e:
             print(f"Ошибка загрузки {src}: {e}")
 
-    # Сортируем кандидатов: сначала по порядку каналов в списке, затем HD наверх
     candidates.sort(key=lambda x: (x[0], get_quality_score(x[3].split(",")[-1])))
 
     valid_by_idx = {}
@@ -93,7 +128,6 @@ def main():
                     bucket.append((grp, info, url))
 
     seen_names = {}
-    epg_url = "https://raw.githubusercontent.com/Lorax121/epg_v2/main/data/epg2.xml.gz"
 
     with open("my_playlist.m3u", "w", encoding="utf-8") as out:
         out.write(f'#EXTM3U url-tvg="{epg_url}"\n')
@@ -112,6 +146,13 @@ def main():
                         if m_logo:
                             best_logo = m_logo.group(1)
 
+                # Если в донорах нет логотипа или ID — берём из базы EPG
+                epg_id, epg_logo = epg_map.get(normalize_name(w), ("", ""))
+                if not best_id:
+                    best_id = epg_id
+                if not best_logo:
+                    best_logo = epg_logo
+
                 for group_name, info, url in streams:
                     raw_name = info.split(",").pop().strip()
                     name_key = raw_name.lower()
@@ -122,6 +163,14 @@ def main():
                     m_logo = re.search(r'tvg-logo="([^"]+)"', info)
                     cur_id = m_id.group(1) if m_id else best_id
                     cur_logo = m_logo.group(1) if m_logo else best_logo
+
+                    # Доп. проверка по очищенному имени конкретного потока
+                    if not cur_logo or not cur_id:
+                        s_epg_id, s_epg_logo = epg_map.get(normalize_name(raw_name), ("", ""))
+                        if not cur_id:
+                            cur_id = s_epg_id
+                        if not cur_logo:
+                            cur_logo = s_epg_logo
 
                     id_part = f' tvg-id="{cur_id}"' if cur_id else ""
                     logo_part = f' tvg-logo="{cur_logo}"' if cur_logo else ""
