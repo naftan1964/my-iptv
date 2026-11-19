@@ -106,23 +106,15 @@ def main():
             req = urllib.request.Request(src, headers={"User-Agent": USER_AGENT})
             with urllib.request.urlopen(req, timeout=15) as resp:
                 lines = resp.read().decode("utf-8", errors="ignore").splitlines()
-            
-            current_info = ""
+                
+                current_info = ""
             for line in lines:
                 line = line.strip()
                 if line.startswith("#EXTINF"):
                     current_info = line
                 elif line.startswith("http") and current_info:
                     raw_name = current_info.split(",")[-1].strip()
-                                    elif line.startswith("http") and current_info:
-                    raw_name = current_info.split(",")[-1].strip()
                     if not has_timezone_shift(raw_name) and not is_unsupported_format(raw_name):
-                        name_lower = raw_name.lower()
-                        for idx, (w, grp) in enumerate(wanted_list):
-                            if is_channel_match(w, name_lower):
-                                candidates.append((idx, w, grp, current_info, line))
-                                break
-
                         name_lower = raw_name.lower()
                         for idx, (w, grp) in enumerate(wanted_list):
                             if is_channel_match(w, name_lower):
