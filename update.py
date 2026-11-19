@@ -3,6 +3,7 @@ import concurrent.futures
 import gzip
 import xml.etree.ElementTree as ET
 import re
+import time
 
 USER_AGENT = "Mozilla/5.0"
 TIMEOUT = 6
