@@ -35,8 +35,11 @@ def is_channel_match(wanted, channel_name):
 
 def normalize_name(name):
     name = name.lower().strip()
-    name = re.sub(r'\b(full\s*hd|fhd|hd|sd|4k|uhd|1080p?|720p?|50\s*fps|orig)\b', '', name)
+    name = re.sub(r'[\(\[].*?[\)\]]', '', name)
+    name = re.sub(r'[!\.\-\+:]', ' ', name)
+    name = re.sub(r'\b(full\s*hd|fhd|hd|sd|4k|uhd|1080p?|720p?|50\s*fps|orig|russia|rus|тв|tv)\b', '', name)
     return re.sub(r'\s+', ' ', name).strip()
+
 
 def load_epg_data(epg_url):
     epg_map = {}
