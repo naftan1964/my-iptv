@@ -113,7 +113,24 @@ def main():
                     clean_info = f'#EXTINF:-1{id_part}{logo_part} group-title="{group_name}",{final_name}'
                     out.write(f"{clean_info}\n#EXTGRP:{group_name}\n{url}\n")
 
-    print("Сборка с приоритетом HD и группировкой каналов завершена!")
+    total_streams = sum(len(v) for v in valid_by_idx.values())
+    missing = []
+    for idx, (w, grp) in enumerate(wanted_list):
+        if idx not in valid_by_idx:
+            missing.append(f"  - {w} (группа: {grp})")
+
+    print("\n" + "=" * 40)
+    print("📊 ОТЧЁТ О СБОРКЕ ПЛЕЙЛИСТА")
+    print("=" * 40)
+    print(f"✅ Найдено каналов: {len(valid_by_idx)} из {len(wanted_list)}")
+    print(f"📺 Всего рабочих потоков: {total_streams}")
+    if missing:
+        print(f"❌ Не найдено каналов ({len(missing)}):")
+        for m in missing:
+            print(m)
+    else:
+        print("🎉 Отлично! Найдены абсолютно все каналы из списка!")
+    print("=" * 40 + "\n")
 
 if __name__ == "__main__":
     main()
