@@ -135,7 +135,7 @@ def main():
     with open("my_playlist.m3u", "w", encoding="utf-8") as out:
         out.write(f'#EXTM3U url-tvg="{epg_url}"\n')
         for idx, (w, grp) in enumerate(wanted_list):
-            if idx in valid_by_idx:
+             if idx in valid_by_idx:
                 streams = valid_by_idx[idx]
                 best_id = ""
                 best_logo = ""
@@ -149,12 +149,18 @@ def main():
                         if m_logo:
                             best_logo = m_logo.group(1)
 
-                # Если в донорах нет логотипа или ID — берём из базы EPG
                 epg_id, epg_logo = epg_map.get(normalize_name(w), ("", ""))
-                if not best_id:
-                    best_id = epg_id
-                if not best_logo:
-                    best_logo = epg_logo
+                if not epg_id or not epg_logo:
+                    for _, s_info, _ in streams:
+                        s_raw = s_info.split(",").pop().strip()
+                        s_id, s_logo = epg_map.get(normalize_name(s_raw), ("", ""))
+                        if not epg_id and s_id:
+                            epg_id = s_id
+                        if not epg_logo and s_logo:
+                            epg_logo = s_logo
+
+                final_id = epg_id or best_id
+                final_logo = epg_logo or best_logo
 
                 for group_name, info, url in streams:
                     raw_name = info.split(",").pop().strip()
@@ -162,24 +168,12 @@ def main():
                     seen_names[name_key] = seen_names.get(name_key, 0) + 1
                     final_name = f"{raw_name} ({seen_names[name_key]})" if seen_names[name_key] > 1 else raw_name
 
-                    m_id = re.search(r'tvg-id="([^"]+)"', info)
-                    m_logo = re.search(r'tvg-logo="([^"]+)"', info)
-                    cur_id = m_id.group(1) if m_id else best_id
-                    cur_logo = m_logo.group(1) if m_logo else best_logo
-
-                    # Доп. проверка по очищенному имени конкретного потока
-                    if not cur_logo or not cur_id:
-                        s_epg_id, s_epg_logo = epg_map.get(normalize_name(raw_name), ("", ""))
-                        if not cur_id:
-                            cur_id = s_epg_id
-                        if not cur_logo:
-                            cur_logo = s_epg_logo
-
-                    id_part = f' tvg-id="{cur_id}"' if cur_id else ""
-                    logo_part = f' tvg-logo="{cur_logo}"' if cur_logo else ""
+                    id_part = f' tvg-id="{final_id}"' if final_id else ""
+                    logo_part = f' tvg-logo="{final_logo}"' if final_logo else ""
 
                     clean_info = f'#EXTINF:-1{id_part}{logo_part} group-title="{group_name}",{final_name}'
                     out.write(f"{clean_info}\n#EXTGRP:{group_name}\n{url}\n")
+
 
     total_streams = sum(len(v) for v in valid_by_idx.values())
     missing = []
