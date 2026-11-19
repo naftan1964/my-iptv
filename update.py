@@ -135,7 +135,7 @@ def main():
     with open("my_playlist.m3u", "w", encoding="utf-8") as out:
         out.write(f'#EXTM3U url-tvg="{epg_url}"\n')
         for idx, (w, grp) in enumerate(wanted_list):
-             if idx in valid_by_idx:
+            if idx in valid_by_idx:
                 streams = valid_by_idx[idx]
                 best_id = ""
                 best_logo = ""
