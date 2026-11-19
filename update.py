@@ -108,7 +108,7 @@ def main():
                 lines = resp.read().decode("utf-8", errors="ignore").splitlines()
                 
                 current_info = ""
-            for line in lines:
+                for line in lines:
                 line = line.strip()
                 if line.startswith("#EXTINF"):
                     current_info = line
