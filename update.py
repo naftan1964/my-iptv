@@ -126,7 +126,7 @@ def main():
 
     candidates.sort(key=lambda x: (x[0], get_quality_score(x[3].split(",")[-1])))
 
-        valid_by_idx = {}
+    valid_by_idx = {}
     with concurrent.futures.ThreadPoolExecutor(max_workers=15) as executor:
         for res in executor.map(check_stream, candidates):
             if res:
