@@ -86,6 +86,7 @@ BCU Kinorating
 BCU VHS HDR
 CineMan
 CineMan Top
+CineMan РуКино
 CineMan Premium
 CineMan Action
 CineMan Thriller
@@ -109,6 +110,18 @@ MM Приключения
 MM Фантастика
 MM UFO
 MM Ужасы
+Yosso TV Best
+Yosso TV New Кино
+Yosso TV Thriller
+Yosso TV Adrenaline
+Yosso TV Русские Фильмы
+Yosso TV Советские Фильмы
+Yosso TV VHS
+PG Premiere HD
+PG Premium HD
+PG Thriller HD
+PG РуКино HD
+PG VHS HD
 [Познавательные]
 Z!Travel
 Z!Science
