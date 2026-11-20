@@ -34,25 +34,50 @@ def has_timezone_shift(name):
     return bool(re.search(r'[\s\(\[][\+\-]\d{1,2}[\)\]]?\b', name))
 
 
-def is_unsupported_format(name):
-    return bool(re.search(r'\b(full\s*hd|fhd|orig|ориг|ариг|4k|uhd|ultra\s*hd|50\s*fps)\b', name.lower()))
-
-
-def is_channel_match(wanted, channel_name):
-    pattern = r'(?:^|[^а-яёa-z0-9])' + re.escape(wanted) + r'(?:$|[^а-яёa-z0-9])'
-    if not re.search(pattern, channel_name):
+def is_unsupported_format(name, is_kinozal=False):
+    # Для кинозалов снимаем все ограничения по форматам и FPS
+    if is_kinozal:
         return False
-    if wanted == "history":
-        if re.search(r'\b(bcu|всу|citrus|viasat)\b', channel_name):
-            return False
-    return True
+    name_low = name.lower()
+    return bool(re.search(r'\b(full\s*hd|fhd|orig|ориг|ариг|4k|uhd|ultra\s*hd|50\s*fps|60\s*fps|hdr)\b', name_low))
+
+
+def clean_title(name, is_kinozal=False):
+    name = name.lower().strip()
+    name = re.sub(r'[\(\[].*?[\)\]]', ' ', name)
+    if is_kinozal:
+        # В кинозалах убираем метки разрешения/orig/50fps для точного совпадения, но оставляем 60fps и hdr
+        name = re.sub(r'\b(full\s*hd|fhd|orig|ориг|ариг|4k|uhd|ultra\s*hd|50\s*fps|hd|sd|1080p?|720p?|russia|russian|rus|ru|by|ua)\b', ' ', name)
+    else:
+        name = re.sub(r'\b(hd|sd|1080p?|720p?|60\s*fps|hdr|russia|russian|rus|ru|by|ua)\b', ' ', name)
+    name = re.sub(r'[^\w\sа-яёa-z0-9]', ' ', name)
+    name = re.sub(r'\btv\b', 'тв', name)
+    return re.sub(r'\s+', ' ', name).strip()
+
+
+def is_channel_match(wanted, channel_name, is_kinozal=False):
+    w_clean = clean_title(wanted, is_kinozal)
+    c_clean = clean_title(channel_name, is_kinozal)
+
+    if not w_clean or not c_clean:
+        return False
+
+    # Строгое равенство очищенных названий (защита коротких имён)
+    if w_clean == c_clean:
+        return True
+
+    # Допускаем только добавление "тв" в конце (например, "Комедия" == "Комедия ТВ")
+    if c_clean == f"{w_clean} тв":
+        return True
+
+    return False
 
 
 def normalize_name(name):
     name = name.lower().strip()
     name = re.sub(r'[\(\[].*?[\)\]]', '', name)
     name = re.sub(r'[!\.\-\+:]', ' ', name)
-    name = re.sub(r'\b(full\s*hd|fhd|hd|sd|4k|uhd|1080p?|720p?|50\s*fps|orig|russia|rus|тв|tv)\b', '', name)
+    name = re.sub(r'\b(full\s*hd|fhd|hd|sd|4k|uhd|1080p?|720p?|50\s*fps|60\s*fps|hdr|orig|russia|rus|тв|tv)\b', '', name)
     return re.sub(r'\s+', ' ', name).strip()
 
 
@@ -129,12 +154,14 @@ def main():
                     current_info = line
                 elif line.startswith("http") and current_info:
                     raw_name = current_info.rsplit(",", 1).pop().strip()
-                    if not has_timezone_shift(raw_name) and not is_unsupported_format(raw_name):
+                    if not has_timezone_shift(raw_name):
                         name_lower = raw_name.lower()
                         for idx, (w, grp) in enumerate(wanted_list):
-                            if is_channel_match(w, name_lower):
-                                candidates.append((idx, w, grp, current_info, line))
-                                break
+                            is_kz = (grp.lower() == "кинозалы")
+                            if not is_unsupported_format(raw_name, is_kz):
+                                if is_channel_match(w, name_lower, is_kz):
+                                    candidates.append((idx, w, grp, current_info, line))
+                                    break
                     current_info = ""
         except Exception as e:
             print(f"Ошибка загрузки {src}: {e}")
