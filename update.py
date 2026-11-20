@@ -6,8 +6,26 @@ import re
 import time
 
 USER_AGENT = "Mozilla/5.0"
-TIMEOUT = 6
+TIMEOUT = 10
 MAX_STREAMS_PER_CHANNEL = 3
+
+ALIASES = {
+    "megogo спорт": ["megogo sport"],
+    "окко прайм спорт": ["okko prime sport", "окко спорт прайм", "okko sport prime"],
+    "окко спорт": ["okko sport"],
+    "box sportcast": ["sportcast", "box sportcast 1", "бокс спорткаст"],
+    "9-1-1": ["911", "911 служба спасения"],
+    "history 2": ["viju history 2", "viju+ history 2", "viasat history 2", "h2", "хистори 2"],
+    "z!russian": ["z русское", "z кинозал русское", "кинозал z russian"],
+    "z!comedy": ["z комедия", "z кинозал комедия", "кинозал z comedy"],
+    "z!thriller": ["z триллер", "z кинозал триллер", "кинозал z thriller"],
+    "z!action": ["z боевик", "z кинозал боевик", "кинозал z action"],
+    "z!adventure": ["z приключения", "z кинозал приключения", "кинозал z adventure"],
+    "z!detective": ["z детектив", "z кинозал детектив", "кинозал z detective"],
+    "z!fantastic": ["z фантастика", "z кинозал фантастика", "кинозал z fantastic"],
+    "z!science": ["z наука", "z кинозал наука", "кинозал z science"],
+    "z!travel": ["z путешествия", "z кинозал путешествия", "кинозал z travel"],
+}
 
 
 def read_sources(filename):
@@ -34,44 +52,33 @@ def has_timezone_shift(name):
     return bool(re.search(r'[\s\(\[][\+\-]\d{1,2}[\)\]]?\b', name))
 
 
-def is_unsupported_format(name, is_kinozal=False):
-    # Для кинозалов снимаем все ограничения по форматам и FPS
-    if is_kinozal:
+def is_unsupported_format(name, allow_all_formats=False):
+    if allow_all_formats:
         return False
-    name_low = name.lower()
-    return bool(re.search(r'\b(full\s*hd|fhd|orig|ориг|ариг|4k|uhd|ultra\s*hd|50\s*fps|60\s*fps|hdr)\b', name_low))
+    return bool(re.search(r'\b(full\s*hd|fhd|orig|ориг|ариг|4k|uhd|ultra\s*hd|50\s*fps|60\s*fps|hdr)\b', name.lower()))
 
 
-def clean_title(name, is_kinozal=False):
+def clean_title(name, allow_all_formats=False):
     name = name.lower().strip()
     name = re.sub(r'[\(\[].*?[\)\]]', ' ', name)
-    if is_kinozal:
-        # В кинозалах убираем метки разрешения/orig/50fps для точного совпадения, но оставляем 60fps и hdr
-        name = re.sub(r'\b(full\s*hd|fhd|orig|ориг|ариг|4k|uhd|ultra\s*hd|50\s*fps|hd|sd|1080p?|720p?|russia|russian|rus|ru|by|ua)\b', ' ', name)
+    if allow_all_formats:
+        name = re.sub(r'\b(full\s*hd|fhd|orig|ориг|ариг|4k|uhd|ultra\s*hd|50\s*fps|hd|sd|1080p?|720p?|russia|rus|ru|by|ua)\b', ' ', name)
     else:
-        name = re.sub(r'\b(hd|sd|1080p?|720p?|60\s*fps|hdr|russia|russian|rus|ru|by|ua)\b', ' ', name)
+        name = re.sub(r'\b(hd|sd|1080p?|720p?|60\s*fps|hdr|russia|rus|ru|by|ua)\b', ' ', name)
     name = re.sub(r'[^\w\sа-яёa-z0-9]', ' ', name)
     name = re.sub(r'\btv\b', 'тв', name)
     return re.sub(r'\s+', ' ', name).strip()
 
 
-def is_channel_match(wanted, channel_name, is_kinozal=False):
-    w_clean = clean_title(wanted, is_kinozal)
-    c_clean = clean_title(channel_name, is_kinozal)
-
-    if not w_clean or not c_clean:
+def is_channel_match(wanted, channel_name, allow_all_formats=False):
+    c_clean = clean_title(channel_name, allow_all_formats)
+    if not c_clean:
         return False
-
-    # Строгое равенство очищенных названий (защита коротких имён)
-    if w_clean == c_clean:
-        return True
-
-    # Допускаем только добавление "тв" в конце (например, "Комедия" == "Комедия ТВ")
-    if c_clean == f"{w_clean} тв":
-        return True
-
+    for variant in [wanted] + ALIASES.get(wanted, []):
+        w_clean = clean_title(variant, allow_all_formats)
+        if w_clean and (w_clean == c_clean or c_clean == f"{w_clean} тв"):
+            return True
     return False
-
 
 def normalize_name(name):
     name = name.lower().strip()
@@ -86,8 +93,7 @@ def load_epg_data(epg_url):
     try:
         req = urllib.request.Request(epg_url, headers={"User-Agent": USER_AGENT})
         with urllib.request.urlopen(req, timeout=20) as resp:
-            raw_data = resp.read()
-        xml_data = gzip.decompress(raw_data)
+            xml_data = gzip.decompress(resp.read())
         root = ET.fromstring(xml_data)
         for ch in root.findall("channel"):
             ch_id = (ch.get("id") or "").strip()
@@ -126,8 +132,7 @@ def check_stream(item):
             if resp.status == 200:
                 chunk = resp.read(512)
                 if chunk and not chunk.lstrip().lower().startswith((b"<!doctype", b"<html")):
-                    ping = time.time() - start
-                    return (idx, key, group, info, url, ping)
+                    return (idx, key, group, info, url, time.time() - start)
     except Exception:
         pass
     return None
@@ -136,17 +141,16 @@ def check_stream(item):
 def main():
     epg_url = "https://raw.githubusercontent.com/Lorax121/epg_v2/main/data/epg2.xml.gz"
     epg_map = load_epg_data(epg_url)
-
     sources = read_sources("sources.txt")
     wanted_list = read_grouped_channels("channels.txt")
     candidates = []
+    blocked_by_format = {}
 
     for src in sources:
         try:
             req = urllib.request.Request(src, headers={"User-Agent": USER_AGENT})
             with urllib.request.urlopen(req, timeout=15) as resp:
                 lines = resp.read().decode("utf-8", errors="ignore").splitlines()
-
             current_info = ""
             for line in lines:
                 line = line.strip()
@@ -158,10 +162,13 @@ def main():
                         name_lower = raw_name.lower()
                         for idx, (w, grp) in enumerate(wanted_list):
                             is_kz = (grp.lower() == "кинозалы")
-                            if not is_unsupported_format(raw_name, is_kz):
-                                if is_channel_match(w, name_lower, is_kz):
+                            allow_all = is_kz or w.startswith(("z!", "cineman")) or w == "history 2"
+                            if is_channel_match(w, name_lower, allow_all):
+                                if not is_unsupported_format(raw_name, allow_all):
                                     candidates.append((idx, w, grp, current_info, line))
-                                    break
+                                else:
+                                    blocked_by_format.setdefault(idx, set()).add(raw_name)
+                                break
                     current_info = ""
         except Exception as e:
             print(f"Ошибка загрузки {src}: {e}")
@@ -171,20 +178,13 @@ def main():
         for res in executor.map(check_stream, candidates):
             if res:
                 idx, key, grp, info, url, ping = res
-                bucket = valid_by_idx.setdefault(idx, [])
-                bucket.append((grp, info, url, ping))
-
-    def stream_sort_key(item):
-        grp, info, url, ping = item
-        ch_title = info.rsplit(",", 1).pop().strip()
-        return (get_quality_score(ch_title), ping)
+                valid_by_idx.setdefault(idx, []).append((grp, info, url, ping))
 
     for idx in valid_by_idx:
-        valid_by_idx[idx].sort(key=stream_sort_key)
+        valid_by_idx[idx].sort(key=lambda x: (get_quality_score(x[1].rsplit(",", 1).pop().strip()), x[3]))
         valid_by_idx[idx] = valid_by_idx[idx][:MAX_STREAMS_PER_CHANNEL]
 
     seen_names = {}
-
     with open("my_playlist.m3u", "w", encoding="utf-8") as out:
         out.write(f'#EXTM3U url-tvg="{epg_url}"\n')
         for idx, (w, grp) in enumerate(wanted_list):
@@ -229,7 +229,6 @@ def main():
 
                     id_part = f' tvg-id="{final_id}"' if final_id else ""
                     logo_part = f' tvg-logo="{final_logo}"' if final_logo else ""
-
                     clean_info = f'#EXTINF:-1{id_part}{logo_part}{catchup_tags} group-title="{group_name}",{final_name}'
                     out.write(f"{clean_info}\n#EXTGRP:{group_name}\n{url}\n")
 
@@ -237,7 +236,10 @@ def main():
     missing = []
     for idx, (w, grp) in enumerate(wanted_list):
         if idx not in valid_by_idx:
-            missing.append(f"  - {w} (группа: {grp})")
+            reason = ""
+            if idx in blocked_by_format:
+                reason = f" — отсеян фильтром формата ({', '.join(list(blocked_by_format[idx])[:2])})"
+            missing.append(f"  - {w} (группа: {grp}){reason}")
 
     print("\n" + "=" * 40)
     print("📊 ОТЧЁТ О СБОРКЕ ПЛЕЙЛИСТА")
