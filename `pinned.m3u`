@@ -1,2 +1,4 @@
-
+#EXTINF:-1 tvg-id="162" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/9081748a3202bdd11154e1c109ce44ec9befcf54.png" catchup="default" catchup-days="14" catchup-source="http://live.ru-tv.site/8156/video-${start}-${duration}.m3u8?token=49a9134cba58721c9c4d7dd48b009eaf" timeshift="14" group-title="Эфирные",НТВ HD (3)
+#EXTGRP:Эфирные
+http://live.ru-tv.site/8156/video.m3u8?token=49a9134cba58721c9c4d7dd48b009eaf
 
