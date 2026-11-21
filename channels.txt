@@ -165,6 +165,7 @@ Travel Channel
 TravelXP
 Моя Планета
 Big Planet
+Дикий
 Дикая рыбалка
 Диалоги о рыбалке
 
