@@ -1,3 +1,6 @@
 EXTINF:-1 tvg-id="146" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/a9a40cbba064bce348a8db9114a8d55b9159bc65.png" catchup="default" catchup-days="14" catchup-source="http://live.ru-tv.site/8150/video-${start}-${duration}.m3u8?token=49a9134cba58721c9c4d7dd48b009eaf" timeshift="14" group-title="Эфирные",Первый канал HD
 #EXTGRP:Эфирные
 http://live.ru-tv.site/8150/video.m3u8?token=49a9134cba58721c9c4d7dd48b009eaf
+#EXTINF:-1 tvg-id="711" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/20f1bddab03c01991592fc1a154f15ddb3b2e354.png" catchup="default" catchup-days="14" catchup-source="http://live.ru-tv.site/8152/video-${start}-${duration}.m3u8?token=49a9134cba58721c9c4d7dd48b009eaf" timeshift="14" group-title="Эфирные",Россия 1 HD
+#EXTGRP:Эфирные
+http://live.ru-tv.site/8152/video.m3u8?token=49a9134cba58721c9c4d7dd48b009eaf
