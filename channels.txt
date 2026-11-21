@@ -142,10 +142,13 @@ The Explorers
 National Geographic
 Мужской
 TERRA
+BOX Kosmo
+BOX History
 BOX Mayday
 CineMan Air Crash
 Большая Азия
 Discovery Channel
+Investigation Discovery
 Первый космический
 Телепутешествия
 Глазами Туриста
@@ -157,6 +160,7 @@ History
 History 2
 Travel+Adventure
 Travel Channel
+TravelXP
 Моя Планета
 Big Planet
 
