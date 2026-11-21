@@ -1,9 +1,10 @@
-import urllib.request
-import concurrent.futures
-import gzip
-import xml.etree.ElementTree as ET
+import os
 import re
 import time
+import gzip
+import urllib.request
+import concurrent.futures
+import xml.etree.ElementTree as ET
 
 USER_AGENT = "Mozilla/5.0"
 TIMEOUT = 10
@@ -14,8 +15,12 @@ ALIASES = {
     "окко прайм спорт": ["okko prime sport", "окко спорт прайм", "okko sport prime"],
     "окко спорт": ["okko sport"],
     "box sportcast": ["sportcast", "box sportcast 1", "бокс спорткаст"],
-    "9-1-1": ["911", "911 служба спасения"],
+    "9-1-1": ["911", "911 служба спасения", "служба спасения", "служба спасения 911"],
     "history 2": ["viju history 2", "viju+ history 2", "viasat history 2", "h2", "хистори 2"],
+    "viju tv1000": ["viju tv 1000", "tv1000", "tv 1000"],
+    "viju tv1000 action": ["viju tv 1000 action", "tv1000 action", "tv 1000 action"],
+    "viju tv1000 русское": ["viju tv 1000 русское", "tv1000 русское", "tv 1000 русское"],
+    "cineman air crash": ["cineman aircrash", "cineman авиакатастрофы"],
     "z!russian": ["z русское", "z кинозал русское", "кинозал z russian"],
     "z!comedy": ["z комедия", "z кинозал комедия", "кинозал z comedy"],
     "z!thriller": ["z триллер", "z кинозал триллер", "кинозал z thriller"],
@@ -25,11 +30,6 @@ ALIASES = {
     "z!fantastic": ["z фантастика", "z кинозал фантастика", "кинозал z fantastic"],
     "z!science": ["z наука", "z кинозал наука", "кинозал z science"],
     "z!travel": ["z путешествия", "z кинозал путешествия", "кинозал z travel"],
-    "viju tv1000": ["viju tv 1000", "tv1000", "tv 1000"],
-    "viju tv1000 action": ["viju tv 1000 action", "tv1000 action"],
-    "viju tv1000 русское": ["viju tv 1000 русское", "tv1000 русское"],
-    "9-1-1": ["911", "911 служба спасения", "служба спасения", "служба спасения 911", "служба спасения 9-1-1"],
-    "cineman air crash": ["cineman aircrash", "cineman авиакатастрофы", "cineman расследования авиакатастроф"],
 }
 
 
@@ -85,13 +85,34 @@ def is_channel_match(wanted, channel_name, allow_all_formats=False):
             return True
     return False
 
+
+def read_pinned_streams(filename, wanted_list):
+    pinned = {}
+    if not os.path.exists(filename):
+        return pinned
+    with open(filename, "r", encoding="utf-8") as f:
+        lines = [line.strip() for line in f if line.strip() and not line.startswith("#EXTM3U")]
+    current_info = ""
+    for line in lines:
+        if line.startswith("#EXTINF"):
+            current_info = line
+        elif line.startswith(("http://", "https://")) and current_info:
+            raw_name = current_info.rsplit(",", 1).pop().strip().lstrip("★").strip()
+            name_lower = raw_name.lower()
+            for idx, (w, grp) in enumerate(wanted_list):
+                if is_channel_match(w, name_lower, allow_all_formats=True):
+                    pinned.setdefault(idx, []).append((grp, current_info, line))
+                    break
+            current_info = ""
+    return pinned
+
+
 def normalize_name(name):
     name = name.lower().strip()
     name = re.sub(r'[\(\[].*?[\)\]]', '', name)
     name = re.sub(r'[!\.\-\+:]', ' ', name)
     name = re.sub(r'\b(full\s*hd|fhd|hd|sd|4k|uhd|1080p?|720p?|50\s*fps|60\s*fps|hdr|orig|russia|rus|тв|tv)\b', '', name)
     return re.sub(r'\s+', ' ', name).strip()
-
 
 def load_epg_data(epg_url):
     epg_map = {}
@@ -128,6 +149,12 @@ def get_quality_score(name):
     return 2
 
 
+def stream_sort_key(item):
+    grp, info, url, ping = item
+    title = info.rsplit(",", 1).pop().strip()
+    return (get_quality_score(title), ping)
+
+
 def check_stream(item):
     idx, key, group, info, url = item
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
@@ -144,10 +171,15 @@ def check_stream(item):
 
 
 def main():
-    epg_url = "https://raw.githubusercontent.com/Lorax121/epg_v2/main/data/epg2.xml.gz"
+    epg_host = "https://raw.githubusercontent.com/Lorax121/epg_v2/main/data/epg2.xml.gz"
+    epg_path = "Lorax121/epg_v2/main/data/epg2.xml.gz"
+    epg_url = f"https://{epg_host}/{epg_path}"
+
     epg_map = load_epg_data(epg_url)
     sources = read_sources("sources.txt")
     wanted_list = read_grouped_channels("channels.txt")
+    pinned_by_idx = read_pinned_streams("pinned.m3u", wanted_list)
+
     candidates = []
     blocked_by_format = {}
 
@@ -161,7 +193,7 @@ def main():
                 line = line.strip()
                 if line.startswith("#EXTINF"):
                     current_info = line
-                elif line.startswith("http") and current_info:
+                elif line.startswith(("http://", "https://")) and current_info:
                     raw_name = current_info.rsplit(",", 1).pop().strip()
                     if not has_timezone_shift(raw_name):
                         name_lower = raw_name.lower()
@@ -186,61 +218,75 @@ def main():
                 valid_by_idx.setdefault(idx, []).append((grp, info, url, ping))
 
     for idx in valid_by_idx:
-        valid_by_idx[idx].sort(key=lambda x: (get_quality_score(x[1].rsplit(",", 1).pop().strip()), x[3]))
+        valid_by_idx[idx].sort(key=stream_sort_key)
         valid_by_idx[idx] = valid_by_idx[idx][:MAX_STREAMS_PER_CHANNEL]
 
     seen_names = {}
+    total_streams = 0
+    found_indices = set()
+
     with open("my_playlist.m3u", "w", encoding="utf-8") as out:
         out.write(f'#EXTM3U url-tvg="{epg_url}"\n')
         for idx, (w, grp) in enumerate(wanted_list):
-            if idx in valid_by_idx:
-                streams = valid_by_idx[idx]
-                best_id = ""
-                best_logo = ""
-                for _, s_info, _, _ in streams:
-                    if not best_id:
-                        m_id = re.search(r'tvg-id="([^"]+)"', s_info)
-                        if m_id:
-                            best_id = m_id.group(1)
-                    if not best_logo:
-                        m_logo = re.search(r'tvg-logo="([^"]+)"', s_info)
-                        if m_logo:
-                            best_logo = m_logo.group(1)
+            p_streams = pinned_by_idx.get(idx, [])
+            a_streams = valid_by_idx.get(idx, [])
+            if not p_streams and not a_streams:
+                continue
 
-                epg_id, epg_logo = epg_map.get(normalize_name(w), ("", ""))
-                if not epg_id or not epg_logo:
-                    for _, s_info, _, _ in streams:
-                        s_raw = s_info.rsplit(",", 1).pop().strip()
-                        s_id, s_logo = epg_map.get(normalize_name(s_raw), ("", ""))
-                        if not epg_id and s_id:
-                            epg_id = s_id
-                        if not epg_logo and s_logo:
-                            epg_logo = s_logo
+            found_indices.add(idx)
+            pinned_urls = {u for _, _, u in p_streams}
+            combined = [(g, i, u, True) for g, i, u in p_streams]
+            for g, i, u, _ in a_streams:
+                if u not in pinned_urls:
+                    combined.append((g, i, u, False))
 
-                final_id = epg_id or best_id
-                final_logo = epg_logo or best_logo
+            best_id = ""
+            best_logo = ""
+            for _, s_info, _, _ in combined:
+                if not best_id:
+                    m_id = re.search(r'tvg-id="([^"]+)"', s_info)
+                    if m_id:
+                        best_id = m_id.group(1)
+                if not best_logo:
+                    m_logo = re.search(r'tvg-logo="([^"]+)"', s_info)
+                    if m_logo:
+                        best_logo = m_logo.group(1)
 
-                for group_name, info, url, _ in streams:
-                    raw_name = info.rsplit(",", 1).pop().strip()
-                    name_key = raw_name.lower()
-                    seen_names[name_key] = seen_names.get(name_key, 0) + 1
-                    final_name = f"{raw_name} ({seen_names[name_key]})" if seen_names[name_key] > 1 else raw_name
+            epg_id, epg_logo = epg_map.get(normalize_name(w), ("", ""))
+            if not epg_id or not epg_logo:
+                for _, s_info, _, _ in combined:
+                    s_raw = s_info.rsplit(",", 1).pop().strip().lstrip("★").strip()
+                    s_id, s_logo = epg_map.get(normalize_name(s_raw), ("", ""))
+                    if not epg_id and s_id:
+                        epg_id = s_id
+                    if not epg_logo and s_logo:
+                        epg_logo = s_logo
 
-                    catchup_tags = ""
-                    for tag in ("catchup", "catchup-days", "catchup-source", "timeshift"):
-                        m_tag = re.search(rf'{tag}="([^"]+)"', info)
-                        if m_tag:
-                            catchup_tags += f' {tag}="{m_tag.group(1)}"'
+            final_id = epg_id or best_id
+            final_logo = epg_logo or best_logo
 
-                    id_part = f' tvg-id="{final_id}"' if final_id else ""
-                    logo_part = f' tvg-logo="{final_logo}"' if final_logo else ""
-                    clean_info = f'#EXTINF:-1{id_part}{logo_part}{catchup_tags} group-title="{group_name}",{final_name}'
-                    out.write(f"{clean_info}\n#EXTGRP:{group_name}\n{url}\n")
+            for group_name, info, url, is_pinned in combined:
+                total_streams += 1
+                raw_name = info.rsplit(",", 1).pop().strip().lstrip("★").strip()
+                base_name = f"★ {raw_name}" if is_pinned else raw_name
+                name_key = base_name.lower()
+                seen_names[name_key] = seen_names.get(name_key, 0) + 1
+                final_name = f"{base_name} ({seen_names[name_key]})" if seen_names[name_key] > 1 else base_name
 
-    total_streams = sum(len(v) for v in valid_by_idx.values())
+                catchup_tags = ""
+                for tag in ("catchup", "catchup-days", "catchup-source", "timeshift"):
+                    m_tag = re.search(rf'{tag}="([^"]+)"', info)
+                    if m_tag:
+                        catchup_tags += f' {tag}="{m_tag.group(1)}"'
+
+                id_part = f' tvg-id="{final_id}"' if final_id else ""
+                logo_part = f' tvg-logo="{final_logo}"' if final_logo else ""
+                clean_info = f'#EXTINF:-1{id_part}{logo_part}{catchup_tags} group-title="{group_name}",{final_name}'
+                out.write(f"{clean_info}\n#EXTGRP:{group_name}\n{url}\n")
+
     missing = []
     for idx, (w, grp) in enumerate(wanted_list):
-        if idx not in valid_by_idx:
+        if idx not in found_indices:
             reason = ""
             if idx in blocked_by_format:
                 reason = f" — отсеян фильтром формата ({', '.join(list(blocked_by_format[idx])[:2])})"
@@ -249,7 +295,8 @@ def main():
     print("\n" + "=" * 40)
     print("📊 ОТЧЁТ О СБОРКЕ ПЛЕЙЛИСТА")
     print("=" * 40)
-    print(f"✅ Найдено каналов: {len(valid_by_idx)} из {len(wanted_list)}")
+    print(f"✅ Найдено каналов: {len(found_indices)} из {len(wanted_list)}")
+    print(f"📌 Закреплено потоков: {sum(len(v) for v in pinned_by_idx.values())}")
     print(f"📺 Всего рабочих потоков: {total_streams}")
     if missing:
         print(f"❌ Не найдено каналов ({len(missing)}):")
