@@ -26,6 +26,8 @@ ALIASES = {
     "z!science": ["z наука", "z кинозал наука", "кинозал z science"],
     "z!travel": ["z путешествия", "z кинозал путешествия", "кинозал z travel"],
     "viju tv1000": ["viju tv 1000", "tv1000", "tv 1000"],
+    "viju tv1000 action": ["viju tv 1000 action", "tv1000 action"],
+    "viju tv1000 русское": ["viju tv 1000 русское", "tv1000 русское"],
 }
 
 
