@@ -158,9 +158,26 @@ def get_quality_score(name):
     return 3
 
 
-def has_archive(info):
-    info_low = info.lower()
-    return any(tag in info_low for tag in ('catchup=', 'catchup-days=', 'timeshift='))
+def has_real_archive(info, url):
+    if not has_archive(info):
+        return False
+    # Проверяем только стандартные Flussonic / Stalker / shift-ссылки
+    low_url = url.lower()
+    if "index.m3u8" in low_url or "mono.m3u8" in low_url or "tracks-" in low_url:
+        # Для Flussonic проверяем архив за 1 час назад
+        ts_1h_ago = int(time.time()) - 3600
+        test_url = re.sub(r'(index|mono)\.m3u8', f'index-{ts_1h_ago}-3600.m3u8', url)
+        if test_url != url:
+            try:
+                data = fetch_bytes(test_url, max_bytes=512, timeout=5)
+                return bool(data and data.lstrip().startswith(b"#EXTM3U"))
+            except Exception:
+                return False
+    # Если явно прописан catchup-source — считаем архив рабочим
+    if 'catchup-source="' in info.lower():
+        return True
+    return False
+
 
 
 def stream_sort_key(item):
