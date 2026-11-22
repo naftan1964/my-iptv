@@ -194,15 +194,27 @@ def stream_sort_key(item):
 
 
 def is_valid_ts_data(data):
-    if not data or len(data) < 1024:
+    if not data or len(data) < 1880:
         return False
-    low = data[:200].lstrip().lower()
-    if low.startswith((b"<!doctype", b"<html", b"404", b"403", b"error", b"no signal")):
+    head = data.split(b"\n", 1).pop(0).lstrip().lower()
+    if head.startswith((b"<!doctype", b"<html", b"404", b"403", b"error", b"no signal")):
         return False
-    # Проверка синхробайта MPEG-TS (0x47 каждые 188 байт)
-    if len(data) >= 377 and data[0] == 0x47 and data[188] == 0x47 and data[376] == 0x47:
-        return True
-    return len(data) >= 4096
+    sync_pos = data.find(0x47)
+    if sync_pos == -1:
+        return False
+    mv = memoryview(data)
+    packets = 0
+    for pos in range(sync_pos, len(data) - 4, 188):
+        if mv.__getitem__(pos) != 0x47:
+            return False
+        pid = ((mv.__getitem__(pos + 1) & 0x1F) << 8) | mv.__getitem__(pos + 2)
+        scrambling = (mv.__getitem__(pos + 3) & 0xC0) >> 6
+        has_payload = (mv.__getitem__(pos + 3) & 0x10) != 0
+        if 0x0020 <= pid < 0x1FFF and scrambling == 0 and has_payload:
+            packets += 1
+            if packets >= 3:
+                return True
+    return False
 
 
 def fetch_bytes(url, max_bytes=16384, timeout=TIMEOUT):
@@ -211,6 +223,36 @@ def fetch_bytes(url, max_bytes=16384, timeout=TIMEOUT):
         if resp.status != 200:
             return b""
         return resp.read(max_bytes)
+
+
+def has_archive(info):
+    info_low = info.lower()
+    return any(tag in info_low for tag in ('catchup=', 'catchup-days=', 'timeshift='))
+
+
+def has_real_archive(info, url):
+    if not has_archive(info):
+        return False
+    low_url = url.lower()
+    if "index.m3u8" in low_url or "mono.m3u8" in low_url or "tracks-" in low_url:
+        ts_1h_ago = int(time.time()) - 3600
+        test_url = re.sub(r'(index|mono)\.m3u8', f'index-{ts_1h_ago}-3600.m3u8', url)
+        if test_url != url:
+            try:
+                data = fetch_bytes(test_url, max_bytes=512, timeout=5)
+                return bool(data and data.lstrip().startswith(b"#EXTM3U"))
+            except Exception:
+                return False
+    if 'catchup-source="' in info.lower():
+        return True
+    return False
+
+
+def clean_fake_archive(info, url):
+    if has_archive(info) and not has_real_archive(info, url):
+        info = re.sub(r'\s*(catchup|catchup-days|catchup-source|timeshift)="[^"]*"', '', info)
+    return info
+
 
 def check_stream(item):
     idx, key, group, info, url = item
@@ -222,12 +264,10 @@ def check_stream(item):
         if not data:
             return None
 
-        # Если это HLS-плейлист (.m3u8) — проверяем реальный видеосегмент внутри
         if data.lstrip().startswith(b"#EXTM3U"):
             current_url = url
             text = data.decode("utf-8", errors="ignore")
 
-            # Если это мастер-плейлист со вложенным .m3u8 — переходим глубже (до 2 уровней)
             for _ in range(2):
                 sub_links = [
                     line.strip() for line in text.splitlines()
@@ -236,7 +276,6 @@ def check_stream(item):
                 if not sub_links:
                     return None
                 next_url = urljoin(current_url, sub_links.pop(0))
-
                 if ".m3u8" in next_url.lower() and next_url != current_url:
                     sub_data = fetch_bytes(next_url, max_bytes=8192)
                     if not sub_data or not sub_data.lstrip().startswith(b"#EXTM3U"):
@@ -244,7 +283,6 @@ def check_stream(item):
                     current_url = next_url
                     text = sub_data.decode("utf-8", errors="ignore")
                 else:
-                    # Проверяем сам видеосегмент (.ts / .aac / .mp4)
                     seg_data = fetch_bytes(next_url, max_bytes=16384)
                     if is_valid_ts_data(seg_data):
                         info = clean_fake_archive(info, url)
@@ -252,13 +290,13 @@ def check_stream(item):
                     return None
             return None
 
-        # Если это прямой поток (как 195.64.140.147:10103/99103)
         if is_valid_ts_data(data):
             info = clean_fake_archive(info, url)
             return (idx, key, group, info, url, time.time() - start)
     except Exception:
         pass
     return None
+
 
 
 
