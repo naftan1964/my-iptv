@@ -187,6 +187,12 @@ def fetch_bytes(url, max_bytes=16384, timeout=TIMEOUT):
 def check_stream(item):
     idx, key, group, info, url = item
     start = time.time()
+    def check_stream(item):
+    idx, key, group, info, url = item
+    if any(bad in url for bad in BAD_HOSTS):
+        return None
+    start = time.time()
+
     try:
         data = fetch_bytes(url, max_bytes=8192)
         if not data:
