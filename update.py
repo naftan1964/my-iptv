@@ -159,7 +159,9 @@ def get_quality_score(name):
 def stream_sort_key(item):
     grp, info, url, ping = item
     title = info.rsplit(",", 1).pop().strip()
-    return (get_quality_score(title), ping)
+    is_hls = 0 if ".m3u8" in url.lower() else 1
+    return (get_quality_score(title), is_hls, ping)
+
 
 
 def is_valid_ts_data(data):
