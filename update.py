@@ -5,6 +5,8 @@ import gzip
 import urllib.request
 import concurrent.futures
 import xml.etree.ElementTree as ET
+from urllib.parse import urljoin
+
 
 USER_AGENT = "Mozilla/5.0"
 TIMEOUT = 10
