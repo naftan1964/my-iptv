@@ -207,7 +207,7 @@ def check_stream(item):
                     text = sub_data.decode("utf-8", errors="ignore")
                 else:
                     # Проверяем сам видеосегмент (.ts / .aac / .mp4)
-                    seg_data = fetch_bytes(next_url, max_bytes=4096)
+                    seg_data = fetch_bytes(next_url, max_bytes=16384)
                     if is_valid_ts_data(seg_data):
                         return (idx, key, group, info, url, time.time() - start)
                     return None
