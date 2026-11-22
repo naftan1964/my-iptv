@@ -169,7 +169,7 @@ def is_valid_ts_data(data):
     return len(data) >= 4096
 
 
-def fetch_bytes(url, max_bytes=4096, timeout=TIMEOUT):
+def fetch_bytes(url, max_bytes=16384, timeout=TIMEOUT):
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         if resp.status != 200:
