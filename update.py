@@ -235,7 +235,8 @@ def check_stream(item):
                 ]
                 if not sub_links:
                     return None
-                next_url = urljoin(current_url, sub_links[0])
+                next_url = urljoin(current_url, sub_links.pop(0))
+
                 if ".m3u8" in next_url.lower() and next_url != current_url:
                     sub_data = fetch_bytes(next_url, max_bytes=8192)
                     if not sub_data or not sub_data.lstrip().startswith(b"#EXTM3U"):
