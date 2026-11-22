@@ -269,9 +269,15 @@ def main():
                 idx, key, grp, info, url, ping = res
                 valid_by_idx.setdefault(idx, []).append((grp, info, url, ping))
 
-    for idx in valid_by_idx:
+        for idx in valid_by_idx:
         valid_by_idx[idx].sort(key=stream_sort_key)
-        valid_by_idx[idx] = valid_by_idx[idx][:MAX_STREAMS_PER_CHANNEL]
+        unique_streams = []
+        seen_urls = set()
+        for s in valid_by_idx[idx]:
+            if s[2] not in seen_urls:
+                seen_urls.add(s[2])
+                unique_streams.append(s)
+        valid_by_idx[idx] = unique_streams[:MAX_STREAMS_PER_CHANNEL]
 
     seen_names = {}
     total_streams = 0
