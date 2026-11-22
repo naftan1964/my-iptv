@@ -161,10 +161,8 @@ def get_quality_score(name):
 def has_real_archive(info, url):
     if not has_archive(info):
         return False
-    # Проверяем только стандартные Flussonic / Stalker / shift-ссылки
     low_url = url.lower()
     if "index.m3u8" in low_url or "mono.m3u8" in low_url or "tracks-" in low_url:
-        # Для Flussonic проверяем архив за 1 час назад
         ts_1h_ago = int(time.time()) - 3600
         test_url = re.sub(r'(index|mono)\.m3u8', f'index-{ts_1h_ago}-3600.m3u8', url)
         if test_url != url:
@@ -173,10 +171,16 @@ def has_real_archive(info, url):
                 return bool(data and data.lstrip().startswith(b"#EXTM3U"))
             except Exception:
                 return False
-    # Если явно прописан catchup-source — считаем архив рабочим
     if 'catchup-source="' in info.lower():
         return True
     return False
+
+
+def clean_fake_archive(info, url):
+    if has_archive(info) and not has_real_archive(info, url):
+        info = re.sub(r'\s*(catchup|catchup-days|catchup-source|timeshift)="[^"]*"', '', info)
+    return info
+
 
 
 
