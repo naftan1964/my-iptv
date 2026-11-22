@@ -149,18 +149,26 @@ def load_epg_data(epg_url):
 
 def get_quality_score(name):
     name_low = name.lower()
-    if re.search(r'\b(1080p?|720p?|hd)\b', name_low):
+    if re.search(r'\b(1080p?|full\s*hd|fhd)\b', name_low):
         return 1
+    if re.search(r'\b(720p?|hd)\b', name_low):
+        return 2
     if re.search(r'\bsd\b', name_low):
-        return 3
-    return 2
+        return 4
+    return 3
+
+
+def has_archive(info):
+    info_low = info.lower()
+    return any(tag in info_low for tag in ('catchup=', 'catchup-days=', 'timeshift='))
 
 
 def stream_sort_key(item):
     grp, info, url, ping = item
     title = info.rsplit(",", 1).pop().strip()
-    is_hls = 0 if ".m3u8" in url.lower() else 1
-    return (get_quality_score(title), is_hls, ping)
+    archive_priority = 0 if has_archive(info) else 1
+    return (archive_priority, get_quality_score(title), ping)
+
 
 
 
