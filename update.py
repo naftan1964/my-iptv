@@ -157,19 +157,69 @@ def stream_sort_key(item):
     return (get_quality_score(title), ping)
 
 
+def is_valid_ts_data(data):
+    if not data or len(data) < 1024:
+        return False
+    low = data[:200].lstrip().lower()
+    if low.startswith((b"<!doctype", b"<html", b"404", b"403", b"error", b"no signal")):
+        return False
+    # Проверка синхробайта MPEG-TS (0x47 каждые 188 байт)
+    if len(data) >= 377 and data[0] == 0x47 and data[188] == 0x47 and data[376] == 0x47:
+        return True
+    return len(data) >= 4096
+
+
+def fetch_bytes(url, max_bytes=4096, timeout=TIMEOUT):
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        if resp.status != 200:
+            return b""
+        return resp.read(max_bytes)
+
+
 def check_stream(item):
     idx, key, group, info, url = item
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     start = time.time()
     try:
-        with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
-            if resp.status == 200:
-                chunk = resp.read(512)
-                if chunk and not chunk.lstrip().lower().startswith((b"<!doctype", b"<html")):
-                    return (idx, key, group, info, url, time.time() - start)
+        data = fetch_bytes(url, max_bytes=8192)
+        if not data:
+            return None
+
+        # Если это HLS-плейлист (.m3u8) — проверяем реальный видеосегмент внутри
+        if data.lstrip().startswith(b"#EXTM3U"):
+            current_url = url
+            text = data.decode("utf-8", errors="ignore")
+
+            # Если это мастер-плейлист со вложенным .m3u8 — переходим глубже (до 2 уровней)
+            for _ in range(2):
+                sub_links = [
+                    line.strip() for line in text.splitlines()
+                    if line.strip() and not line.strip().startswith("#")
+                ]
+                if not sub_links:
+                    return None
+                next_url = urljoin(current_url, sub_links[0])
+                if ".m3u8" in next_url.lower() and next_url != current_url:
+                    sub_data = fetch_bytes(next_url, max_bytes=8192)
+                    if not sub_data or not sub_data.lstrip().startswith(b"#EXTM3U"):
+                        return None
+                    current_url = next_url
+                    text = sub_data.decode("utf-8", errors="ignore")
+                else:
+                    # Проверяем сам видеосегмент (.ts / .aac / .mp4)
+                    seg_data = fetch_bytes(next_url, max_bytes=4096)
+                    if is_valid_ts_data(seg_data):
+                        return (idx, key, group, info, url, time.time() - start)
+                    return None
+            return None
+
+        # Если это прямой поток (как 195.64.140.147:10103/99103)
+        if is_valid_ts_data(data):
+            return (idx, key, group, info, url, time.time() - start)
     except Exception:
         pass
     return None
+
 
 
 def main():
