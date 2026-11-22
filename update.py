@@ -261,7 +261,7 @@ def main():
                     current_info = ""
         except Exception as e:
             print(f"Ошибка загрузки {src}: {e}")
-
+    
     valid_by_idx = {}
     with concurrent.futures.ThreadPoolExecutor(max_workers=15) as executor:
         for res in executor.map(check_stream, candidates):
@@ -269,7 +269,7 @@ def main():
                 idx, key, grp, info, url, ping = res
                 valid_by_idx.setdefault(idx, []).append((grp, info, url, ping))
 
-        for idx in valid_by_idx:
+    for idx in valid_by_idx:
         valid_by_idx[idx].sort(key=stream_sort_key)
         unique_streams = []
         seen_urls = set()
@@ -282,6 +282,7 @@ def main():
     seen_names = {}
     total_streams = 0
     found_indices = set()
+
 
     with open("my_playlist.m3u", "w", encoding="utf-8") as out:
         out.write(f'#EXTM3U url-tvg="{epg_url}"\n')
