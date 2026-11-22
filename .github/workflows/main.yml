@@ -2,9 +2,6 @@ name: Update IPTV Playlist
 
 on:
   workflow_dispatch:
-  repository_dispatch:
-  schedule:
-    - cron: '0 */4 * * *'
 
 concurrency:
   group: iptv-playlist-update
@@ -43,6 +40,7 @@ jobs:
           else
             echo "Плейлист не изменился, коммит не требуется."
           fi
+
 
 
           
