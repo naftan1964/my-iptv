@@ -214,9 +214,6 @@ def check_stream(item):
         return None
     start = time.time()
     try:
-    
-
-
         data = fetch_bytes(url, max_bytes=8192)
         if not data:
             return None
@@ -245,16 +242,19 @@ def check_stream(item):
                     # Проверяем сам видеосегмент (.ts / .aac / .mp4)
                     seg_data = fetch_bytes(next_url, max_bytes=16384)
                     if is_valid_ts_data(seg_data):
+                        info = clean_fake_archive(info, url)
                         return (idx, key, group, info, url, time.time() - start)
                     return None
             return None
 
         # Если это прямой поток (как 195.64.140.147:10103/99103)
         if is_valid_ts_data(data):
+            info = clean_fake_archive(info, url)
             return (idx, key, group, info, url, time.time() - start)
     except Exception:
         pass
     return None
+
 
 
 
