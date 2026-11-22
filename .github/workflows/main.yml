@@ -2,6 +2,13 @@ name: Update IPTV Playlist
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+  schedule:
+    - cron: '0 */4 * * *'
+
+concurrency:
+  group: iptv-playlist-update
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -9,14 +16,35 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - run: |
-          python3 update.py
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run update script
+        run: python3 update.py
+
+      - name: Commit and push updated playlist
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@://github.com"
           git add my_playlist.m3u
-          git commit -m "Update playlist" || exit 0
-          git push
+          if ! git diff --staged --quiet; then
+            git commit -m "Update playlist"
+            git pull --rebase --autostash origin main
+            git push origin main
+          else
+            echo "Плейлист не изменился, коммит не требуется."
+          fi
+
+
+          
 
 
