@@ -11,6 +11,11 @@ from urllib.parse import urljoin
 USER_AGENT = "Mozilla/5.0"
 TIMEOUT = 10
 MAX_STREAMS_PER_CHANNEL = 3
+BAD_HOSTS = (
+    "195.64.140.147",
+    "tv.ttk.mx",
+)
+
 
 ALIASES = {
     "megogo спорт": ["megogo sport"],
