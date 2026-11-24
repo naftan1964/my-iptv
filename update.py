@@ -66,12 +66,23 @@ ALIASES = {
     "z!travel": ["z путешествия", "z кинозал путешествия", "кинозал z travel"],
 }
 
-
 def read_sources(filename):
+  sources = []
+  last_comment = ""
   with open(filename, "r", encoding="utf-8") as f:
-    return [
-        line.strip() for line in f if line.strip() and not line.startswith("#")
-    ]
+    for raw_line in f:
+      line = raw_line.strip()
+      if not line:
+        last_comment = ""
+        continue
+      if line.startswith("#"):
+        last_comment = line.lstrip("#").strip()
+      else:
+        sources.append((line, last_comment))
+        last_comment = ""
+  return sources
+
+
 
 
 def read_grouped_channels(filename):
@@ -170,32 +181,39 @@ def normalize_name(name):
   return re.sub(r"\s+", " ", name).strip()
 
 
-def load_epg_data(epg_url):
+def load_epg_data(epg_url, retries=3, delay=5):
   epg_map = {}
-  try:
-    req = urllib.request.Request(epg_url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(req, timeout=20) as resp:
-      xml_data = gzip.decompress(resp.read())
-    root = ET.fromstring(xml_data)
-    for ch in root.findall("channel"):
-      ch_id = (ch.get("id") or "").strip()
-      icon_el = ch.find("icon")
-      icon_src = (
-          (icon_el.get("src") or "").strip() if icon_el is not None else ""
-      )
-      for dn in ch.findall("display-name"):
-        if dn.text:
-          key = normalize_name(dn.text)
-          if key:
-            old_id, old_logo = epg_map.get(key, ("", ""))
-            if not old_logo and icon_src:
-              epg_map[key] = (ch_id or old_id, icon_src)
-            elif key not in epg_map:
-              epg_map[key] = (ch_id, icon_src)
-    print(f"База EPG загружена: {len(epg_map)} каналов с иконками.")
-  except Exception as e:
-    print(f"Не удалось загрузить иконки из EPG: {e}")
+  for attempt in range(1, retries + 1):
+    try:
+      print(f"Загрузка базы EPG (попытка {attempt}/{retries})...")
+      req = urllib.request.Request(epg_url, headers={"User-Agent": USER_AGENT})
+      with urllib.request.urlopen(req, timeout=20) as resp:
+        xml_data = gzip.decompress(resp.read())
+      root = ET.fromstring(xml_data)
+      for ch in root.findall("channel"):
+        ch_id = (ch.get("id") or "").strip()
+        icon_el = ch.find("icon")
+        icon_src = (
+            (icon_el.get("src") or "").strip() if icon_el is not None else ""
+        )
+        for dn in ch.findall("display-name"):
+          if dn.text:
+            key = normalize_name(dn.text)
+            if key:
+              old_id, old_logo = epg_map.get(key, ("", ""))
+              if not old_logo and icon_src:
+                epg_map[key] = (ch_id or old_id, icon_src)
+              elif key not in epg_map:
+                epg_map[key] = (ch_id, icon_src)
+      print(f"База EPG загружена: {len(epg_map)} каналов с иконками.")
+      return epg_map
+    except Exception as e:
+      print(f"Ошибка загрузки EPG (попытка {attempt}/{retries}): {e}")
+      if attempt < retries:
+        time.sleep(delay)
+  print("Не удалось загрузить иконки из EPG после 3 попыток.")
   return epg_map
+
 
 
 def get_quality_score(name):
