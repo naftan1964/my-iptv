@@ -391,9 +391,11 @@ def main():
               is_kz = (
                   re.sub(r"^[^\wа-яёa-z0-9]+", "", grp.lower()).strip()
                   == "кинозалы"
+              )
               allow_all = (
                   is_kz or w.startswith(("z!", "cineman")) or w == "history 2"
               )
+
               if is_channel_match(w, name_lower, allow_all):
                 if not is_unsupported_format(raw_name, allow_all):
                   candidates.append(
