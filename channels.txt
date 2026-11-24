@@ -1,4 +1,4 @@
-[Эфирные]
+[📡Эфирные]
 НТВ
 Россия 1
 Первый канал
@@ -11,7 +11,7 @@
 Т24
 Мир
 Санкт-Петербург
-[Новостные]
+[🚨Новостные]
 Россия 24
 РТР Планета
 Москва 24
@@ -22,7 +22,7 @@ Euronews Россия
 РБК
 Инфоканал
 360 Новости
-[Спортивные]
+[🏀Спортивные]
 Матч тв
 Матч! Премьер
 Матч! Футбол 1
@@ -41,7 +41,7 @@ Eurosport 2
 BOX SportCast
 KHL Prime
 KHL
-[Кино и сериалы]
+[🍿Кино и сериалы]
 Viju+ Premiere
 Viju+ Megahit
 Viju+ Comedy
@@ -75,7 +75,7 @@ Viju TV1000 Русское
 Страшное
 Cinema
 sci-fi
-[Кинозалы]
+[🍺Кинозалы]
 Z!Russian
 Z!Comedy
 Z!Thriller
@@ -136,7 +136,7 @@ PG Premium HD
 PG Thriller HD
 PG РуКино HD
 PG VHS HD
-[Познавательные]
+[🌍Познавательные]
 Z!Travel
 Z!Science
 The Explorers
