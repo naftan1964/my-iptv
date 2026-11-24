@@ -388,7 +388,9 @@ def main():
           if not has_timezone_shift(raw_name):
             name_lower = raw_name.lower()
             for idx, (w, grp) in enumerate(wanted_list):
-              is_kz = grp.lower() == "кинозалы"
+              is_kz = (
+                  re.sub(r"^[^\wа-яёa-z0-9]+", "", grp.lower()).strip()
+                  == "кинозалы"
               allow_all = (
                   is_kz or w.startswith(("z!", "cineman")) or w == "history 2"
               )
