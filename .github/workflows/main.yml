@@ -4,11 +4,6 @@ on:
   workflow_dispatch:
   repository_dispatch:
 
-name: Update IPTV Playlist
-
-on:
-  workflow_dispatch:
-
 concurrency:
   group: iptv-playlist-update
   cancel-in-progress: true
@@ -46,6 +41,7 @@ jobs:
           else
             echo "Плейлист не изменился, коммит не требуется."
           fi
+
 
 
 
