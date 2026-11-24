@@ -365,11 +365,13 @@ def main():
   blocked_by_format = {}
   source_stats = []
 
-  for src_idx, src in enumerate(sources):
+  for src_idx, (src, comment) in enumerate(sources):
     host = urlparse(src).netloc or "неизвестный адрес"
-    label = f"Ссылка #{src_idx + 1} ({host})"
+    title_part = f" — {comment}" if comment else ""
+    label = f"Ссылка #{src_idx + 1}{title_part} ({host})"
     stat = {"label": label, "loaded": False, "tested": 0, "alive": 0}
     source_stats.append(stat)
+
 
     try:
       req = urllib.request.Request(src, headers={"User-Agent": USER_AGENT})
