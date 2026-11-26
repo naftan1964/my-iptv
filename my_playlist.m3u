@@ -14,7 +14,7 @@ http://185.76.10.53:8080/srv5/ntv_hd/tracks-v1a1/mono.m3u8?cid=144&did=5366158&m
 #EXTINF:-1 tvg-id="711" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/20f1bddab03c01991592fc1a154f15ddb3b2e354.png" catchup="default" catchup-days="14" catchup-source="http://live.ru-tv.site/8152/video-${start}-${duration}.m3u8?token=49a9134cba58721c9c4d7dd48b009eaf" timeshift="14" group-title="📡Эфирные",★ Россия 1 HD
 #EXTGRP:📡Эфирные
 http://live.ru-tv.site/8152/video.m3u8?token=49a9134cba58721c9c4d7dd48b009eaf
-#EXTINF:-1 tvg-id="711" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/20f1bddab03c01991592fc1a154f15ddb3b2e354.png" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" group-title="📡Эфирные",Россия 1 (Архив)
+#EXTINF:-1 tvg-id="711" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/20f1bddab03c01991592fc1a154f15ddb3b2e354.png" catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" group-title="📡Эфирные",Россия 1
 #EXTGRP:📡Эфирные
 https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1/variant.m3u8
 #EXTINF:-1 tvg-id="711" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/20f1bddab03c01991592fc1a154f15ddb3b2e354.png" group-title="📡Эфирные",Россия 1 HD
@@ -31,19 +31,19 @@ http://live.ru-tv.site/8150/video.m3u8?token=49a9134cba58721c9c4d7dd48b009eaf
 https://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD/variant.m3u8
 #EXTINF:-1 tvg-id="146" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/a9a40cbba064bce348a8db9114a8d55b9159bc65.png" group-title="📡Эфирные",Первый канал HD
 #EXTGRP:📡Эфирные
-http://95.181.17.26/dvr01/hd1/1kanal_hd/chunks.m3u8?&wmsAuthSign=c2VydmVyX3RpbWU9MTEvMjUvMjAyNiA4OjI1OjQ2IFBNJmhhc2hfdmFsdWU9NW5RY0E5dHdhbmZzY2R3RlR1T3VjZz09JnZhbGlkbWludXRlcz03MjAmaWQ9Nzc3
+http://95.181.17.26/dvr01/hd1/1kanal_hd/chunks.m3u8?&wmsAuthSign=c2VydmVyX3RpbWU9MTEvMjYvMjAyNiA3OjQxOjU0IEFNJmhhc2hfdmFsdWU9dFNFM2RGS1JrUm95YVlmM2grUktnUT09JnZhbGlkbWludXRlcz03MjAmaWQ9Nzc3
 #EXTINF:-1 tvg-id="146" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/a9a40cbba064bce348a8db9114a8d55b9159bc65.png" group-title="📡Эфирные",Первый канал HD (2)
 #EXTGRP:📡Эфирные
-https://bl.rutube.ru/livestream/c58f502c7bb34a8fcdd976b221fca292/index.m3u8?s=CsectfNEhR43560rR5rBJg&e=2095638405&scheme=https
+https://stream3.cinerama.uz/1214/mono.m3u8
 #EXTINF:-1 tvg-id="18" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/8a5dcf601661a82bf7cd02afb45589bd746f3d82.png" catchup="default" catchup-days="14" catchup-source="http://live.ru-tv.site/8312/video-${start}-${duration}.m3u8?token=49a9134cba58721c9c4d7dd48b009eaf" timeshift="14" group-title="📡Эфирные",★ РЕН ТВ HD (2)
 #EXTGRP:📡Эфирные
 http://live.ru-tv.site/8312/video.m3u8?token=49a9134cba58721c9c4d7dd48b009eaf
-#EXTINF:-1 tvg-id="18" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/8a5dcf601661a82bf7cd02afb45589bd746f3d82.png" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" group-title="📡Эфирные",Рен ТВ (Архив)
-#EXTGRP:📡Эфирные
-https://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV/variant.m3u8
 #EXTINF:-1 tvg-id="18" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/8a5dcf601661a82bf7cd02afb45589bd746f3d82.png" catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" group-title="📡Эфирные",РЕН ТВ
 #EXTGRP:📡Эфирные
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV/variant.m3u8
+#EXTINF:-1 tvg-id="18" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/8a5dcf601661a82bf7cd02afb45589bd746f3d82.png" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" group-title="📡Эфирные",Рен ТВ (Архив)
+#EXTGRP:📡Эфирные
+https://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV/variant.m3u8
 #EXTINF:-1 tvg-id="18" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/8a5dcf601661a82bf7cd02afb45589bd746f3d82.png" group-title="📡Эфирные",Рен ТВ HD
 #EXTGRP:📡Эфирные
 http://185.76.10.53:8080/srv5/ren_tv_hd/tracks-v1a1/mono.m3u8?cid=144&did=5366158&m=1&rid=24397&token=2022b6576a65c40ede42a7d4941b5471
@@ -52,7 +52,7 @@ http://185.76.10.53:8080/srv5/ren_tv_hd/tracks-v1a1/mono.m3u8?cid=144&did=536615
 http://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/mono.ts.m3u8
 #EXTINF:-1 tvg-id="4661" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/06be897cf468ad71f77890859c542ae300e674bb.png" group-title="📡Эфирные",Звезда Плюс
 #EXTGRP:📡Эфирные
-http://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/tracks-v1a1/mono.ts.m3u8
+https://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="4661" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/06be897cf468ad71f77890859c542ae300e674bb.png" group-title="📡Эфирные",Звезда Плюс (2)
 #EXTGRP:📡Эфирные
 http://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/tracks-v2a1/mono.ts.m3u8
@@ -64,19 +64,16 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA/variant.m3u8
 https://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA/variant.m3u8
 #EXTINF:-1 tvg-id="405" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/650200127e7c0b044485df1ff8c2e6801b7c4de2.png" group-title="📡Эфирные",Звезда HD
 #EXTGRP:📡Эфирные
-http://tvchannelstream1.tvzvezda.ru/cdn/tvzvezda/playlist_hdhigh.m3u8
+http://dmitry-tv.ddns.net/hls/T2/CH_ZVEZDAHD.m3u8
 #EXTINF:-1 tvg-id="3357" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/b4d9b938877d750a76c0d1a3d88306ad50cb1577.png" catchup="default" catchup-days="14" catchup-source="http://live.ru-tv.site/8707/video-${start}-${duration}.m3u8?token=49a9134cba58721c9c4d7dd48b009eaf" timeshift="14" group-title="📡Эфирные",★ Мосфильм. Золотая коллекция (2)
 #EXTGRP:📡Эфирные
 http://live.ru-tv.site/8707/video.m3u8?token=49a9134cba58721c9c4d7dd48b009eaf
 #EXTINF:-1 tvg-id="3357" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/b4d9b938877d750a76c0d1a3d88306ad50cb1577.png" group-title="📡Эфирные",Мосфильм. Золотая коллекция
 #EXTGRP:📡Эфирные
-http://185.76.10.53:8080/srv5/mosfilm/tracks-v1a1/mono.m3u8?cid=144&did=5366158&m=1&rid=24397&token=2022b6576a65c40ede42a7d4941b5471
+https://fs.uplink.kz/mosfilm/mono.m3u8?token=onlinetv2
 #EXTINF:-1 tvg-id="3357" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/b4d9b938877d750a76c0d1a3d88306ad50cb1577.png" group-title="📡Эфирные",Мосфильм Золотая коллекция (2)
 #EXTGRP:📡Эфирные
 http://185.121.1.163:8083/Mosfilm/index.m3u8
-#EXTINF:-1 tvg-id="3357" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/b4d9b938877d750a76c0d1a3d88306ad50cb1577.png" group-title="📡Эфирные",Мосфильм. Золотая коллекция (2)
-#EXTGRP:📡Эфирные
-https://fs.uplink.kz/mosfilm/mono.m3u8?token=onlinetv2
 #EXTINF:-1 tvg-id="2768" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/55cad2e7873bcd2811dd1c574c408e56d53afd8d.png" group-title="📡Эфирные",Арсенал HD
 #EXTGRP:📡Эфирные
 https://stream8.cinerama.uz/1414/tracks-v1a1/mono.m3u8
@@ -88,13 +85,13 @@ http://cdntv.online/high/wkb8rh2jd6/1032.mpeg
 https://stream8.cinerama.uz/1414/index.m3u8
 #EXTINF:-1 tvg-id="2430" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/a19727b23bf3ab20297e4ea4628272c4d3212957.png" group-title="📡Эфирные",Оружие
 #EXTGRP:📡Эфирные
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/2087/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/2087/index.m3u8
 #EXTINF:-1 tvg-id="2430" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/a19727b23bf3ab20297e4ea4628272c4d3212957.png" group-title="📡Эфирные",Оружие (2)
 #EXTGRP:📡Эфирные
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/2087/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/2087/index.m3u8
 #EXTINF:-1 tvg-id="2430" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/a19727b23bf3ab20297e4ea4628272c4d3212957.png" group-title="📡Эфирные",Оружие (3)
 #EXTGRP:📡Эфирные
-http://194.158.222.36:6093/
+http://45.11.139.43:8555/orujie/index.m3u8
 #EXTINF:-1 tvg-id="2762" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e0fc066b5c9b2c474ef52a808f0a630cce22dcef.png" group-title="📡Эфирные",Т24
 #EXTGRP:📡Эфирные
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/5047/index.m3u8
@@ -134,13 +131,13 @@ https://fs.uplink.kz/rtr_planeta/mono.m3u8?token=onlinetv2
 #EXTINF:-1 tvg-id="334" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/f3f88a4b6c0879cc5f7c445ee5825cebe7d903d0.png" catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" group-title="🚨Новостные",Москва 24
 #EXTGRP:🚨Новостные
 https://rt-mos-htlive.cdn.ngenix.net/hls/CH_R04_MOSKOV24/variant.m3u8
-#EXTINF:-1 tvg-id="334" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/f3f88a4b6c0879cc5f7c445ee5825cebe7d903d0.png" group-title="🚨Новостные",Москва 24 (М24)
-#EXTGRP:🚨Новостные
-https://stream.smotrim.ru/hls/moscow_24/playlist_3.m3u8
 #EXTINF:-1 tvg-id="334" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/f3f88a4b6c0879cc5f7c445ee5825cebe7d903d0.png" group-title="🚨Новостные",Москва 24 (2)
 #EXTGRP:🚨Новостные
+https://stream.smotrim.ru/hls/moscow_24/playlist_3.m3u8
+#EXTINF:-1 tvg-id="334" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/f3f88a4b6c0879cc5f7c445ee5825cebe7d903d0.png" group-title="🚨Новостные",Москва 24 (3)
+#EXTGRP:🚨Новостные
 https://fs.uplink.kz/moskva24/mono.m3u8?token=onlinetv2
-#EXTINF:-1 tvg-id="2078" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/02cdc879c1d60fb90f6e5b17c874ab4197e9faf6.png" group-title="🚨Новостные",МИР 24 HD
+#EXTINF:-1 tvg-id="2078" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/02cdc879c1d60fb90f6e5b17c874ab4197e9faf6.png" group-title="🚨Новостные",Мир 24 HD
 #EXTGRP:🚨Новостные
 http://hls.mirtv.cdnvideo.ru/mirtv-parampublish/mir24_2500/playlist.m3u8
 #EXTINF:-1 tvg-id="2078" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/02cdc879c1d60fb90f6e5b17c874ab4197e9faf6.png" group-title="🚨Новостные",МИР 24 HD (2)
@@ -151,31 +148,31 @@ http://dmitry-tv.ddns.net/hls/CH_MIR24HD.m3u8
 https://bl.rutube.ru/livestream/43269ba8fb179e298b1e497f557e8d2d/index.m3u8?s=lswkUz3NQQHnD-a8WTcTEw&e=2066519806&scheme=https
 #EXTINF:-1 tvg-id="2271" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e4de029e4607e2003a20c5826154fa9b40c8b10d.png" group-title="🚨Новостные",Известия HD
 #EXTGRP:🚨Новостные
-http://hls-igi.cdnvideo.ru/igi/igi_hq/playlist.m3u8
+http://dmitry-tv.ddns.net/hls/CH_I3BECTIYAHD.m3u8
 #EXTINF:-1 tvg-id="2271" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e4de029e4607e2003a20c5826154fa9b40c8b10d.png" group-title="🚨Новостные",Известия ТВ HD
 #EXTGRP:🚨Новостные
 http://igi-hls.cdnvideo.ru/igi/igi_tcode/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="2271" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e4de029e4607e2003a20c5826154fa9b40c8b10d.png" group-title="🚨Новостные",Известия HD (2)
 #EXTGRP:🚨Новостные
-http://dmitry-tv.ddns.net/hls/CH_I3BECTIYAHD.m3u8
+http://hls-igi.cdnvideo.ru/igi/igi_hq/playlist.m3u8
 #EXTINF:-1 tvg-id="743" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/fc5f9782ade08228a33ebb347f22fb9f47fc3c0a.png" catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" group-title="🚨Новостные",РБК
 #EXTGRP:🚨Новостные
 https://s91030.cdn.ngenix.net/hls/CH_R25_RBKTVHD_VLDK/variant.m3u8
 #EXTINF:-1 tvg-id="743" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/fc5f9782ade08228a33ebb347f22fb9f47fc3c0a.png" group-title="🚨Новостные",РБК HD
 #EXTGRP:🚨Новостные
-http://dmitry-tv.ddns.net/hls/CH_RBKHD.m3u8
+http://online.video.rbc.ru/online/rbctv_1080p/index.m3u8
 #EXTINF:-1 tvg-id="743" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/fc5f9782ade08228a33ebb347f22fb9f47fc3c0a.png" group-title="🚨Новостные",РБК HD (2)
 #EXTGRP:🚨Новостные
-http://online.video.rbc.ru/online/rbctv_1080p/index.m3u8
+http://online.video.rbc.ru/online/rbctvhd_1080p/index.m3u8
 #EXTINF:-1 tvg-id="4458" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/1a8ad254dc5b89daa7656cd54ec98b883058e32d.png" group-title="🚨Новостные",360° НОВОСТИ HD
 #EXTGRP:🚨Новостные
 http://dmitry-tv.ddns.net/hls/smotrim/CH_360TV_NEWSHD.m3u8
 #EXTINF:-1 tvg-id="4458" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/1a8ad254dc5b89daa7656cd54ec98b883058e32d.png" group-title="🚨Новостные",360 Новости HD
 #EXTGRP:🚨Новостные
 https://cdn-evacoder-tv.facecast.io/evacoder_hls_hi/UBZfFgtKB1JwTwoDERNQVGGs/1080.m3u8
-#EXTINF:-1 tvg-id="4458" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/1a8ad254dc5b89daa7656cd54ec98b883058e32d.png" group-title="🚨Новостные",360° Новости HD (2)
+#EXTINF:-1 tvg-id="4458" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/1a8ad254dc5b89daa7656cd54ec98b883058e32d.png" group-title="🚨Новостные",360.RU НОВОСТИ HD
 #EXTGRP:🚨Новостные
-http://live-vgtrksmotrim.cdnvideo.ru/vgtrksmotrim/smotrim-live-03-srt.smil/tracks-v5a1/mono.m3u8
+https://bl.rutube.ru/livestream/d14fcf59cb7d07a26c48ebc8c6565f44/index.m3u8?s=v9538LQrJK0GAqtHVgBbqw&e=2066519838&scheme=https
 #EXTINF:-1 tvg-id="2051" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/a3e67093190747a282a9f7f73b82f6bc3fb8fa3e.png" catchup="append" catchup-days="3" catchup-source="?offset=-${offset}&utcstart=${timestamp}" group-title="🏀Спортивные",Матч ТВ
 #EXTGRP:🏀Спортивные
 http://zabava-htlive.cdn.ngenix.net/hls/CH_MATCHTV/variant.m3u8
@@ -184,13 +181,13 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_MATCHTV/variant.m3u8
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/212/index.m3u8
 #EXTINF:-1 tvg-id="2051" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/a3e67093190747a282a9f7f73b82f6bc3fb8fa3e.png" group-title="🏀Спортивные",Матч ТВ HD (2)
 #EXTGRP:🏀Спортивные
-https://bl.rutube.ru/livestream/11bbbec75a2ceb8cf446ad16813c6eec/index.m3u8?s=0_D9EWX6nNOAWdCXLALISA&e=2095638468&scheme=https
+https://bl.rutube.ru/livestream/11bbbec75a2ceb8cf446ad16813c6eec/index.m3u8?s=gAIvdAJ8UVNxvjYzuUdhhQ&e=2095679032&scheme=https
 #EXTINF:-1 tvg-id="2250" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e907f0d73d23fa1e89d3b639d44edb807b52204e.png" group-title="🏀Спортивные",Матч! Премьер HD
 #EXTGRP:🏀Спортивные
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/220/index.m3u8
 #EXTINF:-1 tvg-id="2250" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e907f0d73d23fa1e89d3b639d44edb807b52204e.png" group-title="🏀Спортивные",Матч Премьер HD
 #EXTGRP:🏀Спортивные
-http://95.181.17.26/dvr01/hd1/NashFutHD/chunks.m3u8?&&wmsAuthSign=c2VydmVyX3RpbWU9MTEvMjUvMjAyNiA4OjI1OjQ2IFBNJmhhc2hfdmFsdWU9NW5RY0E5dHdhbmZzY2R3RlR1T3VjZz09JnZhbGlkbWludXRlcz03MjAmaWQ9Nzc3
+http://95.181.17.26/dvr01/hd1/NashFutHD/chunks.m3u8?&&wmsAuthSign=c2VydmVyX3RpbWU9MTEvMjYvMjAyNiA3OjQxOjU0IEFNJmhhc2hfdmFsdWU9dFNFM2RGS1JrUm95YVlmM2grUktnUT09JnZhbGlkbWludXRlcz03MjAmaWQ9Nzc3
 #EXTINF:-1 tvg-id="2250" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e907f0d73d23fa1e89d3b639d44edb807b52204e.png" group-title="🏀Спортивные",Матч! Премьер
 #EXTGRP:🏀Спортивные
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/531/index.m3u8
@@ -248,36 +245,36 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP
 #EXTINF:-1 tvg-id="2363" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/a5cc15f8c430c26af67a8f43232fef2a2b458bd2.png" group-title="🏀Спортивные",Setanta Sports 2 (2)
 #EXTGRP:🏀Спортивные
 http://stream2.cinerama.uz/1264/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="2055" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/38740fa331d78afe07c126a662a51f2c5e5a9871.png" group-title="🏀Спортивные",viju+ Sport HD (1080p)
-#EXTGRP:🏀Спортивные
-http://46.53.200.153:7777/play/a01l/index.m3u8
 #EXTINF:-1 tvg-id="2055" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/38740fa331d78afe07c126a662a51f2c5e5a9871.png" group-title="🏀Спортивные",viju+ Sport (1080p)
 #EXTGRP:🏀Спортивные
 https://stream8.cinerama.uz/1229/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="2055" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/38740fa331d78afe07c126a662a51f2c5e5a9871.png" group-title="🏀Спортивные",Viju+ Sport HD
 #EXTGRP:🏀Спортивные
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/2007/index.m3u8
+#EXTINF:-1 tvg-id="2055" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/38740fa331d78afe07c126a662a51f2c5e5a9871.png" group-title="🏀Спортивные",Viju+ Sport
+#EXTGRP:🏀Спортивные
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/160/index.m3u8
 #EXTINF:-1 tvg-id="9325" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/8ad7095a2fdc67d55da4fe0f5c4f54defe6f461f.png" group-title="🏀Спортивные",Окко Футбол HD
 #EXTGRP:🏀Спортивные
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/6554/index.m3u8
 #EXTINF:-1 tvg-id="9325" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/8ad7095a2fdc67d55da4fe0f5c4f54defe6f461f.png" group-title="🏀Спортивные",Окко Футбол
 #EXTGRP:🏀Спортивные
 http://uhugktfh.megogo.xyz/iptv/BV4SSQ9PRKF2CW/6554/index.m3u8
-#EXTINF:-1 tvg-id="5883" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/35d1aa03206e3eb510dd8f0d038bc75799dddd55.png" group-title="🏀Спортивные",Eurosport 1 (1080p)
-#EXTGRP:🏀Спортивные
-https://r.eu.cdn-redge.media/livehls/oeu/mt/live/eurosport_1/live.livx/playlist.m3u8
 #EXTINF:-1 tvg-id="5883" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/35d1aa03206e3eb510dd8f0d038bc75799dddd55.png" group-title="🏀Спортивные",Eurosport 1 Russia (1080p)
 #EXTGRP:🏀Спортивные
 https://s7.iptv-24.net/1439/playlist.m3u8
+#EXTINF:-1 tvg-id="5883" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/35d1aa03206e3eb510dd8f0d038bc75799dddd55.png" group-title="🏀Спортивные",Eurosport 1 (1080p)
+#EXTGRP:🏀Спортивные
+https://r.eu.cdn-redge.media/livehls/oeu/mt/live/eurosport_1/live.livx/playlist.m3u8
 #EXTINF:-1 tvg-id="5883" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/35d1aa03206e3eb510dd8f0d038bc75799dddd55.png" group-title="🏀Спортивные",Eurosport 1 HD
 #EXTGRP:🏀Спортивные
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/228/index.m3u8
-#EXTINF:-1 tvg-id="8052" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/b0e8c2ae846ae64c0181956542b32634ef55cd17.png" group-title="🏀Спортивные",Eurosport 2 (1080p)
-#EXTGRP:🏀Спортивные
-https://r.eu.cdn-redge.media/livehls/oeu/mt/live/eurosport_2/live.livx/playlist.m3u8
 #EXTINF:-1 tvg-id="8052" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/b0e8c2ae846ae64c0181956542b32634ef55cd17.png" group-title="🏀Спортивные",Eurosport 2 Russia (1080p)
 #EXTGRP:🏀Спортивные
 https://s7.iptv-24.net/1452/playlist.m3u8
+#EXTINF:-1 tvg-id="8052" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/b0e8c2ae846ae64c0181956542b32634ef55cd17.png" group-title="🏀Спортивные",Eurosport 2 (1080p)
+#EXTGRP:🏀Спортивные
+https://r.eu.cdn-redge.media/livehls/oeu/mt/live/eurosport_2/live.livx/playlist.m3u8
 #EXTINF:-1 tvg-id="8052" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/b0e8c2ae846ae64c0181956542b32634ef55cd17.png" group-title="🏀Спортивные",Eurosport 2 HD
 #EXTGRP:🏀Спортивные
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/234/index.m3u8
@@ -299,66 +296,66 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP
 #EXTINF:-1 tvg-id="2048" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/d185d4b1de5ad6b95fb145458862612ffb6439c3.png" group-title="🏀Спортивные",KHL (2)
 #EXTGRP:🏀Спортивные
 http://176.118.197.101/KHL/mono.m3u8
-#EXTINF:-1 tvg-id="1013" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/ed18d9de41a41efcf96f23a54fd7982f2d9f6367.png" group-title="🍿Кино и сериалы",viju+ Premiere HD (1080p)
-#EXTGRP:🍿Кино и сериалы
-http://46.53.200.153:7777/play/Viju_Premiere/index.m3u8
 #EXTINF:-1 tvg-id="1013" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/ed18d9de41a41efcf96f23a54fd7982f2d9f6367.png" group-title="🍿Кино и сериалы",viju+ Premiere HD
 #EXTGRP:🍿Кино и сериалы
 http://flussonic.mkpnet.ru/tv-e107d21a90cb808f/video.m3u8
 #EXTINF:-1 tvg-id="1013" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/ed18d9de41a41efcf96f23a54fd7982f2d9f6367.png" group-title="🍿Кино и сериалы",viju+ premiere
 #EXTGRP:🍿Кино и сериалы
 https://flussonic.mkpnet.ru/tv-e107d21a90cb808f/video.m3u8
-#EXTINF:-1 tvg-id="1012" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/43881c96582aa648e80236138e99cb0966cae9ac.png" group-title="🍿Кино и сериалы",viju+ Megahit HD (1080p)
+#EXTINF:-1 tvg-id="1012" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/43881c96582aa648e80236138e99cb0966cae9ac.png" group-title="🍿Кино и сериалы",viju+ Megahit HD
 #EXTGRP:🍿Кино и сериалы
-http://46.53.200.153:7777/play/Viju_Megahit_HD/index.m3u8
+http://flussonic.mkpnet.ru/tv-3d1cedf99303d057/video.m3u8
+#EXTINF:-1 tvg-id="1011" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e7db5047ba4726631ba519b5e25228ac03f00c58.png" group-title="🍿Кино и сериалы",viju+ Comedy HD
+#EXTGRP:🍿Кино и сериалы
+http://flussonic.mkpnet.ru/tv-c385ec3bab3a3605/video.m3u8
 #EXTINF:-1 tvg-id="1011" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e7db5047ba4726631ba519b5e25228ac03f00c58.png" group-title="🍿Кино и сериалы",Viju Comedy
 #EXTGRP:🍿Кино и сериалы
 https://flussonic.mkpnet.ru/tv-c385ec3bab3a3605/video.m3u8
 #EXTINF:-1 tvg-id="1011" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e7db5047ba4726631ba519b5e25228ac03f00c58.png" group-title="🍿Кино и сериалы",Viju+ Comedy
 #EXTGRP:🍿Кино и сериалы
 https://stream8.cinerama.uz/1061/index.m3u8
-#EXTINF:-1 tvg-id="1011" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e7db5047ba4726631ba519b5e25228ac03f00c58.png" group-title="🍿Кино и сериалы",viju+ Comedy (2)
-#EXTGRP:🍿Кино и сериалы
-https://stream2.somon.tv/vipcomedy/index.m3u8
 #EXTINF:-1 tvg-id="125" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/35f704506f04c1510598e65e86077db4dc7a5dcb.png" group-title="🍿Кино и сериалы",viju TV1000 action (1080p)
 #EXTGRP:🍿Кино и сериалы
 https://stream8.cinerama.uz/1225/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="125" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/35f704506f04c1510598e65e86077db4dc7a5dcb.png" group-title="🍿Кино и сериалы",TV1000 Action
 #EXTGRP:🍿Кино и сериалы
-http://46.53.200.153:7777/play/a01h/index.m3u8
+https://fs.uplink.kz/viju_tv1000_action/mono.m3u8?token=onlinetv2
 #EXTINF:-1 tvg-id="125" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/35f704506f04c1510598e65e86077db4dc7a5dcb.png" group-title="🍿Кино и сериалы",Viju TV1000 Action
 #EXTGRP:🍿Кино и сериалы
 http://stream2.cinerama.uz/1225/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="127" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/017e28d76d8356a888874c4732826da3214d0fc3.png" group-title="🍿Кино и сериалы",Viju TV1000
 #EXTGRP:🍿Кино и сериалы
 http://91.205.196.7:8000/play/a02j
-#EXTINF:-1 tvg-id="127" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/017e28d76d8356a888874c4732826da3214d0fc3.png" group-title="🍿Кино и сериалы",Viju TV 1000
-#EXTGRP:🍿Кино и сериалы
-http://46.53.200.153:7777/play/TV_1000/index.m3u8
 #EXTINF:-1 tvg-id="127" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/017e28d76d8356a888874c4732826da3214d0fc3.png" group-title="🍿Кино и сериалы",TV1000
 #EXTGRP:🍿Кино и сериалы
-http://46.53.200.153:7777/play/TV_1000/index.m3
+https://stream8.cinerama.uz/1058/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="127" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/017e28d76d8356a888874c4732826da3214d0fc3.png" group-title="🍿Кино и сериалы",TV1000 (2)
+#EXTGRP:🍿Кино и сериалы
+https://fs.uplink.kz/viju_tv1000/mono.m3u8?token=onlinetv2
 #EXTINF:-1 tvg-id="267" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/b317f300f2b9cbb7fd29854cc7d43e65c822c8a8.png" group-title="🍿Кино и сериалы",Viju TV1000 Русское
+#EXTGRP:🍿Кино и сериалы
+https://flussonic.mkpnet.ru/tv-7510472b0133abb2/video.m3u8
+#EXTINF:-1 tvg-id="267" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/b317f300f2b9cbb7fd29854cc7d43e65c822c8a8.png" group-title="🍿Кино и сериалы",Viju TV1000 Русское (2)
 #EXTGRP:🍿Кино и сериалы
 https://flussonic.mkpnet.ru/tv-7510472b0133abb2/video.m3u8?token=test
 #EXTINF:-1 tvg-id="267" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/b317f300f2b9cbb7fd29854cc7d43e65c822c8a8.png" group-title="🍿Кино и сериалы",Viju TV1000 Русское (2)
 #EXTGRP:🍿Кино и сериалы
 https://stream8.cinerama.uz/1059/index.m3u8
-#EXTINF:-1 tvg-id="1584" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/ca1fa6c09c094b05f049846d1c71fa295e2947ee.png" group-title="🍿Кино и сериалы",Мужское кино HD
+#EXTINF:-1 tvg-id="1584" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/ca1fa6c09c094b05f049846d1c71fa295e2947ee.png" group-title="🍿Кино и сериалы",Мужское кино
+#EXTGRP:🍿Кино и сериалы
+http://185.76.10.53:8080/srv5/interesnoetv/tracks-v1a1/mono.m3u8?cid=144&did=5366158&m=1&rid=24397&token=2022b6576a65c40ede42a7d4941b5471
+#EXTINF:-1 tvg-id="1584" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/ca1fa6c09c094b05f049846d1c71fa295e2947ee.png" group-title="🍿Кино и сериалы",Мужское кино (2)
 #EXTGRP:🍿Кино и сериалы
 https://stream8.cinerama.uz/1237/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="1584" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/ca1fa6c09c094b05f049846d1c71fa295e2947ee.png" group-title="🍿Кино и сериалы",Мужское кино (3)
 #EXTGRP:🍿Кино и сериалы
-http://185.121.1.163:8083/MuzhskoeKino/index.m3u8
-#EXTINF:-1 tvg-id="1584" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/ca1fa6c09c094b05f049846d1c71fa295e2947ee.png" group-title="🍿Кино и сериалы",Мужское кино
-#EXTGRP:🍿Кино и сериалы
 https://fs.uplink.kz/muzhskoe_kino/mono.m3u8?token=onlinetv2
 #EXTINF:-1 tvg-id="542" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/76c72ae621baf82de701b19f6ec31584c3d26276.png" group-title="🍿Кино и сериалы",Кинохит
 #EXTGRP:🍿Кино и сериалы
-https://fs.uplink.kz/kinohit/mono.m3u8?token=onlinetv2
+https://stream8.cinerama.uz/1055/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="542" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/76c72ae621baf82de701b19f6ec31584c3d26276.png" group-title="🍿Кино и сериалы",Кинохит (2)
 #EXTGRP:🍿Кино и сериалы
-https://stream8.cinerama.uz/1055/tracks-v1a1/mono.m3u8
+https://fs.uplink.kz/kinohit/mono.m3u8?token=onlinetv2
 #EXTINF:-1 tvg-id="542" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/76c72ae621baf82de701b19f6ec31584c3d26276.png" group-title="🍿Кино и сериалы",Кинохит (3)
 #EXTGRP:🍿Кино и сериалы
 https://flussonic.mkpnet.ru/tv-513b9c22f4277475/video.m3u8
@@ -370,7 +367,7 @@ http://93.170.254.17/Kinomiks/tracks-v1a1/mono.ts.m3u8
 http://93.170.254.17/Kinomiks/index.m3u8
 #EXTINF:-1 tvg-id="644" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/2c0f50ed59def6e353751d0f934bcbcc1404c150.png" group-title="🍿Кино и сериалы",Киномикс (3)
 #EXTGRP:🍿Кино и сериалы
-https://fs.uplink.kz/kinomix/mono.m3u8?token=onlinetv2
+http://176.118.197.101/Kinomix/mono.m3u8
 #EXTINF:-1 tvg-id="566" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/131bcfbee16ea23025a4bf866f9913e6c29b0e41.png" group-title="🍿Кино и сериалы",Кинопремьера HD
 #EXTGRP:🍿Кино и сериалы
 https://fs.uplink.kz/kinopremiera_hd/mono.m3u8?token=onlinetv2
@@ -383,51 +380,48 @@ http://91.205.196.7:8000/play/a02m
 #EXTINF:-1 tvg-id="485" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/c836b07f02dd8b02521f3073d878fa521cf6b824.png" group-title="🍿Кино и сериалы",НАШЕ НОВОЕ КИНО
 #EXTGRP:🍿Кино и сериалы
 http://185.46.16.239:8000/Nickelodeon
-#EXTINF:-1 tvg-id="485" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/c836b07f02dd8b02521f3073d878fa521cf6b824.png" group-title="🍿Кино и сериалы",Наше Новое Кино (2)
-#EXTGRP:🍿Кино и сериалы
-https://stream8.cinerama.uz/1051/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="485" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/c836b07f02dd8b02521f3073d878fa521cf6b824.png" group-title="🍿Кино и сериалы",Наше новое кино (3)
+#EXTINF:-1 tvg-id="485" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/c836b07f02dd8b02521f3073d878fa521cf6b824.png" group-title="🍿Кино и сериалы",Наше новое кино (2)
 #EXTGRP:🍿Кино и сериалы
 https://fs.uplink.kz/nashe_novoe_kino/mono.m3u8?token=onlinetv2
+#EXTINF:-1 tvg-id="485" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/c836b07f02dd8b02521f3073d878fa521cf6b824.png" group-title="🍿Кино и сериалы",НАШЕ НОВОЕ КИНО (3)
+#EXTGRP:🍿Кино и сериалы
+http://sgw.ott.tricolor.tv/streamingGateway/GetLivePlayList?source=Nashe_novoe_kino.m3u8&serviceArea=MSK-SA-1&drmreq=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBfdHlwZSI6ImFwdHBfb3R0IiwiY2xhc3MiOiJCUk9XU0VSIiwiZHJlaWQiOiI0NjIxOTAwODYwMjk2MyIsImV4cCI6MTc5NjA3NjkwNCwiaHdpZCI6IjRjYzRkODliOGI2ODIxZTZhZGM5NDdiZGRlMmRkMmQ2MDM3MjYzMTM3ODFhODk2Nzc4MGNjMDI2YzRhZmE0ZDUiLCJsYXN0X3JlcV9kYXRlIjoxNzk1NDcyMTA0LCJzZXNzaW9uX2lkIjoiMzBhOTQ1OWMzYjI3NWIwODA3MzBkOGU0ZTZmOGRiODciLCJ0b2tlbl90eXBlIjoiQ29udGVudEFjY2Vzc1Rva2VuIiwidHlwZSI6Ik1PWklMTEEifQ.HPfE_I3RRbAp8jh86O39Yj9R4sOiu3ZqqcC8QMSGr24
 #EXTINF:-1 tvg-id="821" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e18b0ef70f4ecd1016f7a83ba5bcff89da25a89d.png" group-title="🍿Кино и сериалы",Кинокомедия
 #EXTGRP:🍿Кино и сериалы
 http://185.46.16.239:8000/Fox_HD
 #EXTINF:-1 tvg-id="821" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e18b0ef70f4ecd1016f7a83ba5bcff89da25a89d.png" group-title="🍿Кино и сериалы",Кинокомедия (2)
 #EXTGRP:🍿Кино и сериалы
-https://fs.uplink.kz/kinokomedia/mono.m3u8?token=onlinetv2
+https://stream8.cinerama.uz/1232/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="821" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e18b0ef70f4ecd1016f7a83ba5bcff89da25a89d.png" group-title="🍿Кино и сериалы",Кинокомедия (3)
 #EXTGRP:🍿Кино и сериалы
-https://stream8.cinerama.uz/1232/tracks-v1a1/mono.m3u8
+https://fs.uplink.kz/kinokomedia/mono.m3u8?token=onlinetv2
 #EXTINF:-1 tvg-id="2493" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/9b857acfdf488a075539aeaa1ece20d8b4f1ae0e.png" group-title="🍿Кино и сериалы",Киноужас HD
 #EXTGRP:🍿Кино и сериалы
 http://s7.merlive.am/Kinoujas/index.m3u8
 #EXTINF:-1 tvg-id="2493" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/9b857acfdf488a075539aeaa1ece20d8b4f1ae0e.png" group-title="🍿Кино и сериалы",Киноужас
 #EXTGRP:🍿Кино и сериалы
 https://fs.uplink.kz/kinouzhas/mono.m3u8?token=onlinetv2
-#EXTINF:-1 tvg-id="12" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/cf55a3fd8f4944b6b85acace06d10e2ab4fd4326.png" group-title="🍿Кино и сериалы",Родное кино
-#EXTGRP:🍿Кино и сериалы
-https://fs.uplink.kz/rodnoe_kino/mono.m3u8?token=onlinetv2
-#EXTINF:-1 tvg-id="12" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/cf55a3fd8f4944b6b85acace06d10e2ab4fd4326.png" group-title="🍿Кино и сериалы",РОДНОЕ КИНО (2)
+#EXTINF:-1 tvg-id="12" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/cf55a3fd8f4944b6b85acace06d10e2ab4fd4326.png" group-title="🍿Кино и сериалы",РОДНОЕ КИНО
 #EXTGRP:🍿Кино и сериалы
 http://sgw.ott.tricolor.tv/streamingGateway/GetLivePlayList?source=Rodnoe_kino.m3u8&serviceArea=MSK-SA-1&drmreq=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBfdHlwZSI6ImFwdHBfb3R0IiwiY2xhc3MiOiJCUk9XU0VSIiwiZHJlaWQiOiI0NjIxOTAwODYwMjk2MyIsImV4cCI6MTc5NjA3NjkwNCwiaHdpZCI6IjRjYzRkODliOGI2ODIxZTZhZGM5NDdiZGRlMmRkMmQ2MDM3MjYzMTM3ODFhODk2Nzc4MGNjMDI2YzRhZmE0ZDUiLCJsYXN0X3JlcV9kYXRlIjoxNzk1NDcyMTA0LCJzZXNzaW9uX2lkIjoiMzBhOTQ1OWMzYjI3NWIwODA3MzBkOGU0ZTZmOGRiODciLCJ0b2tlbl90eXBlIjoiQ29udGVudEFjY2Vzc1Rva2VuIiwidHlwZSI6Ik1PWklMTEEifQ.HPfE_I3RRbAp8jh86O39Yj9R4sOiu3ZqqcC8QMSGr24
+#EXTINF:-1 tvg-id="12" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/cf55a3fd8f4944b6b85acace06d10e2ab4fd4326.png" group-title="🍿Кино и сериалы",Родное Кино (2)
+#EXTGRP:🍿Кино и сериалы
+https://stream8.cinerama.uz/1052/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="12" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/cf55a3fd8f4944b6b85acace06d10e2ab4fd4326.png" group-title="🍿Кино и сериалы",Родное кино (3)
 #EXTGRP:🍿Кино и сериалы
-http://176.118.197.101/RodnoeKino/index.m3u8
+https://fs.uplink.kz/rodnoe_kino/mono.m3u8?token=onlinetv2
 #EXTINF:-1 tvg-id="2020" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/2530acd5b37ddfb0194ce9efbc33d0f17c6ebb8c.png" group-title="🍿Кино и сериалы",Дом кино премиум
 #EXTGRP:🍿Кино и сериалы
 http://185.76.10.53:8080/srv5/dom_kino_premium/tracks-v1a1/mono.m3u8?cid=144&did=5366158&m=1&rid=24397&token=2022b6576a65c40ede42a7d4941b5471
-#EXTINF:-1 tvg-id="2020" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/2530acd5b37ddfb0194ce9efbc33d0f17c6ebb8c.png" group-title="🍿Кино и сериалы",Дом кино Премиум (2)
-#EXTGRP:🍿Кино и сериалы
-https://fs.uplink.kz/dom_kino_premium/mono.m3u8?token=onlinetv2
 #EXTINF:-1 tvg-id="834" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/a4ea1867a2afdd1d8b5b376997909e686fa9481b.png" group-title="🍿Кино и сериалы",Дом Кино
 #EXTGRP:🍿Кино и сериалы
 https://stream8.cinerama.uz/1054/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="834" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/a4ea1867a2afdd1d8b5b376997909e686fa9481b.png" group-title="🍿Кино и сериалы",Дом кино (2)
 #EXTGRP:🍿Кино и сериалы
-https://fs.uplink.kz/dom_kino/mono.m3u8?token=onlinetv2
+http://176.118.197.101/Dom_kino/index.m3u8
 #EXTINF:-1 tvg-id="834" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/a4ea1867a2afdd1d8b5b376997909e686fa9481b.png" group-title="🍿Кино и сериалы",Дом кино (3)
 #EXTGRP:🍿Кино и сериалы
-http://176.118.197.101/Dom_kino/index.m3u8
+https://fs.uplink.kz/dom_kino/mono.m3u8?token=onlinetv2
 #EXTINF:-1 tvg-id="2403" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/f1d74e41912ddf7c87a5c4335aa0b0d818657a78.png" group-title="🍿Кино и сериалы",Иллюзион+
 #EXTGRP:🍿Кино и сериалы
 http://185.46.16.239:8000/Illyuzion+
@@ -437,9 +431,6 @@ http://176.118.197.101/Illuzion+/index.m3u8
 #EXTINF:-1 tvg-id="53" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/184b10015ad4d18261dea79a7956828e1035dc10.png" group-title="🍿Кино и сериалы",Русский иллюзион
 #EXTGRP:🍿Кино и сериалы
 http://185.46.16.239:8000/Russkiy_Illyuzion
-#EXTINF:-1 tvg-id="53" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/184b10015ad4d18261dea79a7956828e1035dc10.png" group-title="🍿Кино и сериалы",Русский иллюзион (2)
-#EXTGRP:🍿Кино и сериалы
-https://fs.uplink.kz/russkiy_illusion/mono.m3u8?token=onlinetv2
 #EXTINF:-1 tvg-id="2834" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/8b6538a215961b1d62ce618e3ca5dcb14229a312.png" group-title="🍿Кино и сериалы",Кинопоказ HD
 #EXTGRP:🍿Кино и сериалы
 http://185.76.10.53:8080/srv5/nash_kinopokaz_hd/tracks-v1a1/mono.m3u8?cid=144&did=5366158&m=1&rid=24397&token=2022b6576a65c40ede42a7d4941b5471
@@ -459,6 +450,9 @@ http://185.46.16.239:8000/Kino_TV
 #EXTGRP:🍿Кино и сериалы
 http://176.118.197.101/KinoTvHD/index.m3u8
 #EXTINF:-1 tvg-id="1620" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e225672bbdf2c2831c558321349af890d7719e5e.png" group-title="🍿Кино и сериалы",Комедия
+#EXTGRP:🍿Кино и сериалы
+http://176.118.197.101/Komediya/mono.m3u8
+#EXTINF:-1 tvg-id="1620" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e225672bbdf2c2831c558321349af890d7719e5e.png" group-title="🍿Кино и сериалы",Комедия (2)
 #EXTGRP:🍿Кино и сериалы
 http://176.118.197.101/Komediya/index.m3u8
 #EXTINF:-1 tvg-id="2836" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/f98371c25349d882c5fbf0f11dbdad3076815821.png" group-title="🍿Кино и сериалы",Камеди
@@ -487,10 +481,7 @@ http://85.117.61.97:8000/play/a017/index.m3u8
 http://185.46.16.239:8000/Yevrokino
 #EXTINF:-1 tvg-id="352" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/2dbad4a5a86a0f4dc6915b3aa14a478e8e795d70.png" group-title="🍿Кино и сериалы",Еврокино (2)
 #EXTGRP:🍿Кино и сериалы
-https://fs.uplink.kz/eurokino/mono.m3u8?token=onlinetv2
-#EXTINF:-1 tvg-id="309" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/ae685e5da37f1a8bb23f8cbe0dfb8aa33beabf27.png" group-title="🍿Кино и сериалы",ТВ 21
-#EXTGRP:🍿Кино и сериалы
-http://46.53.200.153:7777/play/TV-21M/index.m3u8
+http://178.134.1.158:8081/eurokino/index.m3u8
 #EXTINF:-1 tvg-id="309" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/ae685e5da37f1a8bb23f8cbe0dfb8aa33beabf27.png" group-title="🍿Кино и сериалы",TV 21 (576p)
 #EXTGRP:🍿Кино и сериалы
 http://178.134.1.158:8081/TVXXI/index.m3u8
@@ -505,10 +496,10 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/3F6EXEEA7RHP74/2049/inde
 http://85.117.61.97:8000/play/a019/index.m3u8
 #EXTINF:-1 tvg-id="518" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/9162c72581c206dc0fc110a3fa154ba51f607b0a.png" group-title="🍿Кино и сериалы",НСТ (2)
 #EXTGRP:🍿Кино и сериалы
-http://vod.tuva.ru/nst/index.m3u8
+http://176.118.197.101/HCT/index.m3u8
 #EXTINF:-1 tvg-id="518" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/9162c72581c206dc0fc110a3fa154ba51f607b0a.png" group-title="🍿Кино и сериалы",НСТ (3)
 #EXTGRP:🍿Кино и сериалы
-http://176.118.197.101/HCT/index.m3u8
+http://vod.tuva.ru/nst/index.m3u8
 #EXTINF:-1 tvg-id="2309" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/04c2f977ba97082e5c937c61eaba0ddbf362fec6.png" group-title="🍿Кино и сериалы",Шокирующее HD
 #EXTGRP:🍿Кино и сериалы
 http://uhugktfh.megogo.xyz/iptv/BV4SSQ9PRKF2CW/9004/index.m3u8
@@ -523,11 +514,11 @@ https://stream8.cinerama.uz/1227/tracks-v1a1/mono.m3u8
 http://185.46.16.239:8000/Cinema
 #EXTINF:-1 tvg-id="2754" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/3252caff90ca05cf81e2991781c1d3381eaf74a4.png" group-title="🍿Кино и сериалы",Cinema (2)
 #EXTGRP:🍿Кино и сериалы
-http://85.117.61.97:8000/play/a01a/index.m3u8
+http://176.118.197.101/Cinema/index.m3u8
 #EXTINF:-1 tvg-id="516" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/f56dc22dfd21cf15a4c3612a474c8820d238def7.png" group-title="🍿Кино и сериалы",Sci Fi (Poland) (1080p)
 #EXTGRP:🍿Кино и сериалы
 http://92.114.85.87:8003/play/a007/index.m3u8
-#EXTINF:-1 tvg-id="516" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/f56dc22dfd21cf15a4c3612a474c8820d238def7.png" group-title="🍿Кино и сериалы",.Sci-fi
+#EXTINF:-1 tvg-id="516" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/f56dc22dfd21cf15a4c3612a474c8820d238def7.png" group-title="🍿Кино и сериалы",.Sci-Fi
 #EXTGRP:🍿Кино и сериалы
 http://flussonic.mkpnet.ru/tv-e80cc885d4ae14d1/video.m3u8
 #EXTINF:-1 tvg-id="516" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/f56dc22dfd21cf15a4c3612a474c8820d238def7.png" group-title="🍿Кино и сериалы",.sci-fi (2)
@@ -565,10 +556,10 @@ http://dda3aa01fc.edemist.com/iptv/KSKRCX75EL4VFTSHWYUKQUGB/31637/index.m3u8
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/3F6EXEEA7RHP74/31637/index.m3u8
 #EXTINF:-1 tvg-id="8761" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/d8e1291c309cf776f9e2bcce94e07d7b964bfa11.png" group-title="🍺Кинозалы",VeleS Киноплёнка
 #EXTGRP:🍺Кинозалы
-http://apdn2s9z.tvclub.xyz/iptv/NPCQ4SE794WFSU/31638/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/3F6EXEEA7RHP74/31638/index.m3u8
 #EXTINF:-1 tvg-id="8761" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/d8e1291c309cf776f9e2bcce94e07d7b964bfa11.png" group-title="🍺Кинозалы",VeleS Киноплёнка (2)
 #EXTGRP:🍺Кинозалы
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/3F6EXEEA7RHP74/31638/index.m3u8
+http://apdn2s9z.tvclub.xyz/iptv/NPCQ4SE794WFSU/31638/index.m3u8
 #EXTINF:-1 tvg-id="8763" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/2487b6ff7d5687b7930c1f5422c0d8a1a91db25b.png" group-title="🍺Кинозалы",VeleS Premiere
 #EXTGRP:🍺Кинозалы
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/3F6EXEEA7RHP74/31641/index.m3u8
@@ -643,13 +634,16 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/11006/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/11007/index.m3u8
 #EXTINF:-1 tvg-id="5585" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/8e6341ef3ceb6baabe54f3880e5083919eae362f.png" group-title="🍺Кинозалы",CineMan Катастрофы
 #EXTGRP:🍺Кинозалы
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/15106/index.m3u8
+http://cdntv.online/high/wkb8rh2jd6/1271.mpeg
 #EXTINF:-1 tvg-id="5585" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/8e6341ef3ceb6baabe54f3880e5083919eae362f.png" group-title="🍺Кинозалы",CineMan Катастрофы (2)
 #EXTGRP:🍺Кинозалы
-http://cdntv.online/high/wkb8rh2jd6/1271.mpeg
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/15106/index.m3u8
 #EXTINF:-1 tvg-id="4688" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e54c68b677fd53ace0c89d70eb2283930ce3ed76.png" group-title="🍺Кинозалы",CineMan Ужасы
 #EXTGRP:🍺Кинозалы
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/11010/index.m3u8
+#EXTINF:-1 tvg-id="4688" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/e54c68b677fd53ace0c89d70eb2283930ce3ed76.png" group-title="🍺Кинозалы",CineMan Ужасы (2)
+#EXTGRP:🍺Кинозалы
+http://hy4dzynk.rostelekom.xyz/iptv/QXRPSB7GMN4VWW/11010/index.m3u8
 #EXTINF:-1 tvg-id="5163" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/6931d2c7c7b40f71f8de63e92146e00942d5652c.png" group-title="🍺Кинозалы",MM Роскино HD
 #EXTGRP:🍺Кинозалы
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/13050/index.m3u8
@@ -728,12 +722,12 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/15105/ind
 #EXTINF:-1 tvg-id="5360" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/ff14b8eb169577ac55d1db94537008cc81df07b0.png" group-title="🍺Кинозалы",Yosso TV Русские Фильмы
 #EXTGRP:🍺Кинозалы
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/14174/index.m3u8
-#EXTINF:-1 tvg-id="5361" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/3838b6f861e8cc4ae76eadb709bc4a4846295c83.png" group-title="🍺Кинозалы",Yosso TV Советские Фильмы
-#EXTGRP:🍺Кинозалы
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/14175/index.m3u8
 #EXTINF:-1 tvg-id="5361" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/3838b6f861e8cc4ae76eadb709bc4a4846295c83.png" group-title="🍺Кинозалы",Yosso TV Советские Фильмы 4K
 #EXTGRP:🍺Кинозалы
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/19435/index.m3u8
+#EXTINF:-1 tvg-id="5361" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/3838b6f861e8cc4ae76eadb709bc4a4846295c83.png" group-title="🍺Кинозалы",Yosso TV Советские Фильмы
+#EXTGRP:🍺Кинозалы
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/14175/index.m3u8
 #EXTINF:-1 tvg-id="5359" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/9397f394dcbabfa4be755c885cf08c4a56f1f4b3.png" group-title="🍺Кинозалы",Yosso TV VHS
 #EXTGRP:🍺Кинозалы
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/14172/index.m3u8
@@ -751,19 +745,22 @@ http://xxot9n16.megogo.xyz/iptv/T9H75A85UBLDTFZDN74YZ4G6/11095/index.m3u8
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/11095/index.m3u8
 #EXTINF:-1 tvg-id="4724" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/302124382739461b3dd6f70e25ad35d9c8421d56.png" group-title="🍺Кинозалы",PG Thriller HD
 #EXTGRP:🍺Кинозалы
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/11099/index.m3u8
+http://uhugktfh.megogo.xyz/iptv/BV4SSQ9PRKF2CW/11099/index.m3u8
 #EXTINF:-1 tvg-id="4724" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/302124382739461b3dd6f70e25ad35d9c8421d56.png" group-title="🍺Кинозалы",PG Thriller HD (2)
 #EXTGRP:🍺Кинозалы
-http://uhugktfh.megogo.xyz/iptv/BV4SSQ9PRKF2CW/11099/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/11099/index.m3u8
 #EXTINF:-1 tvg-id="4721" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/c315c0e36e821383f76e5b644a46157ad4cf4a9b.png" group-title="🍺Кинозалы",PG РуКино HD
 #EXTGRP:🍺Кинозалы
-http://apdn2s9z.tvclub.xyz/iptv/NPCQ4SE794WFSU/11096/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/11096/index.m3u8
 #EXTINF:-1 tvg-id="4721" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/c315c0e36e821383f76e5b644a46157ad4cf4a9b.png" group-title="🍺Кинозалы",PG РуКино HD (2)
 #EXTGRP:🍺Кинозалы
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/11096/index.m3u8
+http://apdn2s9z.tvclub.xyz/iptv/NPCQ4SE794WFSU/11096/index.m3u8
 #EXTINF:-1 tvg-id="5462" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/47ed53193cbafca5642eb2bad79c7ec6c80d48e6.png" group-title="🍺Кинозалы",PG VHS HD
 #EXTGRP:🍺Кинозалы
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/15000/index.m3u8
+#EXTINF:-1 tvg-id="5462" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/47ed53193cbafca5642eb2bad79c7ec6c80d48e6.png" group-title="🍺Кинозалы",PG VHS HD (2)
+#EXTGRP:🍺Кинозалы
+http://185.221.213.254/live/stream112.php?q=h0c5Eyuek0CppzJQmzPiyBmI9DfhNnGVuNxzdYNOfd-NZXVzxn-5nG-V_i8HN8fOtbEEdA__KF0J-CUI4zfdypFBfkiqnQxHHD1GTlJrJQo
 #EXTINF:-1 tvg-id="6213" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/81c410dc9f572f213760607d8cfe691ba1852b46.png" group-title="🌍Познавательные",Z!Travel HD
 #EXTGRP:🌍Познавательные
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/17063/index.m3u8
@@ -793,22 +790,22 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/2047/index.m3u8
 #EXTINF:-1 tvg-id="2444" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/fc60eae76f1d80169bb5015cb15cf0a97111ca7e.png" group-title="🌍Познавательные",Мужской (3)
 #EXTGRP:🌍Познавательные
-https://flussonic.mkpnet.ru/tv-55c94e838b306657/video.m3u8?token=test
+http://flussonic.mkpnet.ru/tv-55c94e838b306657/video.m3u8
 #EXTINF:-1 tvg-id="7632" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/c183076ef69898b036a4202cdbd77e6bad3cde20.png" group-title="🌍Познавательные",TERRA HD
 #EXTGRP:🌍Познавательные
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/2416/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/2416/index.m3u8
 #EXTINF:-1 tvg-id="7632" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/c183076ef69898b036a4202cdbd77e6bad3cde20.png" group-title="🌍Познавательные",TERRA HD (2)
 #EXTGRP:🌍Познавательные
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/2416/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/2416/index.m3u8
 #EXTINF:-1 tvg-id="7632" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/c183076ef69898b036a4202cdbd77e6bad3cde20.png" group-title="🌍Познавательные",TERRA
 #EXTGRP:🌍Познавательные
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/230/index.m3u8
 #EXTINF:-1 tvg-id="2186" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/7d4f62d36a4a6ef72f0298f13e9c3e7e4472bf43.png" group-title="🌍Познавательные",DocuBox HD
 #EXTGRP:🌍Познавательные
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/968/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/968/index.m3u8
 #EXTINF:-1 tvg-id="2186" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/7d4f62d36a4a6ef72f0298f13e9c3e7e4472bf43.png" group-title="🌍Познавательные",DocuBox HD (2)
 #EXTGRP:🌍Познавательные
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/968/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/968/index.m3u8
 #EXTINF:-1 tvg-id="2186" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/7d4f62d36a4a6ef72f0298f13e9c3e7e4472bf43.png" group-title="🌍Познавательные",DocuBox
 #EXTGRP:🌍Познавательные
 https://dash3.antik.sk/live/test_docubox_medium_atk/playlist.m3u8
@@ -823,10 +820,10 @@ http://apdn2s9z.tvclub.xyz/iptv/NPCQ4SE794WFSU/20159/index.m3u8
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/3F6EXEEA7RHP74/32228/index.m3u8
 #EXTINF:-1 tvg-id="2417" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/5700157c9ae54844ec1c294d49d1cc224fbe814e.png" group-title="🌍Познавательные",Большая Азия HD
 #EXTGRP:🌍Познавательные
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/2009/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/2009/index.m3u8
 #EXTINF:-1 tvg-id="2417" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/5700157c9ae54844ec1c294d49d1cc224fbe814e.png" group-title="🌍Познавательные",Большая Азия HD (2)
 #EXTGRP:🌍Познавательные
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/2009/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/2009/index.m3u8
 #EXTINF:-1 tvg-id="2417" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/5700157c9ae54844ec1c294d49d1cc224fbe814e.png" group-title="🌍Познавательные",Большая Азия HD (3)
 #EXTGRP:🌍Познавательные
 http://live-bigasia.cdnvideo.ru/bigasia/bigasia.smil/playlist.m3u8
@@ -883,28 +880,28 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP
 https://stream8.cinerama.uz/1420/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="521" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/72561eb99a00a40702c76cff85554a380f3c5413.png" group-title="🌍Познавательные",Viju Explore HD
 #EXTGRP:🌍Познавательные
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/6381/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/6381/index.m3u8
 #EXTINF:-1 tvg-id="521" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/72561eb99a00a40702c76cff85554a380f3c5413.png" group-title="🌍Познавательные",Viju Explore HD (2)
 #EXTGRP:🌍Познавательные
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/6381/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/6381/index.m3u8
 #EXTINF:-1 tvg-id="521" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/72561eb99a00a40702c76cff85554a380f3c5413.png" group-title="🌍Познавательные",Viju Explore
 #EXTGRP:🌍Познавательные
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/163/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/163/index.m3u8
 #EXTINF:-1 tvg-id="277" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/7e6bd12073710ec433ccc923c69da9d8200fdb06.png" group-title="🌍Познавательные",Viju History HD
 #EXTGRP:🌍Познавательные
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/203/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/203/index.m3u8
 #EXTINF:-1 tvg-id="277" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/7e6bd12073710ec433ccc923c69da9d8200fdb06.png" group-title="🌍Познавательные",Viju History HD (2)
 #EXTGRP:🌍Познавательные
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/203/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/203/index.m3u8
 #EXTINF:-1 tvg-id="277" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/7e6bd12073710ec433ccc923c69da9d8200fdb06.png" group-title="🌍Познавательные",Viju History
 #EXTGRP:🌍Познавательные
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/162/index.m3u8
 #EXTINF:-1 tvg-id="2012" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/2aaa235fbe7452c691402ec38e2082daf813e06a.png" group-title="🌍Познавательные",Viju+ Planet HD
 #EXTGRP:🌍Познавательные
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/9027/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/9027/index.m3u8
 #EXTINF:-1 tvg-id="2012" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/2aaa235fbe7452c691402ec38e2082daf813e06a.png" group-title="🌍Познавательные",Viju+ Planet HD (2)
 #EXTGRP:🌍Познавательные
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/9027/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/9027/index.m3u8
 #EXTINF:-1 tvg-id="1394" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/900d9d0f28cfab7b78230b1115a70489f63ad26d.png" group-title="🌍Познавательные",History HD
 #EXTGRP:🌍Познавательные
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/231/index.m3u8
@@ -925,7 +922,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/2033/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/9013/index.m3u8
 #EXTINF:-1 tvg-id="1035" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/5e6a8c1ca83d955e589ad5f61e9a4a2feb2cca1a.png" group-title="🌍Познавательные",Travel+Adventure HD
 #EXTGRP:🌍Познавательные
-http://95.181.17.14/dvr02/mobile2/TravAdHD/playlist.m3u8?&wmsAuthSign=c2VydmVyX3RpbWU9MTEvMjUvMjAyNiA4OjI1OjQ2IFBNJmhhc2hfdmFsdWU9NW5RY0E5dHdhbmZzY2R3RlR1T3VjZz09JnZhbGlkbWludXRlcz03MjAmaWQ9Nzc3
+http://95.181.17.14/dvr02/mobile2/TravAdHD/playlist.m3u8?&wmsAuthSign=c2VydmVyX3RpbWU9MTEvMjYvMjAyNiA3OjQxOjU0IEFNJmhhc2hfdmFsdWU9dFNFM2RGS1JrUm95YVlmM2grUktnUT09JnZhbGlkbWludXRlcz03MjAmaWQ9Nzc3
 #EXTINF:-1 tvg-id="1035" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/5e6a8c1ca83d955e589ad5f61e9a4a2feb2cca1a.png" group-title="🌍Познавательные",Travel+Adventure
 #EXTGRP:🌍Познавательные
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/850/index.m3u8
@@ -952,10 +949,10 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/2090/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/2090/index.m3u8
 #EXTINF:-1 tvg-id="7623" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/f119f34ca30a6121ee133b1fb96119e0dfd0c38b.png" group-title="🌍Познавательные",Big Planet
 #EXTGRP:🌍Познавательные
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/14027/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/14027/index.m3u8
 #EXTINF:-1 tvg-id="7623" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/f119f34ca30a6121ee133b1fb96119e0dfd0c38b.png" group-title="🌍Познавательные",Big Planet (2)
 #EXTGRP:🌍Познавательные
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/14027/index.m3u8
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/14027/index.m3u8
 #EXTINF:-1 tvg-id="7623" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/f119f34ca30a6121ee133b1fb96119e0dfd0c38b.png" group-title="🌍Познавательные",Big planet (3)
 #EXTGRP:🌍Познавательные
 https://fs.uplink.kz/big_planet/mono.m3u8?token=onlinetv2
@@ -967,7 +964,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/847/index
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/847/index.m3u8
 #EXTINF:-1 tvg-id="2283" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/d3d444a607781437a0d7d55a4f416bf14f9bc5fe.png" group-title="🌍Познавательные",Дикий (3)
 #EXTGRP:🌍Познавательные
-https://stream8.cinerama.uz/1230/index.m3u8
+https://stream3.cinerama.uz/1230/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="2484" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/10fe922e24b6db47b847284d74db898361f94f6a.png" group-title="🌍Познавательные",Дикая рыбалка HD
 #EXTGRP:🌍Познавательные
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/2005/index.m3u8
@@ -983,3 +980,6 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/4RX9EUEFQCUA5P/2394/inde
 #EXTINF:-1 tvg-id="2627" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/48becbc5c7f84322a9aa23bc2ade87b6f4c6311c.png" group-title="🌍Познавательные",Диалоги о рыбалке HD (2)
 #EXTGRP:🌍Познавательные
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PLKYEKSX6SGE6A88XMV6FTQP/2394/index.m3u8
+#EXTINF:-1 tvg-id="2627" tvg-logo="https://raw.githubusercontent.com/Lorax121/epg_v2/main/icons/pool/48becbc5c7f84322a9aa23bc2ade87b6f4c6311c.png" group-title="🌍Познавательные",Диалоги о рыбалке
+#EXTGRP:🌍Познавательные
+http://line.iptvhunt.com:80/play/live.php?mac=00:1A:79:0A:AC:C0&stream=1148935&extension=ts&play_token=7YmGcJaDo9
