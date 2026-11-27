@@ -373,7 +373,6 @@ def main():
     stat = {"label": label, "loaded": False, "tested": 0, "alive": 0}
     source_stats.append(stat)
 
-
     try:
       req = urllib.request.Request(src, headers={"User-Agent": USER_AGENT})
       with urllib.request.urlopen(req, timeout=15) as resp:
@@ -495,46 +494,80 @@ def main():
         clean_info = f'#EXTINF:-1{id_part}{logo_part}{catchup_tags} group-title="{group_name}",{final_name}'
         out.write(f"{clean_info}\n#EXTGRP:{group_name}\n{url}\n")
 
-  print("\n" + "=" * 45)
-  print("🩺 ЗДОРОВЬЕ ИСТОЧНИКОВ (Ссылки)")
-  print("=" * 45)
+  report_lines = []
+  report_lines.append("🩺 ЗДОРОВЬЕ ИСТОЧНИКОВ MyIPTV")
   if not source_stats:
-    print("⚪ Файл sources.txt пуст")
+    report_lines.append("⚪ Файл sources.txt пуст")
   else:
     for stat in source_stats:
       label = stat["label"]
       tested = stat["tested"]
       alive = stat["alive"]
       if not stat["loaded"]:
-        print(f"❌ {label} — ОШИБКА ЗАГРУЗКИ (лист не открывается)")
+        report_lines.append(f"❌ {label} — ОШИБКА ЗАГРУЗКИ")
       elif tested == 0:
-        print(f"⚪ {label} — ПУСТОЙ (подходящих каналов не найдено)")
+        report_lines.append(f"⚪ {label} — пустой")
       elif alive == 0:
-        print(f"❌ {label} — УПАЛ! (0 из {tested} потоков — пора менять ссылку!)")
+        report_lines.append(f"❌ {label} — УПАЛ! (0 из {tested})")
       else:
-        print(f"✅ {label} — ЖИВОЙ (рабочих потоков: {alive} из {tested})")
+        report_lines.append(f"✅ {label} — живой ({alive} из {tested})")
 
   missing = []
   for idx, (w, grp) in enumerate(wanted_list):
     if idx not in found_indices:
       reason = ""
       if idx in blocked_by_format:
-        reason = f" — отсеян фильтром формата ({', '.join(list(blocked_by_format[idx])[:2])})"
-      missing.append(f"  - {w} (группа: {grp}){reason}")
+        reason = f" — отсеян фильтром ({', '.join(list(blocked_by_format[idx])[:2])})"
+      missing.append(f"• {w} ({grp}){reason}")
 
-  print("\n" + "=" * 45)
-  print("📊 ОТЧЁТ О СБОРКЕ ПЛЕЙЛИСТА")
-  print("=" * 45)
-  print(f"✅ Найдено каналов: {len(found_indices)} из {len(wanted_list)}")
-  print(f"📌 Закреплено потоков: {sum(len(v) for v in pinned_by_idx.values())}")
-  print(f"📺 Всего рабочих потоков: {total_streams}")
+  report_lines.append("")
+  report_lines.append("📊 ИТОГИ СБОРКИ MyIPTV")
+  report_lines.append(f"✅ Найдено каналов: {len(found_indices)} из {len(wanted_list)}")
+  report_lines.append(f"📌 Закреплено потоков: {sum(len(v) for v in pinned_by_idx.values())}")
+  report_lines.append(f"📺 Всего рабочих потоков: {total_streams}")
+
   if missing:
-    print(f"❌ Не найдено каналов ({len(missing)}):")
-    for m in missing:
-      print(m)
+    report_lines.append(f"❌ Не найдено ({len(missing)}):")
+    report_lines.extend(missing[:20])
+    if len(missing) > 20:
+      report_lines.append(f"...и ещё {len(missing) - 20} шт.")
   else:
-    print("🎉 Отлично! Найдены абсолютно все каналы из списка!")
-  print("=" * 45 + "\n")
+    report_lines.append("🎉 Найдены все каналы из списка!")
+
+  report_text = "\n".join(report_lines)
+  print("\n" + report_text + "\n")
+  send_telegram_report(report_text)
+
+
+def send_telegram_report(text):
+  raw_token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+  raw_chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
+
+  digits = "".join(c for c in raw_chat_id if c.isdigit() or c == "-")
+  token = raw_token.strip()
+  if " " in token:
+    for part in token.split():
+      if ":" in part:
+        token = part
+        break
+
+  if ":" not in token or not digits:
+    print("⚠️ Секреты TELEGRAM_BOT_TOKEN или TELEGRAM_CHAT_ID не заданы.")
+    return
+
+  tg_host = "api.telegram.org"
+  api_url = f"https://{tg_host}/bot{token}/sendMessage"
+  payload = urllib.parse.urlencode({
+      "chat_id": digits,
+      "text": text[:3800],
+  }).encode("utf-8")
+
+  try:
+    req = urllib.request.Request(api_url, data=payload, method="POST")
+    with urllib.request.urlopen(req, timeout=15) as resp:
+      print("📨 Ответ Telegram:", resp.read().decode("utf-8", errors="ignore"))
+  except Exception as e:
+    print(f"❌ Ошибка отправки в Telegram: {e}")
 
 
 if __name__ == "__main__":
