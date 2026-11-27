@@ -3,6 +3,7 @@ import gzip
 import os
 import re
 import time
+import urllib.parse
 from urllib.parse import urljoin, urlparse
 import urllib.request
 import xml.etree.ElementTree as ET
