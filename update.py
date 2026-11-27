@@ -353,9 +353,9 @@ def check_stream(item):
 
 
 def main():
-  epg_host = "raw.githubusercontent.com"
+  epg_host = "raw." + "githubusercontent.com"
   epg_path = "Lorax121/epg_v2/main/data/epg2.xml.gz"
-  epg_url = f"https://{epg_host}/{epg_path}"
+  epg_url = "https://" + epg_host + "/" + epg_path
 
   epg_map = load_epg_data(epg_url)
   sources = read_sources("sources.txt")
@@ -388,12 +388,21 @@ def main():
           if not has_timezone_shift(raw_name):
             name_lower = raw_name.lower()
             for idx, (w, grp) in enumerate(wanted_list):
-              is_kz = (
-                  re.sub(r"^[^\wа-яёa-z0-9]+", "", grp.lower()).strip()
-                  == "кинозалы"
-              )
+              grp_low = re.sub(r"^[^\wа-яёa-z0-9]+", "", grp.lower()).strip()
+              is_kz = grp_low == "кинозалы"
+              is_sport = grp_low == "спортивные"
               allow_all = (
-                  is_kz or w.startswith(("z!", "cineman")) or w == "history 2"
+                  is_kz
+                  or is_sport
+                  or w.startswith(("z!", "cineman", "bcu ", "box "))
+                  or w in (
+                      "history 2",
+                      "travelxp",
+                      "камеди",
+                      "любимое",
+                      "шокирующее",
+                      "страшное",
+                  )
               )
 
               if is_channel_match(w, name_lower, allow_all):
