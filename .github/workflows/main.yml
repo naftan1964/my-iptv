@@ -27,6 +27,9 @@ jobs:
           python-version: '3.11'
 
       - name: Run update script
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python3 update.py
 
       - name: Commit and push updated playlist
