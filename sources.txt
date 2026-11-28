@@ -12,3 +12,5 @@ https://www.dropbox.com/scl/fi/ejbrp9d4c19y7d3773a6j/Donor-GitHub.txt?rlkey=ief4
 https://iptv-org.github.io/iptv/index.m3u
 # 🧤 NGRCH/iptv
 https://raw.githubusercontent.com/ngrch/iptv/refs/heads/main/ru.m3u
+# 🛟 slava-67
+https://raw.githubusercontent.com/slava-67/TV/IPTV/avto-full.m3u
